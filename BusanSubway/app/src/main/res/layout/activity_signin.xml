@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login.SigninActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@drawable/underline"
+        android:gravity="center"
+        android:text="계정 로그인"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp">
+
+        <EditText
+            android:id="@+id/email_in"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            android:padding="20sp"
+            android:textSize="15sp"
+            tools:ignore="Autofill,LabelFor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp">
+
+        <EditText
+            android:id="@+id/password_in"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="20sp"
+            android:textSize="15sp"
+            tools:ignore="Autofill,LabelFor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30sp"
+        android:paddingTop="20sp"
+        android:paddingRight="30sp">
+
+        <Button
+            android:id="@+id/signin_in"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="#aaaaaa"
+            android:gravity="center"
+            android:text="로그인"
+            tools:ignore="Autofill,LabelFor,OnClick" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="80sp"
+        android:paddingTop="20sp"
+        android:paddingRight="80sp">
+
+        <Button
+            android:id="@+id/signup_in"
+            android:layout_width="300sp"
+            android:layout_height="30sp"
+            android:background="#aaaaaa"
+            android:gravity="center"
+            android:text="회원가입"
+            tools:ignore="Autofill,LabelFor" />
+    </LinearLayout>
+
+</LinearLayout>
