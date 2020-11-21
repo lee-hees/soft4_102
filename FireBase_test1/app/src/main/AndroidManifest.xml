@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firebase_test1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".First.OneActivity"/>
+        <activity android:name=".First.TwoActivity"/>
+        <activity android:name=".First.ThreeActivity"/>
+        <activity android:name=".First.FourActivity"/>
+        <activity android:name=".Second.OneActivity"/>
+        <activity android:name=".Second.TwoActivity"/>
+        <activity android:name=".Second.ThreeActivity"/>
+        <activity android:name=".Second.FourActivity"/>
+        <activity android:name=".Third.OneActivity"/>
+        <activity android:name=".Third.TwoActivity"/>
+        <activity android:name=".Third.ThreeActivity"/>
+        <activity android:name=".Third.FourActivity"/>
+        <activity android:name=".Fourth.OneActivity"/>
+        <activity android:name=".Fourth.TwoActivity"/>
+        <activity android:name=".Fourth.ThreeActivity"/>
+        <activity android:name=".Fourth.FourActivity"/>
+        <activity android:name=".Dong.OneActivity"/>
+        <activity android:name=".Dong.TwoActivity"/>
+        <activity android:name=".Dong.ThreeActivity"/>
+        <activity android:name=".Dong.FourActivity"/>
+        <activity android:name=".Kim.OneActivity"/>
+        <activity android:name=".Kim.TwoActivity"/>
+        <activity android:name=".Kim.ThreeActivity"/>
+        <activity android:name=".Kim.FourActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
