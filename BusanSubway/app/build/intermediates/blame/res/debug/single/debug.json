@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_intro.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\layout\\activity_intro.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signin.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\layout\\activity_signin.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\drawable_underline.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\drawable\\underline.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\drawable_signup.xml.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\drawable\\signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\drawable_intro_icon.png.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\drawable\\intro_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\2sdsf\\Documents\\soft4_102\\BusanSubway\\app\\src\\main\\res\\drawable\\icon.png"
+    }
+]

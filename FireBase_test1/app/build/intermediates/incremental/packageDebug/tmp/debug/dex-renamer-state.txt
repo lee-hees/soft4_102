@@ -1,0 +1,4 @@
+#Wed Oct 28 22:07:53 KST 2020
+base.0=C\:\\Users\\2sdsf\\AndroidStudioProjects\\FireBase_test1\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
