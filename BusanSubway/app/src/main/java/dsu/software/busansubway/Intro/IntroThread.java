@@ -7,7 +7,7 @@ public class IntroThread extends Thread {
 
     private Handler handler;
 
-    public IntroThread(Handler handler) {
+    protected IntroThread(Handler handler) {
         this.handler = handler;
     }
 

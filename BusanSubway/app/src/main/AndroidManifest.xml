@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".AA.Main"/>
+        <activity android:name=".Select.Main"/>
         <activity android:name=".Login.SigninActivity"/>
         <activity android:name=".Login.SignupActivity"/>
         <activity android:name=".Intro.IntroActivity">

@@ -1,7 +1,9 @@
 package dsu.software.busansubway.Login;
 
-import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,14 +18,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import dsu.software.busansubway.AA.Main;
+import java.util.regex.Pattern;
+
 import dsu.software.busansubway.R;
 
 public class SignupActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    EditText Eemail, Epassword;
-    Button signin, signup;
+    EditText Eemail, Epassword, Epassword_check;
+    Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +35,72 @@ public class SignupActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        final Boolean[] color = {false, false, false};
+
         Eemail = findViewById(R.id.email_up);
+        Eemail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                color[0] = Pattern.matches("\\w+@\\w+\\.\\w+(\\.\\w+)?", Eemail.getText().toString());
+                if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
+                    signup.setBackgroundResource(R.color.color);
+                } else {
+                    signup.setBackgroundResource(R.color.grey);
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
         Epassword = findViewById(R.id.password_up);
+        Epassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                color[1] = Epassword.getText().toString().length() >= 6;
+                if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
+                    signup.setBackgroundResource(R.color.color);
+                } else {
+                    signup.setBackgroundResource(R.color.grey);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        Epassword_check = findViewById(R.id.password_check_up);
+        Epassword_check.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                color[2] = Epassword.getText().toString().length() >= 6;
+                if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
+                    signup.setBackgroundResource(R.color.color);
+                } else {
+                    signup.setBackgroundResource(R.color.grey);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
 
         signup = findViewById(R.id.signup_up);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +109,7 @@ public class SignupActivity extends AppCompatActivity {
                 signup();
             }
         });
-        
+
     }
 
     @Override
