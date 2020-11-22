@@ -11,9 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".Select.Main"/>
-        <activity android:name=".Login.SigninActivity"/>
-        <activity android:name=".Login.SignupActivity"/>
+        <activity android:name=".Inside.InsideActivity" />
+        <activity android:name=".Select.Station_Tab" />
+        <activity android:name=".Details.DetailActivity" />
+        <activity android:name=".Login.SignupActivity" />
+        <activity android:name=".Login.SigninActivity" />
         <activity android:name=".Intro.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

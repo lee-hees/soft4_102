@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="out_1">1번출구</string>
+    <string name="out_2">2번출구</string>
+    <string name="out_3">3번출구</string>
+    <string name="out_4">4번출구</string>
+    <string name="out_5">5번출구</string>
+    <string name="out_6">6번출구</string>
+    <string name="out_7">7번출구</string>
+    <string name="out_8">8번출구</string>
+    <string name="out_9">9번출구</string>
+    <string name="out_10">10번출구</string>
+    <string name="out_11">11번출구</string>
+    <string name="out_12">12번출구</string>
+
+</resources>

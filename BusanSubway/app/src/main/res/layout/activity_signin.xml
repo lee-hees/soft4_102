@@ -82,7 +82,7 @@
 
         <Button
             android:id="@+id/signup_in"
-            android:layout_width="300sp"
+            android:layout_width="250sp"
             android:layout_height="30sp"
             android:background="@color/color"
             android:gravity="center"

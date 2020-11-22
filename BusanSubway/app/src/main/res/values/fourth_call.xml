@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fourth_call_1">
+        주소 부산광역시 동래구 아시아드대로 지하 232\n전화 1544-5005
+    </string>
+    <string name="fourth_call_2">
+        주소 부산광역시 동래구 중앙대로 1324\n전화 1544-5005
+    </string>
+    <string name="fourth_call_3">
+        주소 부산광역시 동래구 충렬대로 지하 223\n전화 1544-5005
+    </string>
+    <string name="fourth_call_4">
+        주소 부산광역시 동래구 충렬대로 지하 285\n전화 1544-5005
+    </string>
+    <string name="fourth_call_5">
+        주소 부산광역시 동래구 바송로 지하 205\n전화 1544-5005
+    </string>
+    <string name="fourth_call_6">
+        주소 부산광역시 동래구 반송로 지하 281\n전화 1544-5005
+    </string>
+    <string name="fourth_call_7">
+        주소 부산광역시 금정구 반송로 387\n전화 1544-5005
+    </string>
+    <string name="fourth_call_8">
+        주소 부산광역시 금정구 반송로 465\n전화 1544-5005
+    </string>
+    <string name="fourth_call_9">
+        주소 부산광역시 해운대구 반송로 550\n전화 1544-5005
+    </string>
+    <string name="fourth_call_10">
+        주소 부산광역시 해운대구 석대천로 121\n전화 1544-5005
+    </string>
+    <string name="fourth_call_11">
+        주소 부산광역시 해운대구 반송로 803\n전화 1544-5005
+    </string>
+    <string name="fourth_call_12">
+        주소 부산광역시 해운대구 반송로 917\n전화 1544-5005
+    </string>
+    <string name="fourth_call_13">
+        주소 부산광역시 기장군 철마면 반송로 991\n전화 1544-5005
+    </string>
+    <string name="fourth_call_14">
+        주소 부산광역시 기장군 철마면 반송로 1101\n전화 1544-5005
+    </string>
+
+</resources>

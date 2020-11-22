@@ -27,6 +27,7 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText Eemail, Epassword, Epassword_check;
     Button signup;
+    private Boolean[] color = {false, false, false};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,6 @@ public class SignupActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        final Boolean[] color = {false, false, false};
 
         Eemail = findViewById(R.id.email_up);
         Eemail.addTextChangedListener(new TextWatcher() {
@@ -122,27 +122,33 @@ public class SignupActivity extends AppCompatActivity {
     private void signup() {
         String email = Eemail.getText().toString();
         String password = Epassword.getText().toString();
+        String password_check = Epassword_check.getText().toString();
 
 //        Toast.makeText(this, email +"\n"+ password, Toast.LENGTH_SHORT).show();
 
-        try {
-            mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                finish();
-                            } else {
-                                Toast.makeText(SignupActivity.this, "이메일 또는 비밀번호가 다릅니다", Toast.LENGTH_SHORT).show();
+        if (color[0] && color[1] && color[2] && password.equals(password_check)) {
+            try {
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    finish();
+                                } else {
+                                    Toast.makeText(SignupActivity.this, "이메일 형식이 다릅니다", Toast.LENGTH_SHORT).show();
+                                }
+
                             }
+                        });
 
-                        }
-                    });
-
-        } catch (Exception e) {
-            Toast.makeText(this, "이메일 또는 비밀번호를 입력하시오", Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                Toast.makeText(this, "이메일 또는 비밀번호를 입력하시오", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            Toast.makeText(SignupActivity.this, "이메일 형식 또는 비밀번호가 다릅니다", Toast.LENGTH_SHORT).show();
         }
 
     }
