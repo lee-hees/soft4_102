@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="kim_in_1">
+        엘리베이터, 자전거보관소, 고객안내센터, 환승주차장
+    </string>
+    <string name="kim_in_2">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_3">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_4">
+        엘리베이터, 고객안내센터
+    </string>
+    <string name="kim_in_5">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_6">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_7">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_8">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_9">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_10">
+        엘리베이터, 자전거보관소, 고객안내센터
+
+    </string>
+    <string name="kim_in_11">
+        엘리베이터, 자전거보관소, 고객안내센터
+
+    </string>
+    <string name="kim_in_12">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_13">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_14">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_15">
+        엘리베이터, 자전거보관소, 고객안내센터, 환승주차장
+    </string>
+    <string name="kim_in_16">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_17">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_18">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_19">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_20">
+        엘리베이터, 자전거보관소, 고객안내센터
+    </string>
+    <string name="kim_in_21">
+        엘리베이터, 자전거보관소, 고객안내센터, 환승주차장
+
+    </string>
+
+</resources>

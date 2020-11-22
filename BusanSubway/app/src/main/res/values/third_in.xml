@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="third_in_1">
+        엘리베이터, 고객안내센터, 휠체어, 만남의장소\n문화공간
+    </string>
+    <string name="third_in_2">
+        엘리베이터, 고객안내센터, 만남의장소, 환승주차장\n자전거보관소
+    </string>
+    <string name="third_in_3">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+    </string>
+    <string name="third_in_4">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+    </string>
+    <string name="third_in_5">
+        엘리베이터, 자전거보관소, 고객안내센터, 만남의장소\n문화공간
+    </string>
+    <string name="third_in_6">
+         엘리베이터, 고객안내센터, 만남의장소,, 자전거보관소
+    </string>
+    <string name="third_in_7">
+         엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="third_in_8">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+    </string>
+    <string name="third_in_9">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소\n문화공간, 관광안내소
+    </string>
+    <string name="third_in_10">
+        엘리베이터, 고객안내센터, 자전거보관소
+    </string>
+    <string name="third_in_11">
+        엘리베이터, 고객안내센터, 자전거보관소
+    </string>
+    <string name="third_in_12">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+    </string>
+    <string name="third_in_13">
+        엘리베이터, 자전거보관소, 고객안내센터, 만남의장소
+    </string>
+    <string name="third_in_14">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="third_in_15">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="third_in_16">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="third_in_17">
+        엘리베이터, 만남의장소, 환승주차장, 자전거보관소
+
+    </string>
+
+</resources>

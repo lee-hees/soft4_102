@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--전화 1544-5005-->
+    <string name="first_call_1">
+        주소  부산광역시 사하구 다대로 지하 692
+\n전화 1544-5005
+    </string>
+    <string name="first_call_2">
+        주소 부산광역시 사하구 다대로 지하548
+\n전화 1544-5005
+    </string>
+    <string name="first_call_3">
+        주소 부산광역시 사하구 다대로 지하422
+\n전화 1544-5005
+    </string>
+    <string name="first_call_4">
+        주소 부산광역시 사하구 다대로 지하310
+\n전화 1544-5005
+    </string>
+    <string name="first_call_5">
+        주소 부산광역시 사하구 다대로 지하230
+\n전화 1544-5005
+    </string>
+    <string name="first_call_6">
+        주소 부산광역시 사하구 신산로 지하 168
+\n전화 1544-5005
+    </string>
+    <string name="first_call_7">
+        주소 부산광역시 사하구 하신번영로 140
+\n전화 1544-5005
+    </string>
+    <string name="first_call_8">
+        주소 부산광역시 사하구 낙동남로 지하 1415
+\n전화 1544-5005
+    </string>
+    <string name="first_call_9">
+        주소 부산광역시 사하구 낙동대로 지하 405
+\n전화 1544-5005
+    </string>
+    <string name="first_call_10">
+        주소 부산광역시 사하구 낙동대로 지하 309
+\n전화 1544-5005
+    </string>
+    <string name="first_call_11">
+        주소 부산광역시 사하구 낙동대로 지하221
+\n전화 1544-5005
+    </string>
+    <string name="first_call_12">
+        주소 부산광역시 사하구 낙동대로 지하 141
+\n전화 1544-5005
+    </string>
+    <string name="first_call_13">
+        주소 부산광역시 서구 대영로 지하 1
+\n전화 1544-5005
+    </string>
+    <string name="first_call_14">
+        주소 부산광역시 서구 구덕로 지하 290\n전화 1544-5005
+    </string>
+    <string name="first_call_15">
+        주소 부산광역시 서구 구덕로 지하170\n전화 1544-5005
+    </string>
+    <string name="first_call_16">
+        주소 부산광역시 중구 구덕로 지하80\n전화 1544-5005
+    </string>
+    <string name="first_call_17">
+        주소 부산광역시 중구 구덕로 지하12\n전화 1544-5005
+    </string>
+    <string name="first_call_18">
+        주소 부산광역시 중구 중앙대로 지하 83
+\n전화 1544-5005
+    </string>
+    <string name="first_call_19">
+        주소 부산광역시 동구 중앙대로 지하 200\n전화 1544-5005
+    </string>
+    <string name="first_call_20">
+        주소 부산광역시 동구 중앙대로 지하 264\n전화 1544-5005
+    </string>
+    <string name="first_call_21">
+        주소 부산광역시 동구 중앙대로 지하 350\n전화 1544-5005
+    </string>
+    <string name="first_call_22">
+        주소 부산광역시 동구 중앙대로 지하 446\n전화 1544-5005
+    </string>
+    <string name="first_call_23">
+        주소 부산광역시 동구 범일로 지하 108\n전화 1544-5005
+    </string>
+    <string name="first_call_24">
+        주소 부산광역시 부산진구 중앙대로 지하612\n전화 1544-5005
+    </string>
+    <string name="first_call_25">
+        주소 부산광역시 부산진구 중앙대로 지하 730\n전화 1544-5005
+    </string>
+    <string name="first_call_26">
+        주소 부산광역시 부산진구 중앙대로 지하786\n전화 1544-5005
+    </string>
+    <string name="first_call_27">
+        주소 부산광역시 부산진구 중앙대로 지하930\n전화 1544-5005
+    </string>
+    <string name="first_call_28">
+        주소 부산광역시 연제구 중앙대로 지하 1017\n전화 1544-5005
+    </string>
+    <string name="first_call_29">
+        부산광역시 연제구 중앙대로 지하 1101\n전화 1544-5005
+    </string>
+    <string name="first_call_30">
+        주소 부산광역시 연제구 중앙대로 지하 1217\n전화 1544-5005
+    </string>
+    <string name="first_call_31">
+        주소 부산광역시 동래구 중앙대로 1324\n전화 1544-5005
+    </string>
+    <string name="first_call_32">
+        주소 부산광역시 동래구 중앙대로 1414\n전화 1544-5005
+    </string>
+    <string name="first_call_33">
+        주소 부산광역시 동래구 중앙대로 1520\n전화 1544-5005
+    </string>
+    <string name="first_call_34">
+        주소 부산광역시 금정구 장전온천천로48\n전화 1544-5005
+    </string>
+    <string name="first_call_35">
+        주소 부산광역시 금정구 장전온천천로 144\n전화 1544-5005
+    </string>
+    <string name="first_call_36">
+        주소 부산광역시 금정구 금정로233번길 46\n전화 1544-5005
+    </string>
+    <string name="first_call_37">
+        주소 부산광역시 금정구 중앙대로 1927-1\n전화 1544-5005
+    </string>
+    <string name="first_call_38">
+        주소 부산광역시 금정구 중앙대로 2019-1\n전화 1544-5005
+    </string>
+    <string name="first_call_39">
+        주소 부산광역시 금정구 중앙대로 2107\n전화 1544-5005
+    </string>
+    <string name="first_call_40">
+        주소 부산광역시 금정구 중앙대로 2238\n전화 1544-5005
+    </string>
+
+</resources>
