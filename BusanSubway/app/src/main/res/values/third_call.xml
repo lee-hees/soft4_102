@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="third_call_1">
+        주소 부산광역시 수영구 수영로 지하 677\n전화 1544-5005
+    </string>
+    <string name="third_call_2">
+        주소 부산광역시 수영구 연수로 지하 337\n전화 1544-5005
+    </string>
+    <string name="third_call_3">
+        주소 부산광역시 연제구 연수로 지하 229\n전화 1544-5005
+    </string>
+    <string name="third_call_4">
+        주소 부산광역시 연제구 월드컵대로 지하 23\n전화 1544-5005
+    </string>
+    <string name="third_call_5">
+         부산광역시 연제구 중앙대로 지하 1101\n전화 1544-5005
+    </string>
+    <string name="third_call_6">
+        주소 부산광역시 연제구 월드컵대로 지하 209\n전화 1544-5005
+    </string>
+    <string name="third_call_7">
+        주소 부산광역시 연제구 아시아드대로 지하 73\n전화 1544-5005
+    </string>
+    <string name="third_call_8">
+        주소 부산광역시 동래구 아시아드대로 지하 153\n전화 1544-5005
+    </string>
+    <string name="third_call_9">
+        주소 부산광역시 동래구 아시아드대로 지하 232\n전화 1544-5005
+    </string>
+    <string name="third_call_10">
+        주소 부산광역시 북구 만덕대로 지하 291\n전화 1544-5005
+    </string>
+    <string name="third_call_11">
+        주소 부산광역시 북구 만덕대로 지하 179\n전화 1544-5005
+    </string>
+    <string name="third_call_12">
+        주소 부산광역시 북구 만덕대로 지하 79\n전화 1544-5005
+    </string>
+    <string name="third_call_13">
+        주소 부산광역시 북구 금곡대로 지하14\n전화 1544-5005
+    </string>
+    <string name="third_call_14">
+        주소 부산광역시 북구 낙동대로 1697\n전화 1544-5005
+    </string>
+    <string name="third_call_15">
+        주소 부산광역시 강서구 낙동북로 485\n전화 1544-5005
+    </string>
+    <string name="third_call_16">
+        주소 부산광역시 강서구 낙동북로 371\n전화 1544-5005
+    </string>
+    <string name="third_call_17">
+        주소 부산광역시 강서구 낙동북로 295\n전화 1544-5005
+    </string>
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dong_in_1">
+        엘리베이터, 환승주차장, 자전거보관소
+    </string>
+    <string name="dong_in_2">
+        엘리베이터, 관광안내소, 환승주차장, 자전거보관소
+
+    </string>
+    <string name="dong_in_3">
+        엘리베이터, 관광안내소, 환승주차장, 자전거보관소
+
+    </string>
+    <string name="dong_in_4">
+        엘리베이터, 관광안내소, 환승주차장, 자전거보관소
+
+    </string>
+    <string name="dong_in_5">
+        엘리베이터, 관광안내소, 환승주차장, 자전거보관소
+
+    </string>
+    <string name="dong_in_6">
+        엘리베이터, 환승주차장, 자전거보관소
+    </string>
+    <string name="dong_in_7">
+        엘리베이터, 환승주차장, 자전거보관소
+    </string>
+    <string name="dong_in_8">
+        엘리베이터, 환승주차장, 자전거보관소
+    </string>
+    <string name="dong_in_9">
+        엘리베이터, 자전거보관소
+    </string>
+    <string name="dong_in_10">
+        엘리베이터, 환승주차장, 자전거보관소
+    </string>
+    <string name="dong_in_11">
+        엘리베이터, 환승주차장, 자전거보관소, 무인민원발급기
+    </string>
+    <string name="dong_in_12">
+        엘리베이터, 환승주차장, 자전거보관소
+
+    </string>
+    <string name="dong_in_13">
+        엘리베이터, 관광안내소, 자전거보관소
+    </string>
+    <string name="dong_in_14">
+        엘리베이터, 환승주차장, 자전거보관소, 관광안내소
+    </string>
+    <string name="dong_in_15">
+        엘리베이터, 환승주차장, 자전거보관소, 관광안내소
+
+    </string>
+
+</resources>

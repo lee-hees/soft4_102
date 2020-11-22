@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color">#00a8f3</color>
+
+    <color name="color_tab">#ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#cccccc</color>
+
+    <color name="first">#FF9800</color>
+<!--    <color name="second">#</color>-->
+<!--    <color name="third">#</color>-->
+<!--    <color name="fourth">#</color>-->
+<!--    <color name="dong">#</color>-->
+<!--    <color name="kim">#</color>-->
+
+    <color name="train_pregnant">#FF80AB</color>
+    <color name="train_black">#000000</color>
+    <color name="train_white">#FFFFFF</color>
+
+    <color name="train_green">#B6DC44</color>
+    <color name="train_yellow">#F8E756</color>
+    <color name="train_red">#F34444</color>
+
+</resources>

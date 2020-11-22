@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="kim_call_1">
+        주소 부산광역시 사상구 광장로 83\n전화 055-310-9601
+    </string>
+    <string name="kim_call_2">
+        주소 부산광역시 사상구 광장로 9\n전화 055-310-9602
+    </string>
+    <string name="kim_call_3">
+        주소 부산광역시 강서구 유통단지1로57번길 7\n전화 055-310-9603
+    </string>
+    <string name="kim_call_4">
+        주소 부산광역시 강서구 공항진입로 165\n전화 055-310-9604
+    </string>
+    <string name="kim_call_5">
+        주소 부산광역시 강서구 경전철로 10\n전화 055-310-9605
+    </string>
+    <string name="kim_call_6">
+        주소 부산광역시 강서구 경전철로 194\n전화 055-310-9606
+    </string>
+    <string name="kim_call_7">
+        주소 부산광역시 강서구 낙동북로 294\n전화 055-310-9607
+    </string>
+    <string name="kim_call_8">
+        주소 부산광역시 강서구 낙동북로 199\n전화 055-310-9608
+    </string>
+    <string name="kim_call_9">
+        주소 부산광역시 강서구 낙동북로 82\n전화 055-310-9609
+    </string>
+    <string name="kim_call_10">
+        주소 경상남도 김해시 김해대로 2787\n전화 055-310-9610
+    </string>
+    <string name="kim_call_11">
+        주소 경상남도 김해시 김해대로 2718\n전화 055-310-9611
+    </string>
+    <string name="kim_call_12">
+        주소 경상남도 김해시 김해대로 2641\n전화 055-310-9612
+    </string>
+    <string name="kim_call_13">
+        주소 경상남도 김해시 김해대로 2515\n전화 055-310-9613
+    </string>
+    <string name="kim_call_14">
+        주소 경상남도 김해시 김해대로 2408\n전화 055-310-9614
+    </string>
+    <string name="kim_call_15">
+        주소 경상남도 김해시 김해대로 2350\n전화 055-310-9615
+
+    </string>
+    <string name="kim_call_16">
+        주소 경상남도 김해시 김해대로 2249\n전화 055-310-9616
+    </string>
+    <string name="kim_call_17">
+        주소 경상남도 김해시 김해대로 2181\n전화 055-310-9617
+
+    </string>
+    <string name="kim_call_18">
+        주소 경상남도 김해시 김해대로 2103\n전화 055-310-9618
+    </string>
+    <string name="kim_call_19">
+        주소 경상남도 김해시 해반천로 5\n전화 055-310-9619
+    </string>
+    <string name="kim_call_20">
+        주소 경상남도 김해시 해반천로 129\n전화 055-310-9620
+    </string>
+    <string name="kim_call_21">
+        주소 경상남도 김해시 해반천로 211\n전화 055-310-9621
+    </string>
+
+</resources>
