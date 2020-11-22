@@ -1,0 +1,10 @@
+<resources>
+    <string name="station_name">호선</string>
+    <string name="where">행</string>
+    <string name="locate">역</string>
+    <string name="visible">혼잡도 다시보기</string>
+    <string name="subway_car1_button">1번객차</string>
+    <string name="subway_car2_button">2번객차</string>
+    <string name="subway_car3_button">3번객차</string>
+    <string name="subway_car4_button">4번객차</string>">BusanSubway
+</resources>

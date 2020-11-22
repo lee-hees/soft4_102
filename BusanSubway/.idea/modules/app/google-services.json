@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "646597810442",
+    "firebase_url": "https://busansubway-744c8.firebaseio.com",
+    "project_id": "busansubway-744c8",
+    "storage_bucket": "busansubway-744c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646597810442:android:652bcdc297aa18f95a02f3",
+        "android_client_info": {
+          "package_name": "dsu.software.busansubway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646597810442-4l8knm91ucfb1g2cjr28r0hjpu0dq7gn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dsu.software.busansubway",
+            "certificate_hash": "36c799c4ee207560d386a84810479e5601222af9"
+          }
+        },
+        {
+          "client_id": "646597810442-gc7d5ukce2q830ua6pcavhid43l2c8no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9ND047BA-4aehds7oKr_dIMin_MAwpac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646597810442-gc7d5ukce2q830ua6pcavhid43l2c8no.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
