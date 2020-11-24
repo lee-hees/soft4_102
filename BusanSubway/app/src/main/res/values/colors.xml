@@ -8,12 +8,12 @@
     <color name="black">#000000</color>
     <color name="grey">#cccccc</color>
 
-    <color name="first">#FF9800</color>
-<!--    <color name="second">#</color>-->
-<!--    <color name="third">#</color>-->
-<!--    <color name="fourth">#</color>-->
-<!--    <color name="dong">#</color>-->
-<!--    <color name="kim">#</color>-->
+    <color name="first">#FC7F25</color>
+    <color name="second">#B2E419</color>
+    <color name="third">#B77A56</color>
+    <color name="fourth">#02A3E9</color>
+    <color name="dong">#98DAEA</color>
+    <color name="kim">#A04BA2</color>
 
     <color name="train_pregnant">#FF80AB</color>
     <color name="train_black">#000000</color>

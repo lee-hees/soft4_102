@@ -1,127 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="fourth_out_1">
-              1번출구\n\t 온천3동주민센터, 글로벌문화예술원, 금강초등학교\n
-2번출구\n\t (구)부산백화점 방면, 종합운동장, 동래구 구민체육센터\n
-3번출구\n\t 온천3동우체국, 대한민국정형외과병원\n
-4번출구\n\t 미남초등학교\n
-5번출구\n\t 온천3치안센터, 한사랑아파트, 미남교차로 방면\n
-6번출구\n\t 광혜병원, 미남교차로 방면\n
-7번출구\n\t 금강초등학교, 미남교차로방면\n
-8번출구\n\t 금정시장, 미남초등학교\n
-9번출구\n\t 미남교차로
-\n10번출구\n\t 내성교차로, 광혜병원
-\n11번출구\n\t 만덕터널
-\n12번출구\n\t 온천2동 주민센터, 내성교차로 방면
-\n13번출구\n\t 온천동 방면
-\n14번출구\n\t 온천2치안센터
+    <string name="fourth_out_1_1">온천3동주민센터, 글로벌문화예술원, 금강초등학교</string>
+    <string name="fourth_out_1_2">(구)부산백화점 방면, 종합운동장, 동래구 구민체육센터</string>
+    <string name="fourth_out_1_3">온천3동우체국, 대한민국정형외과병원</string>
+    <string name="fourth_out_1_4">미남초등학교</string>
+    <string name="fourth_out_1_5">온천3치안센터, 한사랑아파트, 미남교차로 방면</string>
+    <string name="fourth_out_1_6">광혜병원, 미남교차로 방면</string>
+    <string name="fourth_out_1_7">금강초등학교, 미남교차로방면</string>
+    <string name="fourth_out_1_8">금정시장, 미남초등학교</string>
+    <string name="fourth_out_1_9">미남교차로</string>
+    <string name="fourth_out_1_10">1내성교차로, 광혜병원</string>
+    <string name="fourth_out_1_11">1만덕터널</string>
+    <string name="fourth_out_1_12">1온천2동 주민센터, 내성교차로 방면</string>
+    <string name="fourth_out_1_13">1온천동 방면</string>
+    <string name="fourth_out_1_14">1온천2치안센터</string>
 
-    </string>
-    <string name="fourth_out_2">
-        1번출구\n\t 한국건강관리협회 부산지부, 내성중학교, 내성교차로\n
-2번출구\n\t 대동병원, 동래구청, 동래경찰서방면, 부산지방기상청\n
-3번출구\n\t 금강공원, 내산초등학교\n\t 시외버스정류소(마산,창원,김해 방면)\n
-4번출구\n\t 동래우체국, 명륜초등학교, 동래중학교, 중앙여자고등학교\n
-5번출구\n\t 내산초등학교, 동래시외버스정류장\n\t 한국건강관리협회 부산지부, 온천2동 주민센터\n
-6번출구\n\t 사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장\n
-7번출구\n\t 내산초등학교, 동래시외버스정류장\n\t 한국건강관리협회 부산지부, 롯데백화점\n
-8번출구\n\t 사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장\n\t 수안초등학교
+    <string name="fourth_out_2_1">한국건강관리협회 부산지부, 내성중학교, 내성교차로</string>
+    <string name="fourth_out_2_2">대동병원, 동래구청, 동래경찰서방면, 부산지방기상청</string>
+    <string name="fourth_out_2_3">금강공원, 내산초등학교 시외버스정류소(마산,창원,김해 방면)</string>
+    <string name="fourth_out_2_4">동래우체국, 명륜초등학교, 동래중학교, 중앙여자고등학교</string>
+    <string name="fourth_out_2_5">내산초등학교, 동래시외버스정류장 한국건강관리협회 부산지부, 온천2동 주민센터</string>
+    <string name="fourth_out_2_6">사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장</string>
+    <string name="fourth_out_2_7">내산초등학교, 동래시외버스정류장 한국건강관리협회 부산지부, 롯데백화점</string>
+    <string name="fourth_out_2_8">사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장 수안초등학교</string>
 
+    <string name="fourth_out_3_1">내성교차로 방면</string>
+    <string name="fourth_out_3_2">내성중학교 방면</string>
+    <string name="fourth_out_3_3">동래구청, 국민건강보험공단</string>
+    <string name="fourth_out_3_4">수안119안전센터, 수안초등학교</string>
+    <string name="fourth_out_3_5">내성초등학교</string>
+    <string name="fourth_out_3_6">동래경찰서</string>
+    <string name="fourth_out_3_7">동래시장</string>
+    <string name="fourth_out_3_8">수안동우체국</string>
 
-    </string>
-    <string name="fourth_out_3">
-        1번출구\n\t 내성교차로 방면\n
-2번출구\n\t 내성중학교 방면\n
-3번출구\n\t 동래구청, 국민건강보험공단\n
-4번출구\n\t 수안119안전센터, 수안초등학교\n
-5번출구\n\t 내성초등학교\n
-6번출구\n\t 동래경찰서\n
-7번출구\n\t 동래시장\n
-8번출구\n\t 수안동우체국
+    <string name="fourth_out_4_1">동래시장, 내성초등학교</string>
+    <string name="fourth_out_4_2">동래경찰서, 수안동우체국, 낙민초등학교</string>
+    <string name="fourth_out_4_3">충렬사, 동래고등학교</string>
+    <string name="fourth_out_4_4">동래역(기차역)</string>
 
+    <string name="fourth_out_5_1">충렬사, 충렬지구대</string>
+    <string name="fourth_out_5_2">안락교차로 방면, 안락1동주민센터, IBK 기업은행 안락동지점</string>
+    <string name="fourth_out_5_3">학산여자중.고등학교, 동신중학교</string>
+    <string name="fourth_out_5_4">서원시장</string>
 
-    </string>
-    <string name="fourth_out_4">
-        1번출구\n\t 동래시장, 내성초등학교\n
-2번출구\n\t 동래경찰서, 수안동우체국, 낙민초등학교\n
-3번출구\n\t 충렬사, 동래고등학교\n
-4번출구\n\t 동래역(기차역)
+    <string name="fourth_out_6_1">동신중학교, 부산맹학교</string>
+    <string name="fourth_out_6_2">안락초등학교</string>
+    <string name="fourth_out_6_3">명장제2동주민센터</string>
+    <string name="fourth_out_6_4">명장1동주민센터, 명장1치안센터, 명장동우체국 금정고등학교, 부산광역시 상수도사업본부, 동래사업소 명동초등학교</string>
 
-    </string>
-    <string name="fourth_out_5">
-        1번출구\n\t 충렬사, 충렬지구대\n
-2번출구\n\t 안락교차로 방면, 안락1동주민센터, IBK 기업은행 안락동지점\n
-3번출구\n\t 학산여자중.고등학교, 동신중학교\n
-4번출구\n\t 서원시장
+    <string name="fourth_out_7_1">서2동주민센터</string>
+    <string name="fourth_out_7_2">동상초등학교</string>
+    <string name="fourth_out_7_3">대묵MPARK아파트</string>
+    <string name="fourth_out_7_4">삼한여명아파트, 삼한 그린피아아파트</string>
 
+    <string name="fourth_out_8_1">부산지방고용노동청, 금사동주민센터, 금사초등학교 부산지방노동위원회</string>
+    <string name="fourth_out_8_2">금사동 방면</string>
+    <string name="fourth_out_8_3">석대사거리 방면, 금사동주민센터</string>
+    <string name="fourth_out_8_4">서금지구대, 금정구종합사회복지관</string>
 
-    </string>
-    <string name="fourth_out_6">
-        1번출구\n\t 동신중학교, 부산맹학교\n
-2번출구\n\t 안락초등학교\n
-3번출구\n\t 명장제2동주민센터\n
-4번출구\n\t 명장1동주민센터, 명장1치안센터, 명장동우체국\n\t 금정고등학교, 부산광역시 상수도사업본부, 동래사업소\n\t 명동초등학교
+    <string name="fourth_out_9_1">반여농산물도매시장</string>
+    <string name="fourth_out_9_2">석대방면, 반여1동방면</string>
 
+    <string name="fourth_out_10_1">영산대역 방면</string>
+    <string name="fourth_out_10_2">해운대구 자원재활용 센터</string>
 
-    </string>
-    <string name="fourth_out_7">
-        1번출구\n\t 서2동주민센터\n
-2번출구\n\t 동상초등학교\n
-3번출구\n\t 대묵MPARK아파트\n
-4번출구\n\t 삼한여명아파트, 삼한 그린피아아파트
+    <string name="fourth_out_11_1">석대역 방면</string>
+    <string name="fourth_out_11_2">영산대학교 부산캠퍼스, 반송초등학교, 반송중학교 부산은행, 농협, 반송우체국, 반송1동주민센터 반송119안전센터, 반송1치안센터 시립반송도서관</string>
+    <string name="fourth_out_11_3">동부산대학역 방면, 반송보건소, 운송초등학교</string>
 
+    <string name="fourth_out_12_1">동부산대학, 운송중학교</string>
+    <string name="fourth_out_12_2">송운초등학교</string>
+    <string name="fourth_out_12_3">고촌역방면</string>
+    <string name="fourth_out_12_4">반송시장, 새마을금고, 운봉우체국, KT반송지점 운봉초등학교, 반송2동주민센터</string>
 
-    </string>
-    <string name="fourth_out_8">
-        1번출구\n\t 부산지방고용노동청, 금사동주민센터, 금사초등학교\n\t 부산지방노동위원회\n
-2번출구\n\t 금사동 방면\n
-3번출구\n\t 석대사거리 방면, 금사동주민센터\n
-4번출구\n\t 서금지구대, 금정구종합사회복지관
+    <string name="fourth_out_13_1">반송2동방면</string>
+    <string name="fourth_out_13_2">운봉종합사회복지관</string>
+    <string name="fourth_out_13_3">실호암공원</string>
+    <string name="fourth_out_13_4">안평리방면</string>
 
-
-    </string>
-    <string name="fourth_out_9">
-        1번출구\n\t 반여농산물도매시장\n
-2번출구\n\t 석대방면, 반여1동방면
-
-
-    </string>
-    <string name="fourth_out_10">
-        1번출구\n\t 영산대역 방면\n
-2번출구\n\t 해운대구 자원재활용 센터
-
-    </string>
-    <string name="fourth_out_11">
-        1번출구\n\t 석대역 방면\n
-2번출구\n\t 영산대학교 부산캠퍼스, 반송초등학교, 반송중학교\n\t 부산은행, 농협, 반송우체국, 반송1동주민센터\n\t 반송119안전센터, 반송1치안센터\n\t 시립반송도서관\n
-3번출구\n\t 동부산대학역 방면, 반송보건소, 운송초등학교
-
-
-    </string>
-    <string name="fourth_out_12">
-        1번출구\n\t 동부산대학, 운송중학교\n
-2번출구\n\t 송운초등학교\n
-3번출구\n\t 고촌역방면\n
-4번출구\n\t 반송시장, 새마을금고, 운봉우체국, KT반송지점\n\t 운봉초등학교, 반송2동주민센터
-
-    </string>
-    <string name="fourth_out_13">
-        1번출구\n\t 반송2동방면\n
-2번출구\n\t 운봉종합사회복지관\n
-3번출구\n\t 실호암공원\n
-4번출구\n\t 안평리방면
-
-
-    </string>
-    <string name="fourth_out_14">
-        1번출구\n\t 한국수력원자력\n
-2번출구\n\t 안평마을\n
-3번출구\n\t 고촌마을, 신진초등학교\n
-4번출구\n\t 안평마을, 안평차량기지
-
-
-    </string>
-
+    <string name="fourth_out_14_1">한국수력원자력</string>
+    <string name="fourth_out_14_2">안평마을</string>
+    <string name="fourth_out_14_3">고촌마을, 신진초등학교</string>
+    <string name="fourth_out_14_4">안평마을, 안평차량기지</string>
 
 </resources>

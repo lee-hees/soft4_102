@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import dsu.software.busansubway.R;
 
-public class InsideActivity extends AppCompatActivity {
+public class InsideActivity_fourth_3 extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     @Override

@@ -36,7 +36,7 @@ public class Station_string extends AppCompatActivity {
                             R.string.second_29, R.string.second_30, R.string.second_31, R.string.second_32,
                             R.string.second_33, R.string.second_34, R.string.second_35, R.string.second_36,
                             R.string.second_37, R.string.second_38, R.string.second_39, R.string.second_40,
-                            R.string.second_41, R.string.second_42
+                            R.string.second_41, R.string.second_42,R.string.second_43
                     },
 
                     {

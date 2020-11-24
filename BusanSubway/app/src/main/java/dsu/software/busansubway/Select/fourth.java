@@ -1,6 +1,8 @@
 package dsu.software.busansubway.Select;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-import dsu.software.busansubway.Details.DetailActivity;
+import dsu.software.busansubway.Details.DetailActivity_fourth;
 import dsu.software.busansubway.R;
 
 public class fourth extends Fragment {
@@ -25,6 +27,7 @@ public class fourth extends Fragment {
     ListviewAdapter myListAdapter;
     ArrayList<ListViewItem> list_itemArrayList;
     LinearLayout info30;
+    TextView st_name;
     static String name;
 
     @Override
@@ -36,7 +39,7 @@ public class fourth extends Fragment {
         gotoDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), DetailActivity.class);
+                Intent intent = new Intent(getContext(), DetailActivity_fourth.class);
                 startActivity(intent);
             }
         });
@@ -62,77 +65,80 @@ public class fourth extends Fragment {
         list_itemArrayList.add(new ListViewItem(4, getString(R.string.fourth_14)));
 
         info30 = view.findViewById(R.id.info30);
+        st_name = view.findViewById(R.id.st_name);
 
         final TextView exit = (TextView) view.findViewById(R.id.exit);
         exit.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                info30.setVisibility(view.GONE);
+                info30.setVisibility(View.GONE);
             }
-        }) ;
+        });
 
         myListAdapter = new ListviewAdapter(getActivity(), list_itemArrayList);
         listView.setAdapter(myListAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                info30.setVisibility(view.VISIBLE);
-                DetailActivity.which = 3; // 4호선 확인용
-                if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_1))) {
-                    DetailActivity.state = 0;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                info30.setVisibility(View.VISIBLE);
+                st_name.setTextColor(Color.parseColor("#02A3E9"));
+                st_name.setText(list_itemArrayList.get(position).getContent().contents);
+                DetailActivity_fourth.which = 3; // 4호선 확인용
+                if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_1))) {
+                    DetailActivity_fourth.state = 0;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_2))) {
-                    DetailActivity.state = 1;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_2))) {
+                    DetailActivity_fourth.state = 1;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_3))) {
-                    DetailActivity.state = 2;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_3))) {
+                    DetailActivity_fourth.state = 2;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_4))) {
-                    DetailActivity.state = 3;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_4))) {
+                    DetailActivity_fourth.state = 3;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_5))) {
-                    DetailActivity.state = 4;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_5))) {
+                    DetailActivity_fourth.state = 4;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_6))) {
-                    DetailActivity.state = 5;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_6))) {
+                    DetailActivity_fourth.state = 5;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_7))) {
-                    DetailActivity.state = 6;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_7))) {
+                    DetailActivity_fourth.state = 6;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_8))) {
-                    DetailActivity.state = 7;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_8))) {
+                    DetailActivity_fourth.state = 7;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_9))) {
-                    DetailActivity.state = 8;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_9))) {
+                    DetailActivity_fourth.state = 8;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_10))) {
-                    DetailActivity.state = 9;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_10))) {
+                    DetailActivity_fourth.state = 9;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_11))) {
-                    DetailActivity.state = 10;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_11))) {
+                    DetailActivity_fourth.state = 10;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_12))) {
-                    DetailActivity.state = 11;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_12))) {
+                    DetailActivity_fourth.state = 11;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_13))) {
-                    DetailActivity.state = 12;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_13))) {
+                    DetailActivity_fourth.state = 12;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
-                } else if (list_itemArrayList.get(position).getContent().equals(getString(R.string.fourth_14))) {
-                    DetailActivity.state = 13;
-                    Station_Tab.name = getString(string.FS[DetailActivity.which][DetailActivity.state]);
+                } else if (list_itemArrayList.get(position).getContent().contents.equals(getString(R.string.fourth_14))) {
+                    DetailActivity_fourth.state = 13;
+                    Station_Tab.name = getString(string.FS[DetailActivity_fourth.which][DetailActivity_fourth.state]);
 
                 }
                 reset(); // 원래 크기로 되돌리기

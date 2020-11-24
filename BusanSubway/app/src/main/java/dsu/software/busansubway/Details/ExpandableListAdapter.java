@@ -1,6 +1,8 @@
 package dsu.software.busansubway.Details;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -93,6 +95,13 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             case CHILD:
                 TextView itemTextView = (TextView) holder.itemView;
                 itemTextView.setText(data.get(position).text);
+                if (item.poss == 1) {
+                    itemTextView.setTextColor(Color.BLACK);
+                } else {
+                    itemTextView.setTextColor(Color.GRAY);
+                }
+
+
                 break;
         }
     }
@@ -113,7 +122,7 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public ImageView btn_expand_toggle;
         public Item refferalItem;
 
-            public ListHeaderViewHolder(View itemView) {
+        public ListHeaderViewHolder(View itemView) {
             super(itemView);
             header_title = (TextView) itemView.findViewById(R.id.header_title);
             btn_expand_toggle = (ImageView) itemView.findViewById(R.id.btn_expand_toggle);
@@ -121,6 +130,7 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     public static class Item {
+        public int poss;
         public int type;
         public String text;
         public List<Item> invisibleChildren;
@@ -129,6 +139,12 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         }
 
         public Item(int type, String text) {
+            this.type = type;
+            this.text = text;
+        }
+
+        public Item(int poss, int type, String text) {
+            this.poss = poss;
             this.type = type;
             this.text = text;
         }
