@@ -28,6 +28,7 @@ public class fourth extends Fragment {
     ArrayList<ListViewItem> list_itemArrayList;
     LinearLayout info30;
     TextView st_name;
+    TextView station_start, station_end, time_start, time_end;
     static String name;
 
     @Override
@@ -149,6 +150,14 @@ public class fourth extends Fragment {
                 //startActivity(todetail);
             }
         });
+
+        station_start = view.findViewById(R.id.station_start);
+        station_end = view.findViewById(R.id.station_end);
+        station_end.setText("안평행");
+        station_start.setText("미남행");
+
+        time_start = view.findViewById(R.id.time_start);
+        time_end = view.findViewById(R.id.time_end);
 
         return view;
     }

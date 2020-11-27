@@ -13,6 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +39,27 @@ public class DetailActivity_kim extends AppCompatActivity {
     int[][] subway_tab = new int[6][43];
     public static int which = 0;
     public static int state = 0;
+    public static String title = "";
     LinearLayout station_hosun;
 //    String add = R.string.app_name;
+
+    public static ArrayList<DatabaseReference> kim_move = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_one_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_one_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_one_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_one_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_two_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_two_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_two_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_two_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_three_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_three_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_three_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_three_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_four_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_four_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_four_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> kim_four_to_fourth_list = new ArrayList<>();
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -298,6 +320,482 @@ public class DetailActivity_kim extends AppCompatActivity {
             }
         });
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference kim = database.getReference("kim"); // 1호선
+        DatabaseReference kim_one = kim.child("one"); // 1호선 1호차
+        DatabaseReference kim_two = kim.child("two"); // 1호선 2호차
+        DatabaseReference kim_three = kim.child("three"); // 1호선 3호차
+        DatabaseReference kim_four = kim.child("four"); // 1호선 4호차
+
+        DatabaseReference kim_one_to_first = kim_one.child("one_to_first"); // 1호차의 1번칸
+        DatabaseReference kim_one_to_second = kim_one.child("one_to_second"); // 1호차의 2번칸
+        DatabaseReference kim_one_to_third = kim_one.child("one_to_third"); // 1호차의 3번칸
+        DatabaseReference kim_one_to_fourth = kim_one.child("one_to_fourth"); // 1호차의 4번칸
+        DatabaseReference kim_two_to_first = kim_two.child("two_to_first"); // 2호차의 1번칸
+        DatabaseReference kim_two_to_second = kim_two.child("two_to_second"); // 2호차의 2번칸
+        DatabaseReference kim_two_to_third = kim_two.child("two_to_third"); // 2호차의 3번칸
+        DatabaseReference kim_two_to_fourth = kim_two.child("two_to_fourth"); // 2호차의 4번칸
+        DatabaseReference kim_three_to_first = kim_three.child("three_to_first"); // 3호차의 1번칸
+        DatabaseReference kim_three_to_second = kim_three.child("three_to_second"); // 3호차의 2번칸
+        DatabaseReference kim_three_to_third = kim_three.child("three_to_third"); // 3호차의 3번칸
+        DatabaseReference kim_three_to_fourth = kim_three.child("three_to_fourth"); // 3호차의 4번칸
+        DatabaseReference kim_four_to_first = kim_four.child("four_to_first"); // 4호차의 1번칸
+        DatabaseReference kim_four_to_second = kim_four.child("four_to_second"); // 4호차의 2번칸
+        DatabaseReference kim_four_to_third = kim_four.child("four_to_third"); // 4호차의 3번칸
+        DatabaseReference kim_four_to_fourth = kim_four.child("four_to_fourth"); // 4호차의 4번칸
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_01"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_02"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_03"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_04"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_05"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_06"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_07"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_08"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_09"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_10"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_11"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_12"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_13"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_14"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_15"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_16"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_17"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_18"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_19"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_20"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_21"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_22"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_23"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_24"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_25"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_26"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_27"));
+        kim_one_to_first_list.add(kim_one_to_first.child("one_to_first_list_28"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_01"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_02"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_03"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_04"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_05"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_06"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_07"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_08"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_09"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_10"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_11"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_12"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_13"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_14"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_15"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_16"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_17"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_18"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_19"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_20"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_21"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_22"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_23"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_24"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_25"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_26"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_27"));
+        kim_one_to_second_list.add(kim_one_to_second.child("one_to_second_list_28"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_01"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_02"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_03"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_04"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_05"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_06"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_07"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_08"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_09"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_10"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_11"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_12"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_13"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_14"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_15"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_16"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_17"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_18"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_19"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_20"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_21"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_22"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_23"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_24"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_25"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_26"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_27"));
+        kim_one_to_third_list.add(kim_one_to_third.child("one_to_third_list_28"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_01"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_02"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_03"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_04"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_05"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_06"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_07"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_08"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_09"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_10"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_11"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_12"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_13"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_14"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_15"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_16"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_17"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_18"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_19"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_20"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_21"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_22"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_23"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_24"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_25"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_26"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_27"));
+        kim_one_to_fourth_list.add(kim_one_to_fourth.child("one_to_fourth_list_28"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_01"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_02"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_03"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_04"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_05"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_06"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_07"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_08"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_09"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_10"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_11"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_12"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_13"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_14"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_15"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_16"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_17"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_18"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_19"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_20"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_21"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_22"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_23"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_24"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_25"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_26"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_27"));
+        kim_two_to_first_list.add(kim_two_to_first.child("two_to_first_list_28"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_01"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_02"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_03"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_04"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_05"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_06"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_07"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_08"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_09"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_10"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_11"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_12"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_13"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_14"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_15"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_16"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_17"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_18"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_19"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_20"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_21"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_22"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_23"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_24"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_25"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_26"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_27"));
+        kim_two_to_second_list.add(kim_two_to_second.child("two_to_second_list_28"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_01"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_02"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_03"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_04"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_05"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_06"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_07"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_08"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_09"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_10"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_11"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_12"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_13"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_14"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_15"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_16"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_17"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_18"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_19"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_20"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_21"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_22"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_23"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_24"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_25"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_26"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_27"));
+        kim_two_to_third_list.add(kim_two_to_third.child("two_to_third_list_28"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_01"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_02"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_03"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_04"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_05"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_06"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_07"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_08"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_09"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_10"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_11"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_12"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_13"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_14"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_15"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_16"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_17"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_18"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_19"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_20"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_21"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_22"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_23"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_24"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_25"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_26"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_27"));
+        kim_two_to_fourth_list.add(kim_two_to_fourth.child("two_to_fourth_list_28"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_01"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_02"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_03"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_04"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_05"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_06"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_07"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_08"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_09"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_10"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_11"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_12"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_13"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_14"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_15"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_16"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_17"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_18"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_19"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_20"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_21"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_22"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_23"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_24"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_25"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_26"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_27"));
+        kim_three_to_first_list.add(kim_three_to_first.child("three_to_first_list_28"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_01"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_02"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_03"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_04"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_05"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_06"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_07"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_08"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_09"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_10"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_11"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_12"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_13"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_14"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_15"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_16"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_17"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_18"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_19"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_20"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_21"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_22"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_23"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_24"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_25"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_26"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_27"));
+        kim_three_to_second_list.add(kim_three_to_second.child("three_to_second_list_28"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_01"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_02"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_03"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_04"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_05"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_06"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_07"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_08"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_09"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_10"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_11"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_12"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_13"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_14"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_15"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_16"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_17"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_18"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_19"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_20"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_21"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_22"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_23"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_24"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_25"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_26"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_27"));
+        kim_three_to_third_list.add(kim_three_to_third.child("three_to_third_list_28"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_01"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_02"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_03"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_04"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_05"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_06"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_07"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_08"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_09"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_10"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_11"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_12"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_13"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_14"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_15"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_16"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_17"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_18"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_19"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_20"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_21"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_22"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_23"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_24"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_25"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_26"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_27"));
+        kim_three_to_fourth_list.add(kim_three_to_fourth.child("three_to_fourth_list_28"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_01"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_02"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_03"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_04"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_05"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_06"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_07"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_08"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_09"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_10"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_11"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_12"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_13"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_14"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_15"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_16"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_17"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_18"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_19"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_20"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_21"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_22"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_23"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_24"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_25"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_26"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_27"));
+        kim_four_to_first_list.add(kim_four_to_first.child("four_to_first_list_28"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_01"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_02"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_03"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_04"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_05"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_06"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_07"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_08"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_09"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_10"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_11"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_12"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_13"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_14"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_15"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_16"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_17"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_18"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_19"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_20"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_21"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_22"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_23"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_24"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_25"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_26"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_27"));
+        kim_four_to_second_list.add(kim_four_to_second.child("four_to_second_list_28"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_01"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_02"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_03"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_04"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_05"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_06"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_07"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_08"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_09"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_10"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_11"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_12"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_13"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_14"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_15"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_16"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_17"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_18"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_19"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_20"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_21"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_22"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_23"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_24"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_25"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_26"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_27"));
+        kim_four_to_third_list.add(kim_four_to_third.child("four_to_third_list_28"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_01"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_02"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_03"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_04"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_05"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_06"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_07"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_08"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_09"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_10"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_11"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_12"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_13"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_14"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_15"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_16"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_17"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_18"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_19"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_20"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_21"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_22"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_23"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_24"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_25"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_26"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_27"));
+        kim_four_to_fourth_list.add(kim_four_to_fourth.child("four_to_fourth_list_28"));
+
+
+
     }
 
     void intentfunc(int detailwhich) {
@@ -339,6 +837,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setText("김해선");
 
             center.setText(R.string.kim_21);
+            title = (String) center.getText();
             right.setVisibility(View.INVISIBLE);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(0, ExpandableListAdapter.HEADER, "출구정보");
@@ -371,6 +870,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             station.setText("김해선");
 
             center.setText(R.string.kim_20);
+            title = (String) center.getText();
             right.setVisibility(View.VISIBLE);
 
             station_start.setText("가야대행");
@@ -387,8 +887,6 @@ public class DetailActivity_kim extends AppCompatActivity {
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_20_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_20_2)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_in_20)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_call_20)));
 
@@ -403,7 +901,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_19);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -433,6 +931,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_18);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -462,6 +961,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_17);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -491,6 +991,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             station.setText("김해선");
 
             center.setText(R.string.kim_16);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -521,6 +1022,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.VISIBLE);
 
             center.setText(R.string.kim_15);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -551,6 +1053,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_14);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -565,8 +1068,6 @@ public class DetailActivity_kim extends AppCompatActivity {
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_14_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_14_2)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_in_14)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_call_14)));
 
@@ -581,6 +1082,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_13);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -610,6 +1112,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_12);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -638,6 +1141,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_11);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -667,6 +1171,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_10);
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -696,7 +1201,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_9);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -725,7 +1230,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_8);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -739,6 +1244,8 @@ public class DetailActivity_kim extends AppCompatActivity {
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_8_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_8_2)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_in_8)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_call_8)));
 
@@ -752,7 +1259,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_7);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -780,7 +1287,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_6);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -809,7 +1316,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_5);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -838,7 +1345,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_4);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -867,7 +1374,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_3);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -896,7 +1403,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_2);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -911,6 +1418,8 @@ public class DetailActivity_kim extends AppCompatActivity {
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_2_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_out_2_2)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_in_2)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.kim_call_2)));
 
@@ -924,7 +1433,7 @@ public class DetailActivity_kim extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
 
             center.setText(R.string.kim_1);
-
+            title = (String) center.getText();
             station_start.setText("가야대행");
             station_end.setText("사상행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();

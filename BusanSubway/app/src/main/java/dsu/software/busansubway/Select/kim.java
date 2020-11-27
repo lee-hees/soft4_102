@@ -28,6 +28,7 @@ public class kim extends Fragment {
     ArrayList<ListViewItem> list_itemArrayList;
     LinearLayout info30;
     TextView st_name;
+    TextView station_start, station_end, time_start, time_end;
     static String name;
 
     @Override
@@ -163,6 +164,14 @@ public class kim extends Fragment {
                 //startActivity(todetail);
             }
         });
+
+        station_start = view.findViewById(R.id.station_start);
+        station_end = view.findViewById(R.id.station_end);
+        station_end.setText("가야대행");
+        station_start.setText("사상행");
+
+        time_start = view.findViewById(R.id.time_start);
+        time_end = view.findViewById(R.id.time_end);
 
         return view;
     }

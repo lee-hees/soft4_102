@@ -13,6 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +39,27 @@ public class DetailActivity_dong extends AppCompatActivity {
     int[][] subway_tab = new int[6][43];
     public static int which = 0;
     public static int state = 0;
+    public static String title = "";
     LinearLayout station_hosun;
 //    String add = R.string.app_name;
+
+    public static ArrayList<DatabaseReference> dong_move = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_one_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_one_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_one_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_one_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_two_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_two_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_two_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_two_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_three_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_three_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_three_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_three_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_four_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_four_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_four_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> dong_four_to_fourth_list = new ArrayList<>();
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -303,6 +325,503 @@ public class DetailActivity_dong extends AppCompatActivity {
             }
         });
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference dong = database.getReference("dong"); // 1호선
+        DatabaseReference dong_one = dong.child("one"); // 1호선 1호차
+        DatabaseReference dong_two = dong.child("two"); // 1호선 2호차
+        DatabaseReference dong_three = dong.child("three"); // 1호선 3호차
+        DatabaseReference dong_four = dong.child("four"); // 1호선 4호차
+
+        DatabaseReference dong_one_to_first = dong_one.child("one_to_first"); // 1호차의 1번칸
+        DatabaseReference dong_one_to_second = dong_one.child("one_to_second"); // 1호차의 2번칸
+        DatabaseReference dong_one_to_third = dong_one.child("one_to_third"); // 1호차의 3번칸
+        DatabaseReference dong_one_to_fourth = dong_one.child("one_to_fourth"); // 1호차의 4번칸
+
+        DatabaseReference dong_two_to_first = dong_two.child("two_to_first"); // 2호차의 1번칸
+        DatabaseReference dong_two_to_second = dong_two.child("two_to_second"); // 2호차의 2번칸
+        DatabaseReference dong_two_to_third = dong_two.child("two_to_third"); // 2호차의 3번칸
+        DatabaseReference dong_two_to_fourth = dong_two.child("two_to_fourth"); // 2호차의 4번칸
+
+        DatabaseReference dong_three_to_first = dong_three.child("three_to_first"); // 3호차의 1번칸
+        DatabaseReference dong_three_to_second = dong_three.child("three_to_second"); // 3호차의 2번칸
+        DatabaseReference dong_three_to_third = dong_three.child("three_to_third"); // 3호차의 3번칸
+        DatabaseReference dong_three_to_fourth = dong_three.child("three_to_fourth"); // 3호차의 4번칸
+
+        DatabaseReference dong_four_to_first = dong_four.child("four_to_first"); // 4호차의 1번칸
+        DatabaseReference dong_four_to_second = dong_four.child("four_to_second"); // 4호차의 2번칸
+        DatabaseReference dong_four_to_third = dong_four.child("four_to_third"); // 4호차의 3번칸
+        DatabaseReference dong_four_to_fourth = dong_four.child("four_to_fourth"); // 4호차의 4번칸
+
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_01"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_02"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_03"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_04"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_05"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_06"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_07"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_08"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_09"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_10"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_11"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_12"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_13"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_14"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_15"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_16"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_17"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_18"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_19"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_20"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_21"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_22"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_23"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_24"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_25"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_26"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_27"));
+        dong_one_to_first_list.add(dong_one_to_first.child("one_to_first_list_28"));
+
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_01"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_02"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_03"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_04"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_05"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_06"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_07"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_08"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_09"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_10"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_11"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_12"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_13"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_14"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_15"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_16"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_17"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_18"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_19"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_20"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_21"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_22"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_23"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_24"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_25"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_26"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_27"));
+        dong_one_to_second_list.add(dong_one_to_second.child("one_to_second_list_28"));
+
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_01"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_02"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_03"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_04"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_05"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_06"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_07"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_08"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_09"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_10"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_11"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_12"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_13"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_14"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_15"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_16"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_17"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_18"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_19"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_20"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_21"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_22"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_23"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_24"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_25"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_26"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_27"));
+        dong_one_to_third_list.add(dong_one_to_third.child("one_to_third_list_28"));
+
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_01"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_02"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_03"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_04"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_05"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_06"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_07"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_08"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_09"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_10"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_11"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_12"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_13"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_14"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_15"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_16"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_17"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_18"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_19"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_20"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_21"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_22"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_23"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_24"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_25"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_26"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_27"));
+        dong_one_to_fourth_list.add(dong_one_to_fourth.child("one_to_fourth_list_28"));
+
+
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_01"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_02"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_03"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_04"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_05"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_06"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_07"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_08"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_09"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_10"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_11"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_12"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_13"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_14"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_15"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_16"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_17"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_18"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_19"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_20"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_21"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_22"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_23"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_24"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_25"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_26"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_27"));
+        dong_two_to_first_list.add(dong_two_to_first.child("two_to_first_list_28"));
+
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_01"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_02"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_03"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_04"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_05"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_06"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_07"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_08"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_09"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_10"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_11"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_12"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_13"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_14"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_15"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_16"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_17"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_18"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_19"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_20"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_21"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_22"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_23"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_24"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_25"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_26"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_27"));
+        dong_two_to_second_list.add(dong_two_to_second.child("two_to_second_list_28"));
+
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_01"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_02"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_03"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_04"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_05"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_06"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_07"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_08"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_09"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_10"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_11"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_12"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_13"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_14"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_15"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_16"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_17"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_18"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_19"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_20"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_21"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_22"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_23"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_24"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_25"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_26"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_27"));
+        dong_two_to_third_list.add(dong_two_to_third.child("two_to_third_list_28"));
+
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_01"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_02"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_03"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_04"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_05"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_06"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_07"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_08"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_09"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_10"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_11"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_12"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_13"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_14"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_15"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_16"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_17"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_18"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_19"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_20"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_21"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_22"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_23"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_24"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_25"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_26"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_27"));
+        dong_two_to_fourth_list.add(dong_two_to_fourth.child("two_to_fourth_list_28"));
+
+
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_01"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_02"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_03"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_04"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_05"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_06"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_07"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_08"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_09"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_10"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_11"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_12"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_13"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_14"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_15"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_16"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_17"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_18"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_19"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_20"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_21"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_22"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_23"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_24"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_25"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_26"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_27"));
+        dong_three_to_first_list.add(dong_three_to_first.child("three_to_first_list_28"));
+
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_01"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_02"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_03"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_04"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_05"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_06"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_07"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_08"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_09"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_10"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_11"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_12"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_13"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_14"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_15"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_16"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_17"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_18"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_19"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_20"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_21"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_22"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_23"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_24"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_25"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_26"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_27"));
+        dong_three_to_second_list.add(dong_three_to_second.child("three_to_second_list_28"));
+
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_01"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_02"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_03"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_04"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_05"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_06"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_07"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_08"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_09"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_10"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_11"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_12"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_13"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_14"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_15"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_16"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_17"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_18"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_19"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_20"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_21"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_22"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_23"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_24"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_25"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_26"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_27"));
+        dong_three_to_third_list.add(dong_three_to_third.child("three_to_third_list_28"));
+
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_01"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_02"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_03"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_04"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_05"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_06"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_07"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_08"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_09"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_10"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_11"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_12"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_13"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_14"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_15"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_16"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_17"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_18"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_19"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_20"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_21"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_22"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_23"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_24"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_25"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_26"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_27"));
+        dong_three_to_fourth_list.add(dong_three_to_fourth.child("three_to_fourth_list_28"));
+
+
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_01"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_02"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_03"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_04"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_05"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_06"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_07"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_08"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_09"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_10"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_11"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_12"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_13"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_14"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_15"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_16"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_17"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_18"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_19"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_20"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_21"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_22"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_23"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_24"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_25"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_26"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_27"));
+        dong_four_to_first_list.add(dong_four_to_first.child("four_to_first_list_28"));
+
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_01"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_02"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_03"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_04"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_05"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_06"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_07"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_08"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_09"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_10"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_11"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_12"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_13"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_14"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_15"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_16"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_17"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_18"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_19"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_20"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_21"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_22"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_23"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_24"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_25"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_26"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_27"));
+        dong_four_to_second_list.add(dong_four_to_second.child("four_to_second_list_28"));
+
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_01"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_02"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_03"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_04"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_05"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_06"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_07"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_08"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_09"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_10"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_11"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_12"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_13"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_14"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_15"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_16"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_17"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_18"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_19"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_20"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_21"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_22"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_23"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_24"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_25"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_26"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_27"));
+        dong_four_to_third_list.add(dong_four_to_third.child("four_to_third_list_28"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_01"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_02"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_03"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_04"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_05"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_06"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_07"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_08"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_09"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_10"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_11"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_12"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_13"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_14"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_15"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_16"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_17"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_18"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_19"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_20"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_21"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_22"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_23"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_24"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_25"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_26"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_27"));
+        dong_four_to_fourth_list.add(dong_four_to_fourth.child("four_to_fourth_list_28"));
+
+
+
 
     }
 
@@ -342,6 +861,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_1);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             left.setVisibility(View.INVISIBLE);
@@ -371,6 +891,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_2);
+            title = (String) center.getText();
             left.setVisibility(View.VISIBLE);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -387,8 +908,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_2_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_2_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_2_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_2)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_2)));
 
@@ -402,6 +921,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_3);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -417,22 +937,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_3_10)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_3)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_3)));
 
@@ -446,6 +950,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_4);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -462,24 +967,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_4_11)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_4)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_4)));
 
@@ -494,6 +981,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
             station.setText("동해선");
             center.setText(R.string.dong_5);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -511,6 +999,8 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_5_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_5_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_5_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_5)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_5)));
 
@@ -526,6 +1016,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             station.setText("2호선");
             hosun.setText("동해선");
             center.setText(R.string.dong_6);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -543,6 +1034,20 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_6_10)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_6)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_6)));
 
@@ -557,6 +1062,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
             station.setText("동해선");
             center.setText(R.string.dong_7);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -572,6 +1078,8 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_7_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_7_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_7_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_7)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_7)));
 
@@ -584,6 +1092,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_8);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -612,6 +1121,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_9);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -626,8 +1136,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_9_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_9_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_9_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_9)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_9)));
 
@@ -641,6 +1149,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_10);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -657,20 +1166,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_10_10)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_10)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_10)));
 
@@ -684,6 +1179,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
             station.setText("동해선");
             center.setText(R.string.dong_11);
+            title = (String) center.getText();
             station_start.setText("부전(동해선)행");
             station_end.setText("일광행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -700,8 +1196,6 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_11_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_11_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_11_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_11)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_11)));
 
@@ -718,6 +1212,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             station.setText("1호선");
             hosun.setText("동해선");
             center.setText(R.string.dong_12);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -733,6 +1228,24 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_12_11)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_12)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_12)));
 
@@ -749,6 +1262,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             station.setText("3호선");
             hosun.setText("동해선");
             center.setText(R.string.dong_13);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -765,6 +1279,22 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_13_10)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_13)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_13)));
 
@@ -778,6 +1308,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             hosun.setVisibility(View.GONE);
             station.setText("동해선");
             center.setText(R.string.dong_14);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -794,6 +1325,8 @@ public class DetailActivity_dong extends AppCompatActivity {
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_14_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_14_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_out_14_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_in_14)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.dong_call_14)));
 
@@ -806,6 +1339,7 @@ public class DetailActivity_dong extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#98DAEA"));
             hosun.setVisibility(View.GONE);
             center.setText(R.string.dong_15);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="소프트웨어개발실습4"
+        android:padding="20sp"
+        android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="팀장 - 이희승"
+        android:paddingBottom="5sp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="팀원 - 이창열"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="팀원 - 변진원"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="팀원 - 이수호"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

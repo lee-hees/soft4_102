@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dong_out_1_1">도시철도 부전역, 부전지구대, 부산전자종합상가, 부전시장 부산진등기소</string>
-    <string name="dong_out_1_2">부산시민공원, 범전치안센터</string>
+    <string name="dong_out_15_1">도시철도 부전역, 부전지구대, 부산전자종합상가, 부전시장, 부산진등기소</string>
+    <string name="dong_out_15_2">부산시민공원, 범전치안센터</string>
 
-    <string name="dong_out_2_1">거제대로</string>
-    <string name="dong_out_2_2">계성여자상업고등학교, 거성중학교</string>
-    <string name="dong_out_2_3">거제4동주민센터, 거제초등학교</string>
+    <string name="dong_out_14_1">거제대로</string>
+    <string name="dong_out_14_2">계성여자상업고등학교, 거성중학교</string>
+    <string name="dong_out_14_3">거제4동주민센터, 거제초등학교</string>
 
-    <string name="dong_out_3_1">연산5동주민센터, 연산교차로방면</string>
-    <string name="dong_out_3_2">연산교차로방면, 교대삼거리방면 신협중앙회부산경남지역본부, 명은병원</string>
-    <string name="dong_out_3_3">거제3동주민센터, 국립농산물품질관리원, 한국자산관리공사 거제지구대</string>
-    <string name="dong_out_3_4">롯데제과부산지점방면, 교대앞삼거리방면</string>
-    <string name="dong_out_3_5">거제2동주민센터</string>
-    <string name="dong_out_3_6">부산고등법원, 지방법원, 부산고등검찰청, 지방검찰청 부산교육대방면</string>
-    <string name="dong_out_3_7">종합운동장방면</string>
-    <string name="dong_out_3_8">부산고등법원, 지방법원, 부산고등검찰청, 지방검찰청</string>
-    <string name="dong_out_3_9">남문구사거리, 교대사거리</string>
-    <string name="dong_out_3_10">1 부산고등법원, 부산고등검찰청, 거제1동주민센터, 주차장</string>
+    <string name="dong_out_13_1">연산5동주민센터, 연산교차로방면</string>
+    <string name="dong_out_13_2">연산교차로방면, 교대삼거리방면 신협중앙회부산경남지역본부, 명은병원</string>
+    <string name="dong_out_13_3">거제3동주민센터, 국립농산물품질관리원, 한국자산관리공사, 거제지구대</string>
+    <string name="dong_out_13_4">롯데제과부산지점방면, 교대앞삼거리방면</string>
+    <string name="dong_out_13_5">거제2동주민센터</string>
+    <string name="dong_out_13_6">부산고등법원, 지방법원, 부산고등검찰청, 지방검찰청, 부산교육대방면</string>
+    <string name="dong_out_13_7">종합운동장방면</string>
+    <string name="dong_out_13_8">부산고등법원, 지방법원, 부산고등검찰청, 지방검찰청</string>
+    <string name="dong_out_13_9">남문구사거리, 교대사거리</string>
+    <string name="dong_out_13_10">1 부산고등법원, 부산고등검찰청, 거제1동주민센터, 주차장</string>
 
-    <string name="dong_out_4_1">거제동 방면, 종합운동장 방면, 법원, 검찰청 이사벨중고등학교, 지구초등학교</string>
-    <string name="dong_out_4_2">부산의료원, 삼익아파트, 연산교차로 방면</string>
-    <string name="dong_out_4_3">국제신문, 부산교육대학교, 연제구청, 이사벨중고등학교</string>
-    <string name="dong_out_4_4">동래시장방면, 거제1동주민센터, 동래경찰서</string>
-    <string name="dong_out_4_5">내성중학교, 종합운동장방면, 어린이재단부산지역본부</string>
-    <string name="dong_out_4_6">동래경찰서, 동래소방서, 동래고등학교, 동래시장방면</string>
-    <string name="dong_out_4_7">한양아파트, 내성교차로방면, 동래방면</string>
-    <string name="dong_out_4_8">부산장애인종합복지관</string>
-    <string name="dong_out_4_9">교대사거리, 주차장</string>
-    <string name="dong_out_4_10">이사벨중고등학교, 지구촌고등학교</string>
-    <string name="dong_out_4_11">주차장</string>
+    <string name="dong_out_12_1">거제동 방면, 종합운동장 방면, 법원, 검찰청, 이사벨중고등학교, 지구초등학교</string>
+    <string name="dong_out_12_2">부산의료원, 삼익아파트, 연산교차로 방면</string>
+    <string name="dong_out_12_3">국제신문, 부산교육대학교, 연제구청, 이사벨중고등학교</string>
+    <string name="dong_out_12_4">동래시장방면, 거제1동주민센터, 동래경찰서</string>
+    <string name="dong_out_12_5">내성중학교, 종합운동장방면, 어린이재단부산지역본부</string>
+    <string name="dong_out_12_6">동래경찰서, 동래소방서, 동래고등학교, 동래시장방면</string>
+    <string name="dong_out_12_7">한양아파트, 내성교차로방면, 동래방면</string>
+    <string name="dong_out_12_8">부산장애인종합복지관</string>
+    <string name="dong_out_12_9">교대사거리, 주차장</string>
+    <string name="dong_out_12_10">이사벨중고등학교, 지구촌고등학교</string>
+    <string name="dong_out_12_11">주차장</string>
 
-    <string name="dong_out_5_1">낙민역4호선, 동래고등학교, 주차장</string>
-    <string name="dong_out_5_2">수민동주민센터</string>
-    <string name="dong_out_5_3">낙민역4호선, 낙민초등학교, 동래고등학교</string>
+    <string name="dong_out_11_1">낙민역4호선, 동래고등학교, 주차장</string>
+    <string name="dong_out_11_2">수민동주민센터</string>
+    <string name="dong_out_11_3">낙민역4호선, 낙민초등학교, 동래고등학교</string>
 
-    <string name="dong_out_6_1">안진초등학교</string>
-    <string name="dong_out_6_2">동래구장애인복지관, B주차장</string>
-    <string name="dong_out_6_3">안락1동주민센터, 낙민공원, A주차장</string>
+    <string name="dong_out_10_1">안진초등학교</string>
+    <string name="dong_out_10_2">동래구장애인복지관, B주차장</string>
+    <string name="dong_out_10_3">안락1동주민센터, 낙민공원, A주차장</string>
 
-    <string name="dong_out_7_1">동래구 방면(안락동), 원동교앞, 안락2동행정복지센터 안남초등학교, 남일중학교, 안락중학교</string>
-    <string name="dong_out_7_2">해운대구 방면(반여동, 재송동), 반여119안전센터 장산중학교, 장산초등학교, 반여1동주민센터, 왕자맨션</string>
+    <string name="dong_out_9_1">동래구 방면(안락동), 원동교앞, 안락2동행정복지센터 안남초등학교, 남일중학교, 안락중학교</string>
+    <string name="dong_out_9_2">해운대구 방면(반여동, 재송동), 반여119안전센터 장산중학교, 장산초등학교, 반여1동주민센터, 왕자맨션</string>
 
-    <string name="dong_out_8_1">산재초등학교, 센텀삼익아파트, 부산해운대경찰서 효성시티병원, 재송1동주민센터, 재송2동주민센터</string>
+    <string name="dong_out_8_1">산재초등학교, 센텀삼익아파트, 부산해운대경찰서, 효성시티병원, 재송1동주민센터, 재송2동주민센터</string>
     <string name="dong_out_8_2">송수초등학교, 센텀e편한세상아파트, 재송어린이도서관 주차장방면</string>
 
-    <string name="dong_out_9_1">센텀고등학교, 재송1동주민센터, 재송초등학교 재송2동주민센터</string>
-    <string name="dong_out_9_2">센텀초등학교, 센텀중학교, 더샵센텀파크아파트 망미초등학교, 부산센텀시티우체국</string>
-    <string name="dong_out_9_3">주차장방면</string>
+    <string name="dong_out_7_1">센텀고등학교, 재송1동주민센터, 재송초등학교, 재송2동주민센터</string>
+    <string name="dong_out_7_2">센텀초등학교, 센텀중학교, 더샵센텀파크아파트, 망미초등학교, 부산센텀시티우체국</string>
+    <string name="dong_out_7_3">주차장방면</string>
 
-    <string name="dong_out_10_1">우2동지구대</string>
-    <string name="dong_out_10_2">해운대공업고등학교, 부산국제외국어고등학교 한독경영정보여자고등학교, 국민은행, 농협, 성모안과 부산문화여자고등학교</string>
-    <string name="dong_out_10_3">중국영사관, 수영로교회, 아르피나 유스호스텔 해강중고등학교</string>
-    <string name="dong_out_10_4">장산터널, 공영주차장, 해운대신시가지(장산터널)방면</string>
-    <string name="dong_out_10_5">시립미술관, 부산사회체육센터, 벡스코제2전시장</string>
-    <string name="dong_out_10_6">우2동주민센터, 새마을금고, 농협, 성불사, 삼환아파트</string>
-    <string name="dong_out_10_7">부산전시컨벤션센터(BEXCO), 부산시립미술관</string>
-    <string name="dong_out_10_8">강동초등학교, 국민건강보험공단해운대지사 삼호가든아파트, 해운대 센텀 메티컬센터 한양 정형외과 병원</string>
-    <string name="dong_out_10_9">부산전시켄벤션센터(BEXCO)</string>
-    <string name="dong_out_10_10">부산전시켄벤션센터(BEXCO)</string>
+    <string name="dong_out_6_1">우2동지구대</string>
+    <string name="dong_out_6_2">해운대공업고등학교, 부산국제외국어고등학교, 한독경영정보여자고등학교, 국민은행, 농협, 성모안과, 부산문화여자고등학교</string>
+    <string name="dong_out_6_3">중국영사관, 수영로교회, 아르피나 유스호스텔, 해강중고등학교</string>
+    <string name="dong_out_6_4">장산터널, 공영주차장, 해운대신시가지(장산터널)방면</string>
+    <string name="dong_out_6_5">시립미술관, 부산사회체육센터, 벡스코제2전시장</string>
+    <string name="dong_out_6_6">우2동주민센터, 새마을금고, 농협, 성불사, 삼환아파트</string>
+    <string name="dong_out_6_7">부산전시컨벤션센터(BEXCO), 부산시립미술관</string>
+    <string name="dong_out_6_8">강동초등학교, 국민건강보험공단해운대지사 삼호가든아파트, 해운대 센텀 메티컬센터 한양 정형외과 병원</string>
+    <string name="dong_out_6_9">부산전시켄벤션센터(BEXCO)</string>
+    <string name="dong_out_6_10">부산전시켄벤션센터(BEXCO)</string>
 
-    <string name="dong_out_11_1">삼성아파트, 동부아파트, 동신아파트, LIG건영아파트 부산한마음스포츠센터, 상당초등학교, 상당중학교 좌4동주민센터, 좌동지구대, NH농협은행 좌동지점 해운대교육지원청, 부흥초등학교, 좌동초등학교, 부흥중학교 부흥고등학교, 좌동 재래시장, A주차장방면</string>
-    <string name="dong_out_11_2">삼성아파트, 동부아파트, 부산한마음스포츠센터 상당초등학교, 상당중학교, 좌4동주민센터, 좌동지구대 NH농협은행 좌동지점, 해운대교육지원청, 부흥초등학교 좌동초등학교,    부흥중학교, 부흥고등학교, 좌동 재래시장 A주차장방면</string>
-    <string name="dong_out_11_3">부산한마음스포츠센터, 상당초등학교, 상당중학교 좌4동주민센터, 좌동지구대, NH농협은행 좌동지점 LG아파트, 두산1차아파트, 양운고등학교, 대림1차아파트 B주차장 방면</string>
-    <string name="dong_out_11_4">좌4동방면, 택시타는곳</string>
+    <string name="dong_out_5_1">삼성아파트, 동부아파트, 동신아파트, LIG건영아파트, 부산한마음스포츠센터, 상당초등학교, 상당중학교, 좌4동주민센터, 좌동지구대, NH농협은행 좌동지점 해운대교육지원청, 부흥초등학교, 좌동초등학교, 부흥중학교 부흥고등학교, 좌동 재래시장, A주차장방면</string>
+    <string name="dong_out_5_2">삼성아파트, 동부아파트, 부산한마음스포츠센터, 상당초등학교, 상당중학교, 좌4동주민센터, 좌동지구대, NH농협은행 좌동지점, 해운대교육지원청, 부흥초등학교 좌동초등학교,    부흥중학교, 부흥고등학교, 좌동 재래시장 A주차장방면</string>
+    <string name="dong_out_5_3">부산한마음스포츠센터, 상당초등학교, 상당중학교, 좌4동주민센터, 좌동지구대, NH농협은행 좌동지점 LG아파트, 두산1차아파트, 양운고등학교, 대림1차아파트 B주차장 방면</string>
+    <string name="dong_out_5_4">좌4동방면, 택시타는곳</string>
 
-    <string name="dong_out_12_1">송정초등학교, 송정휴먼시아2단지아파트, 송정동주민센터 해운대송정우체국</string>
-    <string name="dong_out_12_2">송정동주민센터, 송정삼거리, 주차장방면</string>
+    <string name="dong_out_4_1">송정초등학교, 송정휴먼시아2단지아파트, 송정동주민센터, 해운대송정우체국</string>
+    <string name="dong_out_4_2">송정동주민센터, 송정삼거리, 주차장방면</string>
 
-    <string name="dong_out_13_1">롯데마트 동부산점, 롯데시네마 동부산아울렛점 롯데프리미엄아울렛 동부산점 동부산관광레저형 기업도시개발구역</string>
-    <string name="dong_out_13_2">부산국제외국인학교</string>
+    <string name="dong_out_3_1">롯데마트 동부산점, 롯데시네마 동부산아울렛점, 롯데프리미엄아울렛, 동부산점 동부산관광레저형 기업도시개발구역</string>
+    <string name="dong_out_3_2">부산국제외국인학교</string>
 
-    <string name="dong_out_14_1">기장지구대, 새마을어린이공원, 기장중학교 동국에버리치아파트</string>
-    <string name="dong_out_14_2">기장군청, 기장고려병원, 청강소공원, 기장현대아파트 부산환경곧안 기장사업소, 기장보건소</string>
+    <string name="dong_out_2_1">기장지구대, 새마을어린이공원, 기장중학교, 동국에버리치아파트</string>
+    <string name="dong_out_2_2">기장군청, 기장고려병원, 청강소공원, 기장현대아파트, 부산환경공단 기장사업소, 기장보건소</string>
 
-    <string name="dong_out_15_1">금강한스빌아파트, 부전비치아파트, 일광면사무소 일광우체국, 일광파출소, 일광119수상구조대</string>
-    <string name="dong_out_15_2">일광신도시</string>
+    <string name="dong_out_1_1">금강한스빌아파트, 부전비치아파트, 일광면사무소 일광우체국, 일광파출소, 일광119수상구조대</string>
+    <string name="dong_out_1_2">일광신도시</string>
 
 </resources>

@@ -2,1431 +2,985 @@
 <resources>
 
 
-    <string name="first_out_1_1">다대도서관, 중현초등학교, 대우아파트, 다대5지구 아파트 몰운대 복지관, 다대 우체국</string>
-    <string name="first_out_1_2">다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수</string>
-    <string name="first_out_1_3">다대대우아파트, 성원아파트</string>
-    <string name="first_out_1_4">다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수</string>
+    <string name="first_out_40_1">다대도서관, 중현초등학교, 대우아파트, 다대5지구 아파트, 몰운대 복지관, 다대 우체국</string>
+    <string name="first_out_40_2">다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수</string>
+    <string name="first_out_40_3">다대대우아파트, 성원아파트</string>
+    <string name="first_out_40_4">다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수</string>
 
 
-    <string name="first_out_2_1">
-        다대중학교, 다대고등학교, 롯데 슈퍼, 농협다대지점 KB국민은행다대지점, 부산은행지점
+    <string name="first_out_39_1">
+        다대중학교, 다대고등학교, 롯데 슈퍼, 농협다대지점, KB국민은행다대지점, 부산은행지점
     </string>
-    <string name="first_out_2_2">
-        우리원병원, 다대해양경비안전센터, 다대민속예술관 부산시수협다대위판장, 자유아파트, 다대포항, 활어회센터 수협다대지점
+    <string name="first_out_39_2">
+        우리원병원, 다대해양경비안전센터, 다대민속예술관, 부산시수협다대위판장, 자유아파트, 다대포항, 활어회센터, 수협다대지점
     </string>
-    <string name="first_out_2_3">
-        다대1동행정복지센터, 아미산자생식물원, 윤공단 대우푸르지오아파트
+    <string name="first_out_39_3">
+        다대1동행정복지센터, 아미산자생식물원, 윤공단, 대우푸르지오아파트
     </string>
-    <string name="first_out_2_4">
+    <string name="first_out_39_4">
         부산유아교육진흥원, 다대1치안센터, 다대초등학교
     </string>
 
 
-    <string name="first_out_3_1">
-         다대3지구도개공아파트, 다대종합사회복지관 다대해송앞파트
+    <string name="first_out_38_1">
+         다대3지구도개공아파트, 다대종합사회복지관, 다대해송앞파트
     </string>
-    <string name="first_out_3_2">
+    <string name="first_out_38_2">
         다대현대아파트, 하나은행, 다대1동 방면
     </string>
-    <string name="first_out_3_3">
+    <string name="first_out_38_3">
         신다대아파트, 다대자연병원, 장림동 방면
     </string>
-    <string name="first_out_3_4">
-        삼환아파트, 다대2동행정복지센터, 사하경찰서다대지구대 다송중학교, 다선초등학교, 두송중학교, 국가지질공원 부산은행
+    <string name="first_out_38_4">
+        삼환아파트, 다대2동행정복지센터, 사하경찰서다대지구대, 다송중학교, 다선초등학교, 두송중학교, 국가지질공원, 부산은행
     </string>
-    <string name="first_out_3_5">
-        다대코오롱맨션, 다대롯데캐슬블루, 다대2동우체국 삼환2차아파트, 다송초등학교, 국제그린아파트, 다송아파트 다대4지구도개공아파트
+    <string name="first_out_38_5">
+        다대코오롱맨션, 다대롯데캐슬블루, 다대2동우체국 삼환2차아파트, 다송초등학교, 국제그린아파트, 다송아파트, 다대4지구도개공아파트
     </string>
 
 
 
-    <string name="first_out_4_1">
+    <string name="first_out_37_1">
          협성르네상스아파트, 일성냉동, 다대포 방면
     </string>
-    <string name="first_out_4_2">
+    <string name="first_out_37_2">
         하나병원, 한서병원, 경희병원, 다송초등학교
     </string>
-    <string name="first_out_4_3">
-        탑마트, 효리모등학교, SC제일은행, 장림2동행정복지센터
+    <string name="first_out_37_3">
+        탑마트, 효림초등학교, SC제일은행, 장림2동행정복지센터
     </string>
-    <string name="first_out_4_4">
+    <string name="first_out_37_4">
         장림현대아파트, 부산장림현대우편취급국, 영남중학교
     </string>
 
-    <string name="first_out_5_1">
-         장림삼거리, 장림초등학교, 성경센스빌, 장림시장 장림동행정복지센터, 장림동우체국
+    <string name="first_out_36_1">
+         장림삼거리, 장림초등학교, 성경센스빌, 장림시장, 장림동행정복지센터, 장림동우체국
     </string>
-    <string name="first_out_5_2">
-        장림파출소, 장림여자중학교, 구평가구단지, 은향교회 부경보건고등학교
+    <string name="first_out_36_2">
+        장림파출소, 장림여자중학교, 구평가구단지, 은향교회, 부경보건고등학교
     </string>
-    <string name="first_out_5_3">
+    <string name="first_out_36_3">
         남양맨션, 강동맨션, 장림초등학교, 삼성디지털프라자
     </string>
-    <string name="first_out_5_4">
-        홈플러스, 신우림아파트, 동원3차아파트, 복있는유치원 대동고등학교, 구평고개사거리 방면
+    <string name="first_out_36_4">
+        홈플러스, 신우림아파트, 동원3차아파트, 복있는유치원, 대동고등학교, 구평고개사거리 방면
     </string>
-    <string name="first_out_5_5">
-        CJ제일제당, 롯데마트, 삼성디지털프라자, 홈플러스 교통안전공단 사하검사소, 부산지방경찰청 제2기동대
+    <string name="first_out_36_5">
+        CJ제일제당, 롯데마트, 삼성디지털프라자, 홈플러스, 교통안전공단 사하검사소, 부산지방경찰청 제2기동대
     </string>
-    <string name="first_out_5_6">
+    <string name="first_out_36_6">
         하이마트, 세정아울렛, 사하경찰서, 홈플러스
     </string>
 
 
-    <string name="first_out_6_1">
+    <string name="first_out_35_1">
          성일여자고등학교, 신평시장, 부산사하경찰서 방면
     </string>
-    <string name="first_out_6_2">
+    <string name="first_out_35_2">
         신평1동행정복지센터, 신평1동치안센터, 신평시장
     </string>
-    <string name="first_out_6_3">
+    <string name="first_out_35_3">
         신평동우체국, 신평 장림 일반산업단지, 사하자동차검사소
     </string>
-    <string name="first_out_6_4">
+    <string name="first_out_35_4">
         사하소방서, 신평초등학교, 부산은행, 하나외환은행
     </string>
-    <string name="first_out_6_5">
+    <string name="first_out_35_5">
         신평 장림 일반산업단지
     </string>
-    <string name="first_out_6_6">
+    <string name="first_out_35_6">
         신평 장림 일반산업단지, 신평초등학교
     </string>
 
 
-    <string name="first_out_7_1">
-         사하구보건소, 신평2동주민센터, 신평장림공단 신평레포츠공원
+    <string name="first_out_34_1">
+         사하구보건소, 신평2동주민센터, 신평장림공단, 신평레포츠공원
     </string>
-    <string name="first_out_7_2">
+    <string name="first_out_34_2">
         주차장
     </string>
-    <string name="first_out_7_3">
+    <string name="first_out_34_3">
         신평차량사업소, 부산염색공단
     </string>
-    <string name="first_out_7_4">
-        신평지구대, 캐나다영사관, 신익강변타운, 현대아파트 한신아파트, 신평장림공단, 국민은행
+    <string name="first_out_34_4">
+        신평지구대, 캐나다영사관, 신익강변타운, 현대아파트, 한신아파트, 신평장림공단, 국민은행
     </string>
-    <string name="first_out_7_5">
+    <string name="first_out_34_5">
         신평장림공단
     </string>
-    <string name="first_out_7_6">
-        하단교차로, 신남초등학교, 가락타운 2.3단지 KEB하나은행 하단지점
+    <string name="first_out_34_6">
+        하단교차로, 신남초등학교, 가락타운 2.3단지, KEB하나은행 하단지점
     </string>
-    <string name="first_out_7_7">
+    <string name="first_out_34_7">
         신평장림공단, 가락타운 2.3단지
     </string>
-    <string name="first_out_7_9">
+    <string name="first_out_34_9">
         신평2동 우체국, 하남초등학교, 하남중학교 가락타운 2.3단지
     </string>
 
 
-    <string name="first_out_8_1">
-         낙동강하구둑, 하단119안전센터, 가락타운 1단지, 세양병원 에덴공원
+    <string name="first_out_33_1">
+         낙동강하구둑, 하단119안전센터, 가락타운 1단지, 세양병원, 에덴공원
     </string>
-    <string name="first_out_8_2">
+    <string name="first_out_33_2">
         가락타운 2,3단지, 하단1동주민센터, 하단초등학교
     </string>
-    <string name="first_out_8_3">
+    <string name="first_out_33_3">
         하단119안전센터
     </string>
-    <string name="first_out_8_4">
-        하단지구대, 하단초등학교, 법무부부산보호관찰소 서부지소 우리은행, 프라임병원
+    <string name="first_out_33_4">
+        하단지구대, 하단초등학교, 법무부부산보호관찰소 서부지소, 우리은행, 프라임병원
     </string>
-    <string name="first_out_8_5">
+    <string name="first_out_33_5">
         에덴공원, 하단우체국, 국민연금공단 서부산지사
     </string>
-    <string name="first_out_8_6">
+    <string name="first_out_33_6">
         우리은행
     </string>
-    <string name="first_out_8_7">
-        하단우체국, 국민건강보험공단, 국민연금공단 서부산지사 에덴공원, 동아대학교, 하단교차로
+    <string name="first_out_33_7">
+        하단우체국, 국민건강보험공단, 국민연금공단 서부산지사, 에덴공원, 동아대학교, 하단교차로
     </string>
-    <string name="first_out_8_8">
+    <string name="first_out_33_8">
         하단교차로, 신평방면
     </string>
-    <string name="first_out_8_9">
+    <string name="first_out_33_9">
         동아대, 건국중, 건국고, 부산여고, 신한은행 당리동지점
     </string>
-    <string name="first_out_8_10">
+    <string name="first_out_33_10">
         1 신평방면, 가락타운 2.3단지, 하단지구대, 하단1동주민센터
     </string>
-    <string name="first_out_8_11">
-        1 KEB하나은행 하단역출장소, 신한은행 당리동지점 부산낙동초등학교, 당리삼창아파트
+    <string name="first_out_33_11">
+        1 KEB하나은행 하단역출장소, 신한은행 당리동지점, 부산낙동초등학교, 당리삼창아파트
     </string>
-    <string name="first_out_8_12">
+    <string name="first_out_33_12">
         1 부산은행, 하단5일장
     </string>
 
 
-    <string name="first_out_9_1">
+    <string name="first_out_32_1">
          하단교차로, 낙동초등학교, 당리삼창아파트, 오성궁전아파트
     </string>
-    <string name="first_out_9_2">
+    <string name="first_out_32_2">
         하단교차로, 하단시장
     </string>
-    <string name="first_out_9_3">
+    <string name="first_out_32_3">
         사하구청, 신한은행
     </string>
-    <string name="first_out_9_4">
+    <string name="first_out_32_4">
         부산은행, 대광공업고등학교
     </string>
-    <string name="first_out_9_5">
-        사하구청, 당리동주민센터, 당리치안센터, 당리중학교 서여자중학교, 국민은행, 사하농협, 사하중학교 당리동 제1체육공원
+    <string name="first_out_32_5">
+        사하구청, 당리동주민센터, 당리치안센터, 당리중학교, 서여자중학교, 국민은행, 사하농협, 사하중학교, 당리동 제1체육공원
     </string>
-    <string name="first_out_9_6">
+    <string name="first_out_32_6">
         당리초등학교, 대광발명과학고등학교, 벽산으뜸아파트
     </string>
 
 
-    <string name="first_out_10_1">
+    <string name="first_out_31_1">
          사하우체국, 당리중학교
     </string>
-    <string name="first_out_10_2">
+    <string name="first_out_31_2">
         괴정4치안센터, KT사하지사, 사남초등학교
     </string>
-    <string name="first_out_10_3">
+    <string name="first_out_31_3">
         괴정1치안센터, 괴정소방파출소, 사하초등학교, 사하중학교
     </string>
-    <string name="first_out_10_4">
+    <string name="first_out_31_4">
         괴정4동주민센터, KT지점
     </string>
-    <string name="first_out_10_5">
+    <string name="first_out_31_5">
         신평입구, 삼익아파트, 부산은행, 사하신협
     </string>
 
 
-    <string name="first_out_11_1">
-         괴정1동주민센터, 괴정1치안센터, 괴정소방파출소 사하초등학교, 괴정메디컬센터, 창우블루빌아파트
+    <string name="first_out_30_1">
+         괴정1동주민센터, 괴정1치안센터, 괴정소방파출소, 사하초등학교, 괴정메디컬센터, 창우블루빌아파트
     </string>
-    <string name="first_out_11_2">
+    <string name="first_out_30_2">
         상수도사업본부 사하사업소, 괴정병원, 우리은행
     </string>
-    <string name="first_out_11_3">
+    <string name="first_out_30_3">
         사하도서관, 부산은행
     </string>
-    <string name="first_out_11_4">
+    <string name="first_out_30_4">
         괴정병원
     </string>
-    <string name="first_out_11_5">
+    <string name="first_out_30_5">
         동산병원, 괴정지구대, 괴정3동치안센터
     </string>
-    <string name="first_out_11_6">
+    <string name="first_out_30_6">
         감천, 다대포방면, 괴정우체국, 국민은행
     </string>
-    <string name="first_out_11_8">
+    <string name="first_out_30_8">
         괴정시장, 뉴코아아울렛 괴정점, 사하성당, 크로바관광호텔
     </string>
-    <string name="first_out_11_10">
+    <string name="first_out_30_10">
         1 괴정시장, 괴정3동주민센터, 농협, 괴정중앙교회
     </string>
 
 
-    <string name="first_out_12_1">
+    <string name="first_out_29_1">
          동주대학교, 괴정초등학교, 괴정3동치안센터
     </string>
-    <string name="first_out_12_2">
+    <string name="first_out_29_2">
         국민은행, 동주여자중학교, 괴정3동주민센터
     </string>
-    <string name="first_out_12_3">
+    <string name="first_out_29_3">
         대티고개, 괴정2치안센터, 신괴정아파트
     </string>
-    <string name="first_out_12_4">
-        괴정2동 우편취급소, 동주여자중학교, 승학초등학교 괴정2동주민센터, 새마을금고
+    <string name="first_out_29_4">
+        괴정2동 우편취급소, 동주여자중학교, 승학초등학교, 괴정2동주민센터, 새마을금고
     </string>
 
 
 
-    <string name="first_out_13_1">
+    <string name="first_out_28_1">
          대티터널방면, 서대치안센터, 부산위생병원
     </string>
-    <string name="first_out_13_2">
-        서부경찰서, 서부산세무서, 보람쉬움아파트, 부산은행 경로치과의원
+    <string name="first_out_28_2">
+        서부경찰서, 서부산세무서, 보람쉬움아파트, 부산은행, 경로치과의원
     </string>
-    <string name="first_out_13_3">
-        구덕터널방면, 부경고등학교, 구덕운동장 경성전자정보고등학교, 서대신3동주민센터
+    <string name="first_out_28_3">
+        구덕터널방면, 부경고등학교, 구덕운동장, 경성전자정보고등학교, 서대신3동주민센터
     </string>
-    <string name="first_out_13_4">
-        동아대학교병원 방면, 서대신1동주민센터, 구덕운동장 서대신동시장, 향군회관
-    </string>
-
-
-    <string name="first_out_14_1">
-         구덕운동장, 경남고등학교, 동아대학교병원 방면 서구선거관리위원회
-    </string>
-    <string name="first_out_14_2">
-        구덕체육관, 서대신동 우체국, 부경고등학교, 부산은행 동아대병원 셔틀버스
-    </string>
-    <string name="first_out_14_3">
-        삼익아파트, 국민은행
-    </string>
-    <string name="first_out_14_4">
-        서대신동시장, (사)대한건강증진협회
-    </string>
-    <string name="first_out_14_5">
-        동아대학교병원, 대신여자중학교, 부산서여자고등학교
-    </string>
-    <string name="first_out_14_6">
-        (사)대한건강증진협회, 서대신동시장
-    </string>
-    <string name="first_out_14_7">
-        부산터널,동대신동시장, 화랑초등학교, 신한은행
-    </string>
-    <string name="first_out_14_8">
-        서구보건소, 부민초등학교, 국민건강보험공단, 하나은행 경로치과의원공간
-    </string>
-
-
-    <string name="first_out_15_1">
-         보수동 방면, 대청로 방면, 부산은행
-    </string>
-    <string name="first_out_15_2">
-        부민동방면, 임시수도기념관 방면, 아미우체국 KT서부산지사, 동아대학교 부민캠퍼스(사회교육원) 아미동우체국
-    </string>
-    <string name="first_out_15_3">
-        경남중학교
-    </string>
-    <string name="first_out_15_4">
-        아미동, 부산대학병원, KT서부산지사
-    </string>
-    <string name="first_out_15_5">
-        경남중학교
-    </string>
-    <string name="first_out_15_6">
-        초장동방면, 부산시 아동청소년회관, 감천문화마을
-    </string>
-    <string name="first_out_15_7">
-        7 한전중부산지점, 토성초등학교
-    </string>
-    <string name="first_out_15_8">
-        아미동방면, 부산시아동청소년회관, 아미초등학교
-    </string>
-    <string name="first_out_15_9">
-        충무동방면, 충무동주민센터
-    </string>
-    <string name="first_out_15_10">
-        충무동방면, 초장동방면
-    </string>
-
-
-    <string name="first_out_16_1">
-         충무교차로, 서구청, 한전중부산지점, 부산은행 충무동지점
-    </string>
-    <string name="first_out_16_2">
-        암남동방면, 충무교차로, 부산공동어시장 부산은행 충무동지점, KEB하나은행 충무동지점 부산충무동우체국
-    </string>
-    <string name="first_out_16_3">
-        충무동방면, 보수동방면, 국제시장, 부평동시장 방면 국민은행, 신한은행
-    </string>
-    <string name="first_out_16_4">
-        자갈치사거리, 공영주차장, 중부견인차보관소 KEB하나은행 충무동지점
-    </string>
-    <string name="first_out_16_5">
-        충무동, 부평동, 신한은행
-    </string>
-    <string name="first_out_16_6">
-        수협은행, KEB하나은행 충무동지점
-    </string>
-    <string name="first_out_16_7">
-        대청동방면, 미술의거리, BIFF광장, 국제시장, 부산극장 CGV 남포, 씨네시티
-    </string>
-    <string name="first_out_16_8">
-        충무동로타리, 부산공동어시장, 수협은행 부산지역금융본부 KEB하나은행 충무동지점, 하나로클럽, 신천지백화점
-    </string>
-    <string name="first_out_16_10">
-        1 신동아수산물종합시장, 자갈치시장, 농협농산물백화점
-    </string>
-
-
-    <string name="first_out_17_1">
-         용두산공원, BIFF광장, 부산근대역사관 방면, 한국문화센터
-    </string>
-    <string name="first_out_17_2">
-        남포동건어물시장, 자갈치시장
-    </string>
-    <string name="first_out_17_3">
-        광복동, 광복동우체국, 부산경륜공단 남포지점
-    </string>
-    <string name="first_out_17_4">
-        자갈치건어물시장
-    </string>
-    <string name="first_out_17_5">
-        광복동입구, 부산데파트, 남포지구대, 부산경륜공단 남포지점
-    </string>
-    <string name="first_out_17_6">
-        영도방면, 태종대, 농협
-    </string>
-    <string name="first_out_17_7">
-        농협
-    </string>
-    <string name="first_out_17_8">
-        롯데백화점광복점
-    </string>
-    <string name="first_out_17_10">
-        롯데백화점광복점
-    </string>
-
-
-    <string name="first_out_18_1">
-         용두산공원, 국제시장, 백신기념관, 부산근대역사관 방면 부산데파트, 광복동입구
-    </string>
-    <string name="first_out_18_2">
-        부산항연안여객터미널, 부산지방식품의약품안전청 수미르공원
-    </string>
-    <string name="first_out_18_3">
-        국민은행, 용두산공원, 국제시장, 백산기념관 부산근대역사관 방면, 광복동입구
-    </string>
-    <string name="first_out_18_4">
-        외국인서비스센터, 부산세관, 부산항국제여객터미널
-    </string>
-    <string name="first_out_18_5">
-        용두산공원, 국제시장, 백산기념관, 부산근대역사관 방면 광복동 입구
-    </string>
-    <string name="first_out_18_6">
-        대한통운 화물취급소
-    </string>
-    <string name="first_out_18_7">
-        부산우체국, 대청동방면, 부산근대역사관 방면
-    </string>
-    <string name="first_out_18_8">
-        부산은행, 삼성생명
-    </string>
-    <string name="first_out_18_9">
-        부산우체국, 대청동방면, 부산근대역사관 방면
-    </string>
-    <string name="first_out_18_10">
-        부산출입국관리사무소, 부산세관, 부산항국제여객터미널
-    </string>
-    <string name="first_out_18_11">
-        부산우체국, 서라벌호텔, 기술신용보증기금 국민건강보험공단 중부산지사
-    </string>
-    <string name="first_out_18_12">
-        부산무역회관, 부산세관, 부산항국제여객터미널
-    </string>
-    <string name="first_out_18_13">
-        중앙동4가, 남성여자고등학교, 40계단문화회간
-    </string>
-    <string name="first_out_18_14">
-        중부소방서, 중앙일보, 부산출입국종합민원센터
-    </string>
-    <string name="first_out_18_15">
-        중앙동4기, 남성여자고등학교, 40계단문화관, 동아일보
-    </string>
-    <string name="first_out_18_17">
-        중부경찰서, 동광동5가, 신용보증기금
-    </string>
-
-
-    <string name="first_out_19_1">
-         부산터널 방면, 영주1동 방면, 상해거리, 부산전화국 부산화교소학교
-    </string>
-    <string name="first_out_19_2">
-        한국생산성본부 부산경남지부, 부산지방보훈청 부산전화번호안내국, SC은행
-    </string>
-    <string name="first_out_19_3">
-        초량1동, 부산화교중학교, 부산화교고등학교, 기업은행
-    </string>
-    <string name="first_out_19_4">
-        부산역광장, 교원공제회관, 아리랑관광호텔
-    </string>
-    <string name="first_out_19_5">
-        초량외국인상가, 부산화교중학교, 부산화교고등학교 상해거리
-    </string>
-    <string name="first_out_19_6">
-        부산역광장, 교원공제회관
-    </string>
-    <string name="first_out_19_7">
-        초량우체국, 부산지방국토관리청, 초량2동주민센터
-    </string>
-    <string name="first_out_19_8">
-        부산역광장
-    </string>
-    <string name="first_out_19_10">
-        부산역광장, 한국토지주택공사 부산울산지역본부
-    </string>
-
-
-    <string name="first_out_20_1">
-         부산지방국토관리청
-    </string>
-    <string name="first_out_20_2">
-        부산역, 조선일보사, 부산장애인총연합회
-    </string>
-    <string name="first_out_20_3">
-        초량3동, 부산고등학교
-    </string>
-    <string name="first_out_20_4">
-        제3부두, 부산건설회관
-    </string>
-    <string name="first_out_20_5">
-        초량3동, 정발장군동상, 부산고등학교, 일본국총영사관 몽골명예영사관
-    </string>
-    <string name="first_out_20_6">
-        항운회관(예식장), 제3부두, 부산건설회관, 부산보훈회관 초량소방파출소, 부산디자인고등학교
-    </string>
-    <string name="first_out_20_7">
-        일보국총영사관, 초량3동주민센터
-    </string>
-    <string name="first_out_20_8">
-        초량3동, 한국감정원
-    </string>
-    <string name="first_out_20_9">
-        성분도병원, 근로복지공단 부산지역본부, 부산중앙초등학교 프랑스문화원, 우리은행
-    </string>
-    <string name="first_out_20_10">
-        초량3동, 제3부두 방면
-    </string>
-    <string name="first_out_20_12">
-        정부물품재활용센터, 부산여자기독교청년회, 한국감정원 부산상조(주), KCB센트리움아파트
-    </string>
-
-
-    <string name="first_out_21_1">
-         수정동우체국, 고관입구, 동구청, 부산국제영화고등학교 동구문화원
-    </string>
-    <string name="first_out_21_2">
-        제4부두, 연합뉴스, 부산지방노동위원회
-    </string>
-    <string name="first_out_21_3">
-        수정2동, 수정동시장, 부산일보사
-    </string>
-    <string name="first_out_21_4">
-        경부선 부산진역, 협성타워
-    </string>
-    <string name="first_out_21_5">
-        부산일보사, 동구청, 수정동시장
-    </string>
-    <string name="first_out_21_6">
-        제4부두, 부산은행
-    </string>
-    <string name="first_out_21_7">
-        부산일보사, 동부경찰서, 부산진세무서, 봉생병원 경남여자고등학교
-    </string>
-    <string name="first_out_21_8">
-        경부선 부산진역
-    </string>
-
-
-    <string name="first_out_22_1">
-         봉생병원, 좌천1동, 좌천동가구거리
-    </string>
-    <string name="first_out_22_2">
-        제자로교회, 범일고가교, 범일5동, 부산지방해양항만청 남해지방해양경찰청
-    </string>
-    <string name="first_out_22_3">
-        부산진교회, 금성중학교, 금성고등학교, 정공단 고려저축은행, 부산진 일신여학교
-    </string>
-    <string name="first_out_22_4">
-        제자로교회, 범일고가교, 부산지방해양항만청, 범일5동 남해지방해양경찰청, 좌천지역아동센터
-    </string>
-    <string name="first_out_22_5">
-        좌천1동, 일신기독병원, 좌천동가구거리
-    </string>
-    <string name="first_out_22_6">
-        성남초등학교, 좌천동가구거리
-    </string>
-    <string name="first_out_22_7">
-        좌천동우체국, 데레사여자고등학교, 좌천동가구거리
-    </string>
-    <string name="first_out_22_8">
-        부산진시장, 남문시장, 동구청
-    </string>
-
-
-    <string name="first_out_23_1">
-         부산진시장, 남문시장
-    </string>
-    <string name="first_out_23_2">
-        예식장방면, 부산시민회관, 동부산우체국, 공무원연금공단 부산연금센터, 범일전화국, 국제호텔, 범일공구철물상가 BBS부산불교방송
-    </string>
-    <string name="first_out_23_3">
-        부산진소방서, 현대백화점
-    </string>
-    <string name="first_out_23_4">
-        범일2동, 범일공구철물상가
-    </string>
-    <string name="first_out_23_5">
-        문화병원, 부산진소방서
-    </string>
-    <string name="first_out_23_6">
-        예식장방면, 범일2동, 범일공구철물상가
-    </string>
-    <string name="first_out_23_7">
-        성가병원, 현대백화점
-    </string>
-    <string name="first_out_23_8">
-        자유시장, 평화시장
-    </string>
-    <string name="first_out_23_9">
-        현대백화점, 문화병원, 부산진소방서
-    </string>
-    <string name="first_out_23_10">
-        자유시장, 평화시장, 부산지방식품의약품안전청
-    </string>
-    <string name="first_out_23_12">
-        중앙귀금속도매상가
-    </string>
-
-
-    <string name="first_out_24_1">
-         건강보험심사평가원 부산지원, 사학연금회관 중소기업진흥공단 부산지역본부 한국장애인고용공단 부산지사 사립학교교직원연금공단
-    </string>
-    <string name="first_out_24_2">
-        중앙시장, 부산진구보건소, 신용보증기금, 성서초등학교
-    </string>
-    <string name="first_out_24_3">
-        춘해병원, 보림극장
-    </string>
-    <string name="first_out_24_4">
-        부산상공회의소, 한국선물거래소, 전포동방면, 동성고등학교 대원1,2단지아파트, 범전1동주민센터, 범천동우체국 기술보증기금
-    </string>
-    <string name="first_out_24_5">
-        춘해병원, 철도차량정비창, 범천4동
-    </string>
-    <string name="first_out_24_6">
-        부산상공회의소, 동성중학교, 동성고등학교, 한국선물거래소 전포동방면, 부산은행, 동성고등학교, 국제금융센터 CGV서면12
-    </string>
-    <string name="first_out_24_7">
-        서면방면, 동서고가도로, 부산철도차량정비청
-    </string>
-    <string name="first_out_24_8">
-        부산교통공사
-    </string>
-
-
-    <string name="first_out_25_1">
-         범천동, 서면시장, 서면1번가
-    </string>
-    <string name="first_out_25_2">
-        주디스태화, 동보서적, CGV대한, 시립부전도서관
-    </string>
-    <string name="first_out_25_3">
-        서면시장, 서면1번가
-    </string>
-    <string name="first_out_25_4">
-        시립부전도서관
-    </string>
-    <string name="first_out_25_5">
-        서면시장
-    </string>
-    <string name="first_out_25_6">
-        한국전력공사부산울산지역본부, 부전2동주민센터 시립부전도서관, 중앙중학교, 전포동방면
-    </string>
-    <string name="first_out_25_7">
-        서면시장, 부전2동우체국
-    </string>
-    <string name="first_out_25_8">
-        서면우체국, 전포초등학교
-    </string>
-    <string name="first_out_25_9">
-        부전1동우체국, 부산진경찰서
-    </string>
-    <string name="first_out_25_10">
-        전포동방면, 철물상가, 서면우체국
-    </string>
-    <string name="first_out_25_11">
-        부산진구청, 부전1동우체국, 동의대한방병원 부전1동주민센터
-    </string>
-    <string name="first_out_25_12">
-        서면우체국, 부산진전화국, 국민연금관리공단 부산지사
-    </string>
-    <string name="first_out_25_13">
-        어린이대공원 방면
-    </string>
-    <string name="first_out_25_15">
-        부전1동, 부전시장
-    </string>
-
-
-    <string name="first_out_26_1">
-         부전시장, 농협부산지역본부, 부산진등기소 동해남부선 부전역, 하나로클럽
-    </string>
-    <string name="first_out_26_2">
-        전포동방면, 부산인력은행, 전포초등학교, 적십자회관 국민은행, 근로복지공단부산중부지사
-    </string>
-    <string name="first_out_26_3">
-        부산전자종합상가
-    </string>
-    <string name="first_out_26_4">
-        국민건강보험공단, 향도중학교
-    </string>
-    <string name="first_out_26_5">
-        부산전자종합상가, 부산진등기소, 부전시장
-    </string>
-    <string name="first_out_26_6">
-        국민건강보험공단, 적십자회관, 전포동방면
-    </string>
-    <string name="first_out_26_7">
-        송상현공동상, 범전동방면, 부산은행, 부산시민공원 세흥병원
-    </string>
-    <string name="first_out_26_8">
-        부산진경찰서, 향도중학교, 송상현광장, 부산창업카페 차량등록사업소
+    <string name="first_out_28_4">
+        동아대학교병원 방면, 서대신1동주민센터, 구덕운동장, 서대신동시장, 향군회관
     </string>
 
 
     <string name="first_out_27_1">
-         송상현공동상, 양정시장, 양정1동우체국, 양정동우체국
+         구덕운동장, 경남고등학교, 동아대학교병원 방면, 서구선거관리위원회
     </string>
     <string name="first_out_27_2">
-        동의과학대학, 바산여자대학, 하나은행, 송상현광장
+        구덕체육관, 서대신동 우체국, 부경고등학교, 부산은행, 동아대병원 셔틀버스
     </string>
     <string name="first_out_27_3">
-        양정동우체국, 양정시장, 양정1동우체국
+        삼익아파트, 국민은행
     </string>
     <string name="first_out_27_4">
-        동의의료원, 동의대학교한의예과, 망미동방면 양정2동주민센터, 부산은행
+        서대신동시장, (사)대한건강증진협회
     </string>
     <string name="first_out_27_5">
-        어린이대공원, 부산광역시교육청, 초읍동방면 부산정보고등학교
+        동아대학교병원, 대신여자중학교, 부산서여자고등학교
     </string>
     <string name="first_out_27_6">
-        망미동방면, 연제구청방면
+        (사)대한건강증진협회, 서대신동시장
     </string>
     <string name="first_out_27_7">
-        백조예식장, 부산광역시교육청, 거제동방면
+        부산터널,동대신동시장, 화랑초등학교, 신한은행
     </string>
     <string name="first_out_27_8">
-        양정2동, 양정2동우체국, 연산교차로방면 부산광역시 지방행정동우회
-    </string>
-    <string name="first_out_27_9">
-        부산광역시 교육연구정보원, 부산발전연구원, 양정초등학교 상수도사업본부 시설관리사무소, 양정청소년수련원 코이카부산지역센터
+        서구보건소, 부민초등학교, 국민건강보험공단, 하나은행, 경로치과의원공간
     </string>
 
 
-    <string name="first_out_28_1">
-         양정교차로방면, 부산지방경찰청, 부산광역시청 부산종합고용지원센터
+    <string name="first_out_26_1">
+         보수동 방면, 대청로 방면, 부산은행
     </string>
-    <string name="first_out_28_2">
-        부산광역시선거관리위원회, 부산지방노동청 국가인권위원회, 부산지방통계청 국민연금공단 부산지역본부, 연제구청, 부산지방국세청
+    <string name="first_out_26_2">
+        부민동방면, 임시수도기념관 방면, 아미우체국, KT서부산지사, 동아대학교 부민캠퍼스(사회교육원), 아미동우체국
     </string>
-    <string name="first_out_28_3">
+    <string name="first_out_26_3">
+        경남중학교
+    </string>
+    <string name="first_out_26_4">
+        아미동, 부산대학병원, KT서부산지사
+    </string>
+    <string name="first_out_26_5">
+        경남중학교
+    </string>
+    <string name="first_out_26_6">
+        초장동방면, 부산시 아동청소년회관, 감천문화마을
+    </string>
+    <string name="first_out_26_7">
+        7 한전중부산지점, 토성초등학교
+    </string>
+    <string name="first_out_26_8">
+        아미동방면, 부산시아동청소년회관, 아미초등학교
+    </string>
+    <string name="first_out_26_9">
+        충무동방면, 충무동주민센터
+    </string>
+    <string name="first_out_26_10">
+        충무동방면, 초장동방면
+    </string>
+
+
+    <string name="first_out_25_1">
+         충무교차로, 서구청, 한전중부산지점, 부산은행 충무동지점
+    </string>
+    <string name="first_out_25_2">
+        암남동방면, 충무교차로, 부산공동어시장, 부산은행 충무동지점, KEB하나은행 충무동지점 부산충무동우체국
+    </string>
+    <string name="first_out_25_3">
+        충무동방면, 보수동방면, 국제시장, 부평동시장 방면, 국민은행, 신한은행
+    </string>
+    <string name="first_out_25_4">
+        자갈치사거리, 공영주차장, 중부견인차보관소, KEB하나은행 충무동지점
+    </string>
+    <string name="first_out_25_5">
+        충무동, 부평동, 신한은행
+    </string>
+    <string name="first_out_25_6">
+        수협은행, KEB하나은행 충무동지점
+    </string>
+    <string name="first_out_25_7">
+        대청동방면, 미술의거리, BIFF광장, 국제시장, 부산극장 CGV 남포, 씨네시티
+    </string>
+    <string name="first_out_25_8">
+        충무동로타리, 부산공동어시장, 수협은행 부산지역금융본부, KEB하나은행 충무동지점, 하나로클럽, 신천지백화점
+    </string>
+    <string name="first_out_25_10">
+        1 신동아수산물종합시장, 자갈치시장, 농협농산물백화점
+    </string>
+
+
+    <string name="first_out_24_1">
+         용두산공원, BIFF광장, 부산근대역사관 방면, 한국문화센터
+    </string>
+    <string name="first_out_24_2">
+        남포동건어물시장, 자갈치시장
+    </string>
+    <string name="first_out_24_3">
+        광복동, 광복동우체국, 부산경륜공단 남포지점
+    </string>
+    <string name="first_out_24_4">
+        자갈치건어물시장
+    </string>
+    <string name="first_out_24_5">
+        광복동입구, 부산데파트, 남포지구대, 부산경륜공단 남포지점
+    </string>
+    <string name="first_out_24_6">
+        영도방면, 태종대, 농협
+    </string>
+    <string name="first_out_24_7">
+        농협
+    </string>
+    <string name="first_out_24_8">
+        롯데백화점광복점
+    </string>
+    <string name="first_out_24_10">
+        롯데백화점광복점
+    </string>
+
+
+    <string name="first_out_23_1">
+         용두산공원, 국제시장, 백신기념관, 부산근대역사관 방면 부산데파트, 광복동입구
+    </string>
+    <string name="first_out_23_2">
+        부산항연안여객터미널, 부산지방식품의약품안전청, 수미르공원
+    </string>
+    <string name="first_out_23_3">
+        국민은행, 용두산공원, 국제시장, 백산기념관, 부산근대역사관 방면, 광복동입구
+    </string>
+    <string name="first_out_23_4">
+        외국인서비스센터, 부산세관, 부산항국제여객터미널
+    </string>
+    <string name="first_out_23_5">
+        용두산공원, 국제시장, 백산기념관, 부산근대역사관 방면 광복동 입구
+    </string>
+    <string name="first_out_23_6">
+        대한통운 화물취급소
+    </string>
+    <string name="first_out_23_7">
+        부산우체국, 대청동방면, 부산근대역사관 방면
+    </string>
+    <string name="first_out_23_8">
+        부산은행, 삼성생명
+    </string>
+    <string name="first_out_23_9">
+        부산우체국, 대청동방면, 부산근대역사관 방면
+    </string>
+    <string name="first_out_23_10">
+        부산출입국관리사무소, 부산세관, 부산항국제여객터미널
+    </string>
+    <string name="first_out_23_11">
+        부산우체국, 서라벌호텔, 기술신용보증기금, 국민건강보험공단 중부산지사
+    </string>
+    <string name="first_out_23_12">
+        부산무역회관, 부산세관, 부산항국제여객터미널
+    </string>
+    <string name="first_out_23_13">
+        중앙동4가, 남성여자고등학교, 40계단문화회간
+    </string>
+    <string name="first_out_23_14">
+        중부소방서, 중앙일보, 부산출입국종합민원센터
+    </string>
+    <string name="first_out_23_15">
+        중앙동4기, 남성여자고등학교, 40계단문화관, 동아일보
+    </string>
+    <string name="first_out_23_17">
+        중부경찰서, 동광동5가, 신용보증기금
+    </string>
+
+
+    <string name="first_out_22_1">
+         부산터널 방면, 영주1동 방면, 상해거리, 부산전화국, 부산화교소학교
+    </string>
+    <string name="first_out_22_2">
+        한국생산성본부 부산경남지부, 부산지방보훈청, 부산전화번호안내국, SC은행
+    </string>
+    <string name="first_out_22_3">
+        초량1동, 부산화교중학교, 부산화교고등학교, 기업은행
+    </string>
+    <string name="first_out_22_4">
+        부산역광장, 교원공제회관, 아리랑관광호텔
+    </string>
+    <string name="first_out_22_5">
+        초량외국인상가, 부산화교중학교, 부산화교고등학교, 상해거리
+    </string>
+    <string name="first_out_22_6">
+        부산역광장, 교원공제회관
+    </string>
+    <string name="first_out_22_7">
+        초량우체국, 부산지방국토관리청, 초량2동주민센터
+    </string>
+    <string name="first_out_22_8">
+        부산역광장
+    </string>
+    <string name="first_out_22_10">
+        부산역광장, 한국토지주택공사, 부산울산지역본부
+    </string>
+
+
+    <string name="first_out_21_1">
+         부산지방국토관리청
+    </string>
+    <string name="first_out_21_2">
+        부산역, 조선일보사, 부산장애인총연합회
+    </string>
+    <string name="first_out_21_3">
+        초량3동, 부산고등학교
+    </string>
+    <string name="first_out_21_4">
+        제3부두, 부산건설회관
+    </string>
+    <string name="first_out_21_5">
+        초량3동, 정발장군동상, 부산고등학교, 일본국총영사관, 몽골명예영사관
+    </string>
+    <string name="first_out_21_6">
+        항운회관(예식장), 제3부두, 부산건설회관, 부산보훈회관, 초량소방파출소, 부산디자인고등학교
+    </string>
+    <string name="first_out_21_7">
+        일보국총영사관, 초량3동주민센터
+    </string>
+    <string name="first_out_21_8">
+        초량3동, 한국감정원
+    </string>
+    <string name="first_out_21_9">
+        성분도병원, 근로복지공단 부산지역본부, 부산중앙초등학교, 프랑스문화원, 우리은행
+    </string>
+    <string name="first_out_21_10">
+        초량3동, 제3부두 방면
+    </string>
+    <string name="first_out_21_12">
+        정부물품재활용센터, 부산여자기독교청년회, 한국감정원, 부산상조(주), KCB센트리움아파트
+    </string>
+
+
+    <string name="first_out_20_1">
+         수정동우체국, 고관입구, 동구청, 부산국제영화고등학교, 동구문화원
+    </string>
+    <string name="first_out_20_2">
+        제4부두, 연합뉴스, 부산지방노동위원회
+    </string>
+    <string name="first_out_20_3">
+        수정2동, 수정동시장, 부산일보사
+    </string>
+    <string name="first_out_20_4">
+        경부선 부산진역, 협성타워
+    </string>
+    <string name="first_out_20_5">
+        부산일보사, 동구청, 수정동시장
+    </string>
+    <string name="first_out_20_6">
+        제4부두, 부산은행
+    </string>
+    <string name="first_out_20_7">
+        부산일보사, 동부경찰서, 부산진세무서, 봉생병원, 경남여자고등학교
+    </string>
+    <string name="first_out_20_8">
+        경부선 부산진역
+    </string>
+
+
+    <string name="first_out_19_1">
+         봉생병원, 좌천1동, 좌천동가구거리
+    </string>
+    <string name="first_out_19_2">
+        제자로교회, 범일고가교, 범일5동, 부산지방해양항만청, 남해지방해양경찰청
+    </string>
+    <string name="first_out_19_3">
+        부산진교회, 금성중학교, 금성고등학교, 정공단 고려저축은행, 부산진 일신여학교
+    </string>
+    <string name="first_out_19_4">
+        제자로교회, 범일고가교, 부산지방해양항만청, 범일5동 남해지방해양경찰청, 좌천지역아동센터
+    </string>
+    <string name="first_out_19_5">
+        좌천1동, 일신기독병원, 좌천동가구거리
+    </string>
+    <string name="first_out_19_6">
+        성남초등학교, 좌천동가구거리
+    </string>
+    <string name="first_out_19_7">
+        좌천동우체국, 데레사여자고등학교, 좌천동가구거리
+    </string>
+    <string name="first_out_19_8">
+        부산진시장, 남문시장, 동구청
+    </string>
+
+
+    <string name="first_out_18_1">
+         부산진시장, 남문시장
+    </string>
+    <string name="first_out_18_2">
+        예식장방면, 부산시민회관, 동부산우체국, 공무원연금공단 부산연금센터, 범일전화국, 국제호텔, 범일공구철물상가, BBS부산불교방송
+    </string>
+    <string name="first_out_18_3">
+        부산진소방서, 현대백화점
+    </string>
+    <string name="first_out_18_4">
+        범일2동, 범일공구철물상가
+    </string>
+    <string name="first_out_18_5">
+        문화병원, 부산진소방서
+    </string>
+    <string name="first_out_18_6">
+        예식장방면, 범일2동, 범일공구철물상가
+    </string>
+    <string name="first_out_18_7">
+        성가병원, 현대백화점
+    </string>
+    <string name="first_out_18_8">
+        자유시장, 평화시장
+    </string>
+    <string name="first_out_18_9">
+        현대백화점, 문화병원, 부산진소방서
+    </string>
+    <string name="first_out_18_10">
+        자유시장, 평화시장, 부산지방식품의약품안전청
+    </string>
+    <string name="first_out_18_12">
+        중앙귀금속도매상가
+    </string>
+
+
+    <string name="first_out_17_1">
+         건강보험심사평가원 부산지원, 사학연금회관, 중소기업진흥공단 부산지역본부, 한국장애인고용공단 부산지사, 사립학교교직원연금공단
+    </string>
+    <string name="first_out_17_2">
+        중앙시장, 부산진구보건소, 신용보증기금, 성서초등학교
+    </string>
+    <string name="first_out_17_3">
+        춘해병원, 보림극장
+    </string>
+    <string name="first_out_17_4">
+        부산상공회의소, 한국선물거래소, 전포동방면, 동성고등학교, 대원1,2단지아파트, 범전1동주민센터, 범천동우체국, 기술보증기금
+    </string>
+    <string name="first_out_17_5">
+        춘해병원, 철도차량정비창, 범천4동
+    </string>
+    <string name="first_out_17_6">
+        부산상공회의소, 동성중학교, 동성고등학교, 한국선물거래소, 전포동방면, 부산은행, 동성고등학교, 국제금융센터, CGV서면12
+    </string>
+    <string name="first_out_17_7">
+        서면방면, 동서고가도로, 부산철도차량정비청
+    </string>
+    <string name="first_out_17_8">
+        부산교통공사
+    </string>
+
+
+    <string name="first_out_16_1">
+         범천동, 서면시장, 서면1번가
+    </string>
+    <string name="first_out_16_2">
+        주디스태화, 동보서적, CGV대한, 시립부전도서관
+    </string>
+    <string name="first_out_16_3">
+        서면시장, 서면1번가
+    </string>
+    <string name="first_out_16_4">
+        시립부전도서관
+    </string>
+    <string name="first_out_16_5">
+        서면시장
+    </string>
+    <string name="first_out_16_6">
+        한국전력공사부산울산지역본부, 부전2동주민센터, 시립부전도서관, 중앙중학교, 전포동방면
+    </string>
+    <string name="first_out_16_7">
+        서면시장, 부전2동우체국
+    </string>
+    <string name="first_out_16_8">
+        서면우체국, 전포초등학교
+    </string>
+    <string name="first_out_16_9">
+        부전1동우체국, 부산진경찰서
+    </string>
+    <string name="first_out_16_10">
+        전포동방면, 철물상가, 서면우체국
+    </string>
+    <string name="first_out_16_11">
+        부산진구청, 부전1동우체국, 동의대한방병원, 부전1동주민센터
+    </string>
+    <string name="first_out_16_12">
+        서면우체국, 부산진전화국, 국민연금관리공단 부산지사
+    </string>
+    <string name="first_out_16_13">
+        어린이대공원 방면
+    </string>
+    <string name="first_out_16_15">
+        부전1동, 부전시장
+    </string>
+
+
+    <string name="first_out_15_1">
+         부전시장, 농협부산지역본부, 부산진등기소, 동해남부선 부전역, 하나로클럽
+    </string>
+    <string name="first_out_15_2">
+        전포동방면, 부산인력은행, 전포초등학교, 적십자회관 국민은행, 근로복지공단부산중부지사
+    </string>
+    <string name="first_out_15_3">
+        부산전자종합상가
+    </string>
+    <string name="first_out_15_4">
+        국민건강보험공단, 향도중학교
+    </string>
+    <string name="first_out_15_5">
+        부산전자종합상가, 부산진등기소, 부전시장
+    </string>
+    <string name="first_out_15_6">
+        국민건강보험공단, 적십자회관, 전포동방면
+    </string>
+    <string name="first_out_15_7">
+        송상현공동상, 범전동방면, 부산은행, 부산시민공원, 세흥병원
+    </string>
+    <string name="first_out_15_8">
+        부산진경찰서, 향도중학교, 송상현광장, 부산창업카페, 차량등록사업소
+    </string>
+
+
+    <string name="first_out_14_1">
+         송상현공동상, 양정시장, 양정1동우체국, 양정동우체국
+    </string>
+    <string name="first_out_14_2">
+        동의과학대학, 바산여자대학, 하나은행, 송상현광장
+    </string>
+    <string name="first_out_14_3">
+        양정동우체국, 양정시장, 양정1동우체국
+    </string>
+    <string name="first_out_14_4">
+        동의의료원, 동의대학교한의예과, 망미동방면, 양정2동주민센터, 부산은행
+    </string>
+    <string name="first_out_14_5">
+        어린이대공원, 부산광역시교육청, 초읍동방면, 부산정보고등학교
+    </string>
+    <string name="first_out_14_6">
+        망미동방면, 연제구청방면
+    </string>
+    <string name="first_out_14_7">
+        백조예식장, 부산광역시교육청, 거제동방면
+    </string>
+    <string name="first_out_14_8">
+        양정2동, 양정2동우체국, 연산교차로방면, 부산광역시 지방행정동우회
+    </string>
+    <string name="first_out_14_9">
+        부산광역시 교육연구정보원, 부산발전연구원, 양정초등학교 상수도사업본부 시설관리사무소, 양정청소년수련원, 코이카부산지역센터
+    </string>
+
+
+    <string name="first_out_13_1">
+         양정교차로방면, 부산지방경찰청, 부산광역시청, 부산종합고용지원센터
+    </string>
+    <string name="first_out_13_2">
+        부산광역시선거관리위원회, 부산지방노동청, 국가인권위원회, 부산지방통계청, 국민연금공단, 부산지역본부, 연제구청, 부산지방국세청
+    </string>
+    <string name="first_out_13_3">
         부산광역시청, 부산지방경찰청
     </string>
-    <string name="first_out_28_4">
+    <string name="first_out_13_4">
         연산교차로, 동래방면
     </string>
-    <string name="first_out_28_5">
+    <string name="first_out_13_5">
         부산광역시의회, 부산광역시청
     </string>
-    <string name="first_out_28_6">
+    <string name="first_out_13_6">
         영남시장상가아파트
     </string>
-    <string name="first_out_28_7">
+    <string name="first_out_13_7">
         연산5동주민센터, 연산교차로방면
     </string>
-    <string name="first_out_28_8">
+    <string name="first_out_13_8">
         연산교차로방면, 연산2동주민센터
     </string>
 
 
-    <string name="first_out_29_1">
-          시청방면, 연제초등학교, 연산5동주민센터, 양정교차로방면 연제초등학교
+    <string name="first_out_12_1">
+          시청방면, 연제초등학교, 연산5동주민센터, 양정교차로방면, 연제초등학교
     </string>
-    <string name="first_out_29_2">
-        연산2동주민센터, 뉴그랜드빌딩, 연산2치안센터 부산경제진흥원, 부산일자리허브센터 부산신용보증재단
+    <string name="first_out_12_2">
+        연산2동주민센터, 뉴그랜드빌딩, 연산2치안센터 부산경제진흥원, 부산일자리허브센터, 부산신용보증재단
     </string>
-    <string name="first_out_29_3">
+    <string name="first_out_12_3">
         부산은행
     </string>
-    <string name="first_out_29_4">
+    <string name="first_out_12_4">
         연산5동우체국, 연산초등학교, KT&amp;G부산본부, 하나은행
     </string>
-    <string name="first_out_29_5">
+    <string name="first_out_12_5">
         종합운동장, 거제동방면, 법원, 경찰청방면
     </string>
-    <string name="first_out_29_6">
+    <string name="first_out_12_6">
         신리삼거리방면, 반도보라아파트, 연산초등학교
     </string>
-    <string name="first_out_29_7">
+    <string name="first_out_12_7">
         부산교육대학교 방면, 목화예식장, 미라보관광호텔
     </string>
-    <string name="first_out_29_8">
+    <string name="first_out_12_8">
         연일시장, 프리마호텔, 연제일신여성병원, 연동초등학교 연산중학교, 부산경상대학교, 연일초등학교
     </string>
-    <string name="first_out_29_10">
+    <string name="first_out_12_10">
         연산4동주민센터, 워크재활의학과병원
     </string>
-    <string name="first_out_29_12">
+    <string name="first_out_12_12">
         안락교차로방면, 연일지구대, KEB하나은행
     </string>
-    <string name="first_out_29_14">
-        안락교차로방면, 동래세무서, 연서초등학교, 우리은행 충렬사 방면
+    <string name="first_out_12_14">
+        안락교차로방면, 동래세무서, 연서초등학교, 우리은행, 충렬사 방면
     </string>
-    <string name="first_out_29_16">
-        부산장애인종합복지관, 교보생명, 노인종합복지관 부산의료원(셔틀버스정류장), 교육대학방면 한국경로복지재단
+    <string name="first_out_12_16">
+        부산장애인종합복지관, 교보생명, 노인종합복지관, 부산의료원(셔틀버스정류장), 교육대학방면, 한국경로복지재단
     </string>
-    <string name="first_out_29_17">
-        종합운동장, 거제동방면, 국민건강보험공단, 신한은행 부산광역시의정회
+    <string name="first_out_12_17">
+        종합운동장, 거제동방면, 국민건강보험공단, 신한은행, 부산광역시의정회
     </string>
 
 
-    <string name="first_out_30_1">
-         거제동 방면, 종합운동장 방면, 법원, 검찰청 이사벨중고등학교, 지구초등학교
+    <string name="first_out_11_1">
+         거제동 방면, 종합운동장 방면, 법원, 검찰청, 이사벨중고등학교, 지구초등학교
     </string>
-    <string name="first_out_30_2">
+    <string name="first_out_11_2">
         부산의료원, 삼익아파트, 연산교차로 방면
     </string>
-    <string name="first_out_30_3">
+    <string name="first_out_11_3">
         국제신문, 부산교육대학교, 연제구청, 이사벨중고등학교
     </string>
-    <string name="first_out_30_4">
+    <string name="first_out_11_4">
         동래시장방면, 거제1동주민센터, 동래경찰서
     </string>
-    <string name="first_out_30_5">
+    <string name="first_out_11_5">
         내성중학교, 종합운동장방면, 어린이재단부산지역본부
     </string>
-    <string name="first_out_30_6">
+    <string name="first_out_11_6">
         동래경찰서, 동래소방서, 동래고등학교, 동래시장방면
     </string>
-    <string name="first_out_30_8">
+    <string name="first_out_11_8">
         한양아파트, 내성교차로방면, 동래방면
     </string>
-    <string name="first_out_30_9">
+    <string name="first_out_11_9">
         부산장애인종합복지관
     </string>
-    <string name="first_out_30_10">
+    <string name="first_out_11_10">
         교대사거리, 주차장
     </string>
-    <string name="first_out_30_11">
+    <string name="first_out_11_11">
         이사벨중고등학교, 지구촌고등학교
     </string>
-    <string name="first_out_30_12">
+    <string name="first_out_11_12">
         주차장
     </string>
 
 
-    <string name="first_out_31_1">
+    <string name="first_out_10_1">
         한국건강관리협회 부산지부, 내성중학교, 내성교차로
     </string>
-    <string name="first_out_31_2">
+    <string name="first_out_10_2">
         대동병원, 동래구청, 동래경찰서방면, 부산지방기상청
     </string>
-    <string name="first_out_31_3">
-        금강공원, 내산초등학교 시외버스정류소(마산,창원,김해 방면)
+    <string name="first_out_10_3">
+        금강공원, 내산초등학교, 시외버스정류소(마산,창원,김해 방면)
     </string>
-    <string name="first_out_31_4">
+    <string name="first_out_10_4">
         동래우체국, 명륜초등학교, 동래중학교, 중앙여자고등학교
     </string>
-    <string name="first_out_31_5">
-        내산초등학교, 동래시외버스정류장 한국건강관리협회 부산지부, 온천2동 주민센터
+    <string name="first_out_10_5">
+        내산초등학교, 동래시외버스정류장, 한국건강관리협회 부산지부, 온천2동 주민센터
     </string>
-    <string name="first_out_31_6">
+    <string name="first_out_10_6">
         사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장
     </string>
-    <string name="first_out_31_7">
-        내산초등학교, 동래시외버스정류장 한국건강관리협회 부산지부, 롯데백화점
+    <string name="first_out_10_7">
+        내산초등학교, 동래시외버스정류장, 한국건강관리협회 부산지부, 롯데백화점
     </string>
-    <string name="first_out_31_8">
+    <string name="first_out_10_8">
         사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장 수안초등학교
     </string>
 
 
-    <string name="first_out_32_1">
-         동래원에고등학교, 부산전자공업고등학교
+    <string name="first_out_9_1">
+         동래원예고등학교, 부산전자공업고등학교
     </string>
-    <string name="first_out_32_2">
+    <string name="first_out_9_2">
         동래우체국, 동래구청, 동래중학교, 동래구보건소
     </string>
-    <string name="first_out_32_3">
+    <string name="first_out_9_3">
         금강공원, 부산컴퓨터도매상가
     </string>
-    <string name="first_out_32_4">
+    <string name="first_out_9_4">
         명륜동, 동래우체국, 명륜초등학교, 한국소방안전협회
     </string>
-    <string name="first_out_32_5">
+    <string name="first_out_9_5">
         롯데마트, 롯데백화점
     </string>
 
 
-    <string name="first_out_33_1">
-         동래온천우체국, 금강공원, 온천장 부산해양자연사박물관방면
+    <string name="first_out_8_1">
+         동래온천우체국, 금강공원, 온천장, 부산해양자연사박물관방면
     </string>
-    <string name="first_out_33_2">
-        부곡동우체국, 동해중학교, 청십자병원, 동래중학교 동래문화회관
+    <string name="first_out_8_2">
+        부곡동우체국, 동해중학교, 청십자병원, 동래중학교, 동래문화회관
     </string>
-    <string name="first_out_33_3">
-        금강식물원, 금정산성방면, 부산해양자연사박물관방면 금강공원, CGV동래, 부산장전3동우체국
+    <string name="first_out_8_3">
+        금강식물원, 금정산성방면, 부산해양자연사박물관방면, 금강공원, CGV동래, 부산장전3동우체국
     </string>
-    <string name="first_out_33_4">
-        부곡동우체국, 내성고등학교, 부산정보관광고등학교 서동방면
+    <string name="first_out_8_4">
+        부곡동우체국, 내성고등학교, 부산정보관광고등학교, 서동방면
     </string>
-    <string name="first_out_33_5">
+    <string name="first_out_8_5">
         금강식물원, 금정산성방면, 우리들병원, 금강공원
     </string>
 
 
-    <string name="first_out_34_1">
+    <string name="first_out_7_1">
          장전동, 장전동우체국, 금정초등학교, 금정등기소
     </string>
-    <string name="first_out_34_2">
+    <string name="first_out_7_2">
         부곡동, 대동대학, 부곡지구대
     </string>
-    <string name="first_out_34_3">
+    <string name="first_out_7_3">
         장전동우체국, 부산대학교
     </string>
-    <string name="first_out_34_4">
-        부곡동, 부곡중학교, 부산대사대부설고등학교, 금정세무서 금양중학교
+    <string name="first_out_7_4">
+        부곡동, 부곡중학교, 부산대사대부설고등학교, 금정세무서, 금양중학교
     </string>
 
 
-    <string name="first_out_35_1">
+    <string name="first_out_6_1">
          부산대학교, 장전1동주민센터, 장전1치안센터
     </string>
-    <string name="first_out_35_2">
+    <string name="first_out_6_2">
         부곡동
     </string>
-    <string name="first_out_35_3">
+    <string name="first_out_6_3">
         장전동, 장전초등학교
     </string>
-    <string name="first_out_35_4">
+    <string name="first_out_6_4">
         부산가톨릭대학교, 오륜대방면
     </string>
 
 
-    <string name="first_out_36_1">
+    <string name="first_out_5_1">
          구서종합시장, 구서오시게시장, 구서1동주민센터
     </string>
-    <string name="first_out_36_2">
+    <string name="first_out_5_2">
         금정우체국, 금정경찰서, 금정구청, 금정문화회관
     </string>
-    <string name="first_out_36_3">
+    <string name="first_out_5_3">
         구서동우체국, 구서1동주민센터, 구서초등학교, 두실방면
     </string>
-    <string name="first_out_36_4">
+    <string name="first_out_5_4">
         금정경찰서, 경부고속도로
     </string>
 
 
-    <string name="first_out_37_1">
-         신한금융투자 금정지점, 구서초등학교 KB국민은행 두실역지점, KEB하나은행 구서동지점
+    <string name="first_out_4_1">
+         신한금융투자 금정지점, 구서초등학교, KB국민은행 두실역지점, KEB하나은행 구서동지점
     </string>
-    <string name="first_out_37_2">
+    <string name="first_out_4_2">
         부곡동방면
     </string>
-    <string name="first_out_37_3">
+    <string name="first_out_4_3">
         선경1차아파트, 부영벽산아파트, 부산은행
     </string>
-    <string name="first_out_37_4">
+    <string name="first_out_4_4">
         성원멘투로빌오피스텔
     </string>
-    <string name="first_out_37_5">
+    <string name="first_out_4_5">
         부영벽산아파트
     </string>
-    <string name="first_out_37_6">
+    <string name="first_out_4_6">
         부곡동방면
     </string>
-    <string name="first_out_37_7">
+    <string name="first_out_4_7">
         선경3차아파트, 부영벽산아파트, 두실마을
     </string>
-    <string name="first_out_37_8">
+    <string name="first_out_4_8">
         남산중학교, 이슬람부산성원
     </string>
 
 
-    <string name="first_out_38_1">
+    <string name="first_out_3_1">
          두실방면, 남산초등학교, 신암마을, 부산외국어대학교
     </string>
-    <string name="first_out_38_2">
+    <string name="first_out_3_2">
         남산중학교, 동광세화아파트
     </string>
-    <string name="first_out_38_3">
+    <string name="first_out_3_3">
         부산외대운동장 방면, 신암마을
     </string>
-    <string name="first_out_38_4">
+    <string name="first_out_3_4">
         공영주차장, 영락공원 방면
     </string>
-    <string name="first_out_38_5">
+    <string name="first_out_3_5">
         신암마을
     </string>
-    <string name="first_out_38_6">
+    <string name="first_out_3_6">
         공영주차장, 동광세화아파트
     </string>
-    <string name="first_out_38_7">
+    <string name="first_out_3_7">
         남산고등학교, 청룡동 방면
     </string>
-    <string name="first_out_38_8">
+    <string name="first_out_3_8">
         침례병원
     </string>
 
 
-    <string name="first_out_39_1">
+    <string name="first_out_2_1">
          청룡초등학교, 남산동주민센터, 신암마을
     </string>
-    <string name="first_out_39_2">
+    <string name="first_out_2_2">
         범어지구대, 팔송파출소, 영락공원, 금정중학교
     </string>
-    <string name="first_out_39_3">
+    <string name="first_out_2_3">
         범어사입구, 팔송
     </string>
-    <string name="first_out_39_4">
+    <string name="first_out_2_4">
         영락공원, 금정도서관, 노포동
     </string>
-    <string name="first_out_39_5">
+    <string name="first_out_2_5">
         범어사입구, 신암마을, 청룡초등학교
     </string>
-    <string name="first_out_39_6">
+    <string name="first_out_2_6">
         영락공원, 금정중학교
     </string>
-    <string name="first_out_39_7">
-        노포동 방면, 부산보호관찰소, 범어사입구, 청룡동 청룡노포동주민센터, 범어사입구
+    <string name="first_out_2_7">
+        노포동 방면, 부산보호관찰소, 범어사입구, 청룡동, 청룡노포동주민센터, 범어사입구
     </string>
-    <string name="first_out_39_8">
+    <string name="first_out_2_8">
         노포동 방면, 노포차량사업소
     </string>
 
 
-    <string name="first_out_40_1">
+    <string name="first_out_1_1">
          두구동, 노포동, 부산컨트리클럽, 덕계, 서창, 울산방면 스포원파크방면
     </string>
-    <string name="first_out_40_2">
+    <string name="first_out_1_2">
         노포동, 부산, 울산시내버스정류장
     </string>
-    <string name="first_out_40_3">
+    <string name="first_out_1_3">
         부산종합버스터미널
     </string>
-
-
-    <!--    //수정전-->
-
-    <string name="first_out_1">
-        1번출구\n\t 다대도서관, 중현초등학교, 대우아파트, 다대5지구 아파트\n\t 몰운대 복지관, 다대 우체국\n
-        2번출구\n\t 다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수\n
-        3번출구\n\t 다대대우아파트, 성원아파트\n
-        4번출구\n\t 다대포해수욕장(다대포해변공원), 몰운대, 꿈의 낙조분수
-</string>
-
-
-    <string name="first_out_2">
-        1번출구\n\t 다대중학교, 다대고등학교, 롯데 슈퍼, 농협다대지점\n\t KB국민은행다대지점, 부산은행지점\n
-2번출구\n\t 우리원병원, 다대해양경비안전센터, 다대민속예술관\n\t 부산시수협다대위판장, 자유아파트, 다대포항, 활어회센터\n\t 수협다대지점\n
-3번출구\n\t 다대1동행정복지센터, 아미산자생식물원, 윤공단\n\t 대우푸르지오아파트\n
-4번출구\n\t 부산유아교육진흥원, 다대1치안센터, 다대초등학교\n
-
-    </string>
-    <string name="first_out_3">
-        1번출구\n\t 다대3지구도개공아파트, 다대종합사회복지관\n\t 다대해송앞파트\n
-2번출구\n\t 다대현대아파트, 하나은행, 다대1동 방면\n
-3번출구\n\t 신다대아파트, 다대자연병원, 장림동 방면\n
-4번출구\n\t 삼환아파트, 다대2동행정복지센터, 사하경찰서다대지구대\n\t 다송중학교, 다선초등학교, 두송중학교, 국가지질공원\n\t 부산은행\n
-6번출구\n\t 다대코오롱맨션, 다대롯데캐슬블루, 다대2동우체국\n\t 삼환2차아파트, 다송초등학교, 국제그린아파트, 다송아파트\n\t 다대4지구도개공아파트
-
-
-    </string>
-    <string name="first_out_4">
-        1번출구\n\t 협성르네상스아파트, 일성냉동, 다대포 방면\n
-2번출구\n\t 하나병원, 한서병원, 경희병원, 다송초등학교\n
-3번출구\n\t 탑마트, 효리모등학교, SC제일은행, 장림2동행정복지센터\n
-4번출구\n\t 장림현대아파트, 부산장림현대우편취급국, 영남중학교
-
-    </string>
-    <string name="first_out_5">
-        1번출구\n\t 장림삼거리, 장림초등학교, 성경센스빌, 장림시장\n\t 장림동행정복지센터, 장림동우체국\n
-        2번출구\n\t 장림파출소, 장림여자중학교, 구평가구단지, 은향교회\n\t 부경보건고등학교\n
-3번출구\n\t 남양맨션, 강동맨션, 장림초등학교, 삼성디지털프라자\n
-4번출구\n\t 홈플러스, 신우림아파트, 동원3차아파트, 복있는유치원\n\t 대동고등학교, 구평고개사거리 방면\n
-5번출구\n\t CJ제일제당, 롯데마트, 삼성디지털프라자, 홈플러스\n\t 교통안전공단 사하검사소, 부산지방경찰청 제2기동대\n
-6번출구\n\t 하이마트, 세정아울렛, 사하경찰서, 홈플러스
-
-    </string>
-    <string name="first_out_6">
-        1번출구\n\t 성일여자고등학교, 신평시장, 부산사하경찰서 방면\n
-2번출구\n\t 신평1동행정복지센터, 신평1동치안센터, 신평시장\n
-3번출구\n\t 신평동우체국, 신평 장림 일반산업단지, 사하자동차검사소\n
-4번출구\n\t 사하소방서, 신평초등학교, 부산은행, 하나외환은행\n
-5번출구\n\t 신평 장림 일반산업단지\n
-6번출구\n\t 신평 장림 일반산업단지, 신평초등학교
-
-    </string>
-    <string name="first_out_7">
-        1번출구\n\t 사하구보건소, 신평2동주민센터, 신평장림공단\n\t 신평레포츠공원\n
-2번출구\n\t 주차장\n
-3번출구\n\t 신평차량사업소, 부산염색공단\n
-4번출구\n\t 신평지구대, 캐나다영사관, 신익강변타운, 현대아파트\n\t 한신아파트, 신평장림공단, 국민은행\n
-5번출구\n\t 신평장림공단\n
-6번출구\n\t 하단교차로, 신남초등학교, 가락타운 2.3단지\n\t KEB하나은행 하단지점\n
-7번출구\n\t 신평장림공단, 가락타운 2.3단지\n
-9번출구\n\t 신평2동 우체국, 하남초등학교, 하남중학교\n\t 가락타운 2.3단지
-
-    </string>
-    <string name="first_out_8">
-        1번출구\n\t 낙동강하구둑, 하단119안전센터, 가락타운 1단지, 세양병원\n\t 에덴공원\n
-2번출구\n\t 가락타운 2,3단지, 하단1동주민센터, 하단초등학교\n
-3번출구\n\t 하단119안전센터\n
-4번출구\n\t 하단지구대, 하단초등학교, 법무부부산보호관찰소 서부지소\n\t 우리은행, 프라임병원\n
-5번출구\n\t 에덴공원, 하단우체국, 국민연금공단 서부산지사\n
-6번출구\n\t 우리은행\n
-7번출구\n\t 하단우체국, 국민건강보험공단, 국민연금공단 서부산지사\n\t 에덴공원, 동아대학교, 하단교차로\n
-8번출구\n\t 하단교차로, 신평방면\n
-9번출구\n\t 동아대, 건국중, 건국고, 부산여고, 신한은행 당리동지점\n
-10번출구\n\t 신평방면, 가락타운 2.3단지, 하단지구대, 하단1동주민센터\n
-11번출구\n\t KEB하나은행 하단역출장소, 신한은행 당리동지점\n\t 부산낙동초등학교, 당리삼창아파트\n
-12번출구\n\t 부산은행, 하단5일장
-
-    </string>
-    <string name="first_out_9">
-        1번출구\n\t 하단교차로, 낙동초등학교, 당리삼창아파트, 오성궁전아파트\n
-2번출구\n\t 하단교차로, 하단시장\n
-3번출구\n\t 사하구청, 신한은행\n
-4번출구\n\t 부산은행, 대광공업고등학교\n
-5번출구\n\t 사하구청, 당리동주민센터, 당리치안센터, 당리중학교\n\t 서여자중학교, 국민은행, 사하농협, 사하중학교\n\t 당리동 제1체육공원\n
-6번출구\n\t 당리초등학교, 대광발명과학고등학교, 벽산으뜸아파트
-
-    </string>
-    <string name="first_out_10">
-        1번출구\n\t 사하우체국, 당리중학교\n
-2번출구\n\t 괴정4치안센터, KT사하지사, 사남초등학교\n
-3번출구\n\t 괴정1치안센터, 괴정소방파출소, 사하초등학교, 사하중학교\n
-        4번출구\n\t 괴정4동주민센터, KT지점\n
-6번출구\n\t 신평입구, 삼익아파트, 부산은행, 사하신협
-
-
-
-    </string>
-    <string name="first_out_11">
-        1번출구\n\t 괴정1동주민센터, 괴정1치안센터, 괴정소방파출소\n\t 사하초등학교, 괴정메디컬센터, 창우블루빌아파트\n
-2번출구\n\t 상수도사업본부 사하사업소, 괴정병원, 우리은행\n
-3번출구\n\t 사하도서관, 부산은행\n
-4번출구\n\t 괴정병원\n
-5번출구\n\t 동산병원, 괴정지구대, 괴정3동치안센터\n
-6번출구\n\t 감천, 다대포방면, 괴정우체국, 국민은행\n
-8번출구\n\t 괴정시장, 뉴코아아울렛 괴정점, 사하성당, 크로바관광호텔\n
-10번출구\n\t 괴정시장, 괴정3동주민센터, 농협, 괴정중앙교회
-
-    </string>
-    <string name="first_out_12">
-        1번출구\n\t 동주대학교, 괴정초등학교, 괴정3동치안센터\n
-2번출구\n\t 국민은행, 동주여자중학교, 괴정3동주민센터\n
-3번출구\n\t 대티고개, 괴정2치안센터, 신괴정아파트\n
-4번출구\n\t 괴정2동 우편취급소, 동주여자중학교, 승학초등학교\n\t 괴정2동주민센터, 새마을금고
-
-    </string>
-    <string name="first_out_13">
-        1번출구\n\t 대티터널방면, 서대치안센터, 부산위생병원\n
-2번출구\n\t 서부경찰서, 서부산세무서, 보람쉬움아파트, 부산은행\n\t 경로치과의원\n
-3번출구\n\t 구덕터널방면, 부경고등학교, 구덕운동장\n\t 경성전자정보고등학교, 서대신3동주민센터\n
-4번출구\n\t 동아대학교병원 방면, 서대신1동주민센터, 구덕운동장\n\t 서대신동시장, 향군회관
-
-
-    </string>
-    <string name="first_out_14">
-        1번출구\n\t 구덕운동장, 경남고등학교, 동아대학교병원 방면\n\t 서구선거관리위원회\n
-2번출구\n\t 구덕체육관, 서대신동 우체국, 부경고등학교, 부산은행\n\t 동아대병원 셔틀버스\n
-3번출구\n\t 삼익아파트, 국민은행\n
-4번출구\n\t 서대신동시장, (사)대한건강증진협회\n
-5번출구\n\t 동아대학교병원, 대신여자중학교, 부산서여자고등학교\n
-6번출구\n\t (사)대한건강증진협회, 서대신동시장\n
-7번출구\n\t 부산터널,동대신동시장, 화랑초등학교, 신한은행\n
-8번출구\n\t 서구보건소, 부민초등학교, 국민건강보험공단, 하나은행\n\t 경로치과의원공간
-
-    </string>
-    <string name="first_out_15">
-        1번출구\n\t 보수동 방면, 대청로 방면, 부산은행\n
-2번출구\n\t 부민동방면, 임시수도기념관 방면, 아미우체국\n\t KT서부산지사, 동아대학교 부민캠퍼스(사회교육원)\n\t 아미동우체국\n
-3번출구\n\t 경남중학교\n
-4번출구\n\t 아미동, 부산대학병원, KT서부산지사\n
-5번출구\n\t 경남중학교\n
-6번출구\n\t 초장동방면, 부산시 아동청소년회관, 감천문화마을\n
-7번출구\n\t 한전중부산지점, 토성초등학교\n
-8번출구\n\t 아미동방면, 부산시아동청소년회관, 아미초등학교\n
-9번출구\n\t 충무동방면, 충무동주민센터\n
-10번출구\n\t 충무동방면, 초장동방면
-
-    </string>
-    <string name="first_out_16">
-        1번출구\n\t 충무교차로, 서구청, 한전중부산지점, 부산은행 충무동지점\n
-2번출구\n\t 암남동방면, 충무교차로, 부산공동어시장\n\t 부산은행 충무동지점, KEB하나은행 충무동지점\n\t 부산충무동우체국\n
-3번출구\n\t 충무동방면, 보수동방면, 국제시장, 부평동시장 방면\n\t 국민은행, 신한은행\n
-4번출구\n\t 자갈치사거리, 공영주차장, 중부견인차보관소\n\t KEB하나은행 충무동지점\n
-5번출구\n\t 충무동, 부평동, 신한은행\n
-6번출구\n\t 수협은행, KEB하나은행 충무동지점\n
-7번출구\n\t 대청동방면, 미술의거리, BIFF광장, 국제시장, 부산극장\n\t CGV 남포, 씨네시티\n
-8번출구\n\t 충무동로타리, 부산공동어시장, 수협은행 부산지역금융본부\n\t KEB하나은행 충무동지점, 하나로클럽, 신천지백화점\n
-10번출구\n\t 신동아수산물종합시장, 자갈치시장, 농협농산물백화점
-
-    </string>
-    <string name="first_out_17">
-        1번출구\n\t 용두산공원, BIFF광장, 부산근대역사관 방면, 한국문화센터\n
-2번출구\n\t 남포동건어물시장, 자갈치시장\n
-3번출구\n\t 광복동, 광복동우체국, 부산경륜공단 남포지점\n
-4번출구\n\t 자갈치건어물시장\n
-5번출구\n\t 광복동입구, 부산데파트, 남포지구대, 부산경륜공단 남포지점\n
-6번출구\n\t 영도방면, 태종대, 농협\n
-7번출구\n\t 농협\n
-8번출구\n\t 롯데백화점광복점\n
-10번출구\n\t 롯데백화점광복점
-
-    </string>
-    <string name="first_out_18">
-        1번출구\n\t 용두산공원, 국제시장, 백신기념관, 부산근대역사관 방면\n\t 부산데파트, 광복동입구\n
-2번출구\n\t 부산항연안여객터미널, 부산지방식품의약품안전청\n\t 수미르공원\n
-3번출구\n\t 국민은행, 용두산공원, 국제시장, 백산기념관\n\t 부산근대역사관 방면, 광복동입구\n
-4번출구\n\t 외국인서비스센터, 부산세관, 부산항국제여객터미널\n
-5번출구\n\t 용두산공원, 국제시장, 백산기념관, 부산근대역사관 방면\n\t 광복동 입구\n
-6번출구\n\t 대한통운 화물취급소\n
-7번출구\n\t 부산우체국, 대청동방면, 부산근대역사관 방면\n
-8번출구\n\t 부산은행, 삼성생명\n
-9번출구\n\t 부산우체국, 대청동방면, 부산근대역사관 방면\n
-10번출구\n\t 부산출입국관리사무소, 부산세관, 부산항국제여객터미널\n
-11번출구\n\t 부산우체국, 서라벌호텔, 기술신용보증기금\n\t 국민건강보험공단 중부산지사\n
-12번출구\n\t 부산무역회관, 부산세관, 부산항국제여객터미널\n
-13번출구\n\t 중앙동4가, 남성여자고등학교, 40계단문화회간\n
-14번출구\n\t 중부소방서, 중앙일보, 부산출입국종합민원센터\n
-15번출구\n\t 중앙동4기, 남성여자고등학교, 40계단문화관, 동아일보\n
-17번출구\n\t 중부경찰서, 동광동5가, 신용보증기금\n
-
-    </string>
-    <string name="first_out_19">
-        1번출구\n\t 부산터널 방면, 영주1동 방면, 상해거리, 부산전화국\n\t 부산화교소학교\n
-2번출구\n\t 한국생산성본부 부산경남지부, 부산지방보훈청\n\t 부산전화번호안내국, SC은행\n
-3번출구\n\t 초량1동, 부산화교중학교, 부산화교고등학교, 기업은행\n
-4번출구\n\t 부산역광장, 교원공제회관, 아리랑관광호텔\n
-5번출구\n\t 초량외국인상가, 부산화교중학교, 부산화교고등학교\n\t 상해거리\n
-6번출구\n\t 부산역광장, 교원공제회관\n
-7번출구\n\t 초량우체국, 부산지방국토관리청, 초량2동주민센터\n
-8번출구\n\t 부산역광장\n
-10번출구\n\t 부산역광장, 한국토지주택공사 부산울산지역본부\n
-
-    </string>
-    <string name="first_out_20">
-        1번출구\n\t 부산지방국토관리청\n
-2번출구\n\t 부산역, 조선일보사, 부산장애인총연합회\n
-3번출구\n\t 초량3동, 부산고등학교\n
-4번출구\n\t 제3부두, 부산건설회관\n
-5번출구\n\t 초량3동, 정발장군동상, 부산고등학교, 일본국총영사관\n\t 몽골명예영사관\n
-6번출구\n\t 항운회관(예식장), 제3부두, 부산건설회관, 부산보훈회관\n\t 초량소방파출소, 부산디자인고등학교\n
-7번출구\n\t 일보국총영사관, 초량3동주민센터\n
-8번출구\n\t 초량3동, 한국감정원\n
-9번출구\n\t 성분도병원, 근로복지공단 부산지역본부, 부산중앙초등학교\n\t 프랑스문화원, 우리은행
-\n10번출구\n\t 초량3동, 제3부두 방면
-\n12번출구\n\t 정부물품재활용센터, 부산여자기독교청년회, 한국감정원\n\t 부산상조(주), KCB센트리움아파트
-
-
-    </string>
-    <string name="first_out_21">
-        1번출구\n\t 수정동우체국, 고관입구, 동구청, 부산국제영화고등학교\n\t 동구문화원
-\n2번출구\n\t 제4부두, 연합뉴스, 부산지방노동위원회
-\n3번출구\n\t 수정2동, 수정동시장, 부산일보사
-\n4번출구\n\t 경부선 부산진역, 협성타워
-\n5번출구\n\t 부산일보사, 동구청, 수정동시장
-\n6번출구\n\t 제4부두, 부산은행
-\n7번출구\n\t 부산일보사, 동부경찰서, 부산진세무서, 봉생병원\n\t 경남여자고등학교
-\n8번출구\n\t 경부선 부산진역
-
-
-    </string>
-    <string name="first_out_22">
-        1번출구\n\t 봉생병원, 좌천1동, 좌천동가구거리\n
-2번출구\n\t 제자로교회, 범일고가교, 범일5동, 부산지방해양항만청\n\t 남해지방해양경찰청\n
-3번출구\n\t 부산진교회, 금성중학교, 금성고등학교, 정공단\n\t 고려저축은행, 부산진 일신여학교\n
-4번출구\n\t 제자로교회, 범일고가교, 부산지방해양항만청, 범일5동\n\t 남해지방해양경찰청, 좌천지역아동센터\n
-5번출구\n\t 좌천1동, 일신기독병원, 좌천동가구거리\n
-6번출구\n\t 성남초등학교, 좌천동가구거리\n
-7번출구\n\t 좌천동우체국, 데레사여자고등학교, 좌천동가구거리\n
-8번출구\n\t 부산진시장, 남문시장, 동구청
-
-
-    </string>
-    <string name="first_out_23">
-        1번출구\n\t 부산진시장, 남문시장\n
-2번출구\n\t 예식장방면, 부산시민회관, 동부산우체국, 공무원연금공단\n\t 부산연금센터, 범일전화국, 국제호텔, 범일공구철물상가\n\t BBS부산불교방송\n
-3번출구\n\t 부산진소방서, 현대백화점\n
-4번출구\n\t 범일2동, 범일공구철물상가\n
-5번출구\n\t 문화병원, 부산진소방서\n
-6번출구\n\t 예식장방면, 범일2동, 범일공구철물상가\n
-7번출구\n\t 성가병원, 현대백화점\n
-8번출구\n\t 자유시장, 평화시장\n
-9번출구\n\t 현대백화점, 문화병원, 부산진소방서
-\n10번출구\n\t 자유시장, 평화시장, 부산지방식품의약품안전청
-\n12번출구\n\t 중앙귀금속도매상가
-
-    </string>
-    <string name="first_out_24">
-        1번출구\n\t 건강보험심사평가원 부산지원, 사학연금회관\n\t 중소기업진흥공단 부산지역본부\n\t 한국장애인고용공단 부산지사\n\t 사립학교교직원연금공단\n
-2번출구\n\t 중앙시장, 부산진구보건소, 신용보증기금, 성서초등학교 \n
-3번출구\n\t 춘해병원, 보림극장\n
-4번출구\n\t 부산상공회의소, 한국선물거래소, 전포동방면, 동성고등학교\n\t 대원1,2단지아파트, 범전1동주민센터, 범천동우체국\n\t 기술보증기금\n
-5번출구\n\t 춘해병원, 철도차량정비창, 범천4동\n
-6번출구\n\t 부산상공회의소, 동성중학교, 동성고등학교, 한국선물거래소\n\t 전포동방면, 부산은행, 동성고등학교, 국제금융센터\n\t CGV서면12\n
-7번출구\n\t 서면방면, 동서고가도로, 부산철도차량정비청\n
-8번출구\n\t 부산교통공사
-
-    </string>
-    <string name="first_out_25">
-        1번출구\n\t 범천동, 서면시장, 서면1번가\n
-2번출구\n\t 주디스태화, 동보서적, CGV대한, 시립부전도서관\n
-3번출구\n\t 서면시장, 서면1번가\n
-4번출구\n\t 시립부전도서관\n
-5번출구\n\t 서면시장\n
-6번출구\n\t 한국전력공사부산울산지역본부, 부전2동주민센터\n\t 시립부전도서관, 중앙중학교, 전포동방면\n
-7번출구\n\t 서면시장, 부전2동우체국\n
-8번출구\n\t 서면우체국, 전포초등학교\n
-9번출구\n\t 부전1동우체국, 부산진경찰서
-\n10번출구\n\t 전포동방면, 철물상가, 서면우체국
-\n11번출구\n\t 부산진구청, 부전1동우체국, 동의대한방병원\n\t 부전1동주민센터
-\n12번출구\n\t 서면우체국, 부산진전화국, 국민연금관리공단 부산지사
-\n13번출구\n\t 어린이대공원 방면
-\n15번출구\n\t 부전1동, 부전시장
-
-
-    </string>
-    <string name="first_out_26">
-        1번출구\n\t 부전시장, 농협부산지역본부, 부산진등기소\n\t 동해남부선 부전역, 하나로클럽 \n
-2번출구\n\t 전포동방면, 부산인력은행, 전포초등학교, 적십자회관\n\t 국민은행, 근로복지공단부산중부지사\n
-3번출구\n\t 부산전자종합상가\n
-4번출구\n\t 국민건강보험공단, 향도중학교\n
-5번출구\n\t 부산전자종합상가, 부산진등기소, 부전시장\n
-6번출구\n\t 국민건강보험공단, 적십자회관, 전포동방면\n
-7번출구\n\t 송상현공동상, 범전동방면, 부산은행, 부산시민공원\n\t 세흥병원\n
-8번출구\n\t 부산진경찰서, 향도중학교, 송상현광장, 부산창업카페\n\t 차량등록사업소
-
-
-    </string>
-    <string name="first_out_27">
-        1번출구\n\t 송상현공동상, 양정시장, 양정1동우체국, 양정동우체국\n
-2번출구\n\t 동의과학대학, 바산여자대학, 하나은행, 송상현광장\n
-3번출구\n\t 양정동우체국, 양정시장, 양정1동우체국\n
-4번출구\n\t 동의의료원, 동의대학교한의예과, 망미동방면\n\t 양정2동주민센터, 부산은행\n
-5번출구\n\t 어린이대공원, 부산광역시교육청, 초읍동방면\n\t 부산정보고등학교\n
-6번출구\n\t 망미동방면, 연제구청방면\n
-7번출구\n\t 백조예식장, 부산광역시교육청, 거제동방면\n
-8번출구\n\t 양정2동, 양정2동우체국, 연산교차로방면\n\t 부산광역시 지방행정동우회\n
-9번출구\n\t 부산광역시 교육연구정보원, 부산발전연구원, 양정초등학교\n\t 상수도사업본부 시설관리사무소, 양정청소년수련원\n\t 코이카부산지역센터
-
-    </string>
-    <string name="first_out_28">
-        1번출구\n\t 양정교차로방면, 부산지방경찰청, 부산광역시청\n\t 부산종합고용지원센터\n
-2번출구\n\t 부산광역시선거관리위원회, 부산지방노동청\n\t 국가인권위원회, 부산지방통계청\n\t 국민연금공단 부산지역본부, 연제구청, 부산지방국세청\n
-3번출구\n\t 부산광역시청, 부산지방경찰청\n
-4번출구\n\t 연산교차로, 동래방면\n
-5번출구\n\t 부산광역시의회, 부산광역시청\n
-6번출구\n\t 영남시장상가아파트\n
-7번출구\n\t 연산5동주민센터, 연산교차로방면\n
-8번출구\n\t 연산교차로방면, 연산2동주민센터
-
-    </string>
-    <string name="first_out_29">
-         1번출구\n\t 시청방면, 연제초등학교, 연산5동주민센터, 양정교차로방면\n\t 연제초등학교\n
-2번출구\n\t 연산2동주민센터, 뉴그랜드빌딩, 연산2치안센터\n\t 부산경제진흥원, 부산일자리허브센터\n\t 부산신용보증재단\n
-3번출구\n\t 부산은행\n
-4번출구\n\t 연산5동우체국, 연산초등학교, KT&amp;G부산본부, 하나은행\n
-5번출구\n\t 종합운동장, 거제동방면, 법원, 경찰청방면\n
-6번출구\n\t 신리삼거리방면, 반도보라아파트, 연산초등학교\n
-7번출구\n\t 부산교육대학교 방면, 목화예식장, 미라보관광호텔\n
-8번출구\n\t 연일시장, 프리마호텔, 연제일신여성병원, 연동초등학교\n\t 연산중학교, 부산경상대학교, 연일초등학교
-\n10번출구\n\t 연산4동주민센터, 워크재활의학과병원
-\n12번출구\n\t 안락교차로방면, 연일지구대, KEB하나은행
-\n14번출구\n\t 안락교차로방면, 동래세무서, 연서초등학교, 우리은행\n\t 충렬사 방면
-\n16번출구\n\t 부산장애인종합복지관, 교보생명, 노인종합복지관\n\t 부산의료원(셔틀버스정류장), 교육대학방면\n\t 한국경로복지재단
-\n17번출구\n\t 종합운동장, 거제동방면, 국민건강보험공단, 신한은행\n\t 부산광역시의정회
-
-    </string>
-    <string name="first_out_30">
-        1번출구\n\t 거제동 방면, 종합운동장 방면, 법원, 검찰청\n\t 이사벨중고등학교, 지구초등학교\n
-2번출구\n\t 부산의료원, 삼익아파트, 연산교차로 방면\n
-3번출구\n\t 국제신문, 부산교육대학교, 연제구청, 이사벨중고등학교\n
-4번출구\n\t 동래시장방면, 거제1동주민센터, 동래경찰서\n
-5번출구\n\t 내성중학교, 종합운동장방면, 어린이재단부산지역본부\n
-6번출구\n\t 동래경찰서, 동래소방서, 동래고등학교, 동래시장방면\n
-8번출구\n\t 한양아파트, 내성교차로방면, 동래방면\n
-9번출구\n\t 부산장애인종합복지관
-\n10번출구\n\t 교대사거리, 주차장
-\n11번출구\n\t 이사벨중고등학교, 지구촌고등학교
-\n12번출구\n\t 주차장
-
-
-    </string>
-    <string name="first_out_31">1번출구\n\t 한국건강관리협회 부산지부, 내성중학교, 내성교차로\n
-2번출구\n\t 대동병원, 동래구청, 동래경찰서방면, 부산지방기상청\n
-3번출구\n\t 금강공원, 내산초등학교\n\t 시외버스정류소(마산,창원,김해 방면)\n
-4번출구\n\t 동래우체국, 명륜초등학교, 동래중학교, 중앙여자고등학교\n
-5번출구\n\t 내산초등학교, 동래시외버스정류장\n\t 한국건강관리협회 부산지부, 온천2동 주민센터\n
-6번출구\n\t 사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장\n
-7번출구\n\t 내산초등학교, 동래시외버스정류장\n\t 한국건강관리협회 부산지부, 롯데백화점\n
-8번출구\n\t 사직지구대, 미남초등학교, 부산내성중학교, 금정상가시장\n\t 수안초등학교
-
-
-    </string>
-    <string name="first_out_32">
-        1번출구\n\t 동래원에고등학교, 부산전자공업고등학교\n
-2번출구\n\t 동래우체국, 동래구청, 동래중학교, 동래구보건소\n
-3번출구\n\t 금강공원, 부산컴퓨터도매상가\n
-4번출구\n\t 명륜동, 동래우체국, 명륜초등학교, 한국소방안전협회\n
-5번출구\n\t 롯데마트, 롯데백화점
-
-
-    </string>
-    <string name="first_out_33">
-        1번출구\n\t 동래온천우체국, 금강공원, 온천장\n\t 부산해양자연사박물관방면\n
-2번출구\n\t 부곡동우체국, 동해중학교, 청십자병원, 동래중학교\n\t 동래문화회관\n
-3번출구\n\t 금강식물원, 금정산성방면, 부산해양자연사박물관방면\n\t 금강공원, CGV동래, 부산장전3동우체국\n
-4번출구\n\t 부곡동우체국, 내성고등학교, 부산정보관광고등학교\n\t 서동방면\n
-5번출구\n\t 금강식물원, 금정산성방면, 우리들병원, 금강공원
-
-    </string>
-    <string name="first_out_34">
-        1번출구\n\t 장전동, 장전동우체국, 금정초등학교, 금정등기소\n
-2번출구\n\t 부곡동, 대동대학, 부곡지구대\n
-3번출구\n\t 장전동우체국, 부산대학교\n
-4번출구\n\t 부곡동, 부곡중학교, 부산대사대부설고등학교, 금정세무서\n\t 금양중학교
-
-
-    </string>
-    <string name="first_out_35">
-        1번출구\n\t 부산대학교, 장전1동주민센터, 장전1치안센터\n
-2번출구\n\t 부곡동\n
-3번출구\n\t 장전동, 장전초등학교\n
-4번출구\n\t 부산가톨릭대학교, 오륜대방면
-
-
-    </string>
-    <string name="first_out_36">
-        1번출구\n\t 구서종합시장, 구서오시게시장, 구서1동주민센터\n
-2번출구\n\t 금정우체국, 금정경찰서, 금정구청, 금정문화회관\n
-3번출구\n\t 구서동우체국, 구서1동주민센터, 구서초등학교, 두실방면\n
-4번출구\n\t 금정경찰서, 경부고속도로
-
-
-    </string>
-    <string name="first_out_37">
-        1번출구\n\t 신한금융투자 금정지점, 구서초등학교\n\t KB국민은행 두실역지점, KEB하나은행 구서동지점\n
-2번출구\n\t 부곡동방면\n
-3번출구\n\t 선경1차아파트, 부영벽산아파트, 부산은행\n
-4번출구\n\t 성원멘투로빌오피스텔\n
-5번출구\n\t 부영벽산아파트\n
-6번출구\n\t 부곡동방면\n
-7번출구\n\t 선경3차아파트, 부영벽산아파트, 두실마을\n
-8번출구\n\t 남산중학교, 이슬람부산성원
-
-
-    </string>
-    <string name="first_out_38">
-        1번출구\n\t 두실방면, 남산초등학교, 신암마을, 부산외국어대학교\n
-2번출구\n\t 남산중학교, 동광세화아파트\n
-3번출구\n\t 부산외대운동장 방면, 신암마을\n
-4번출구\n\t 공영주차장, 영락공원 방면\n
-5번출구\n\t 신암마을\n
-6번출구\n\t 공영주차장, 동광세화아파트\n
-7번출구\n\t 남산고등학교, 청룡동 방면\n
-8번출구\n\t 침례병원
-
-
-    </string>
-    <string name="first_out_39">
-        1번출구\n\t 청룡초등학교, 남산동주민센터, 신암마을\n
-2번출구\n\t 범어지구대, 팔송파출소, 영락공원, 금정중학교\n
-3번출구\n\t 범어사입구, 팔송\n
-4번출구\n\t 영락공원, 금정도서관, 노포동\n
-5번출구\n\t 범어사입구, 신암마을, 청룡초등학교\n
-6번출구\n\t 영락공원, 금정중학교\n
-7번출구\n\t 노포동 방면, 부산보호관찰소, 범어사입구, 청룡동\n\t 청룡노포동주민센터, 범어사입구\n
-8번출구\n\t 노포동 방면, 노포차량사업소
-
-    </string>
-    <string name="first_out_40">
-        1번출구\n\t 두구동, 노포동, 부산컨트리클럽, 덕계, 서창, 울산방면\n\t 스포원파크방면\n
-2번출구\n\t 노포동, 부산, 울산시내버스정류장\n
-3번출구\n\t 부산종합버스터미널
-
-
-    </string>
-
 
 </resources>

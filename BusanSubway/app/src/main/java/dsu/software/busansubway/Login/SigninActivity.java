@@ -50,7 +50,7 @@ public class SigninActivity extends AppCompatActivity {
                 if (color[0] && color[1]) {
                     signin.setBackgroundResource(R.color.color);
                 } else {
-                    signin.setBackgroundResource(R.color.grey);
+                    signin.setBackgroundResource(R.color.gray);
                 }
             }
 
@@ -71,7 +71,7 @@ public class SigninActivity extends AppCompatActivity {
                 if (color[0] && color[1]) {
                     signin.setBackgroundResource(R.color.color);
                 } else {
-                    signin.setBackgroundResource(R.color.grey);
+                    signin.setBackgroundResource(R.color.gray);
                 }
             }
 

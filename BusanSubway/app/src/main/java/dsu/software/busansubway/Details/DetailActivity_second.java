@@ -13,6 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +39,28 @@ public class DetailActivity_second extends AppCompatActivity {
     int[][] subway_tab = new int[6][43];
     public static int which = 0;
     public static int state = 0;
+    public static String title = "";
     LinearLayout station_hosun;
 //    String add = R.string.app_name;
+
+    public static ArrayList<DatabaseReference> second_move = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_one_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_one_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_one_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_one_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_two_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_two_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_two_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_two_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_three_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_three_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_three_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_three_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_four_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_four_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_four_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> second_four_to_fourth_list = new ArrayList<>();
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -318,6 +341,482 @@ public class DetailActivity_second extends AppCompatActivity {
             }
         });
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference second = database.getReference("second"); // 1호선
+        DatabaseReference second_one = second.child("one"); // 1호선 1호차
+        DatabaseReference second_two = second.child("two"); // 1호선 2호차
+        DatabaseReference second_three = second.child("three"); // 1호선 3호차
+        DatabaseReference second_four = second.child("four"); // 1호선 4호차
+
+        DatabaseReference second_one_to_first = second_one.child("one_to_first"); // 1호차의 1번칸
+        DatabaseReference second_one_to_second = second_one.child("one_to_second"); // 1호차의 2번칸
+        DatabaseReference second_one_to_third = second_one.child("one_to_third"); // 1호차의 3번칸
+        DatabaseReference second_one_to_fourth = second_one.child("one_to_fourth"); // 1호차의 4번칸
+        DatabaseReference second_two_to_first = second_two.child("two_to_first"); // 2호차의 1번칸
+        DatabaseReference second_two_to_second = second_two.child("two_to_second"); // 2호차의 2번칸
+        DatabaseReference second_two_to_third = second_two.child("two_to_third"); // 2호차의 3번칸
+        DatabaseReference second_two_to_fourth = second_two.child("two_to_fourth"); // 2호차의 4번칸
+        DatabaseReference second_three_to_first = second_three.child("three_to_first"); // 3호차의 1번칸
+        DatabaseReference second_three_to_second = second_three.child("three_to_second"); // 3호차의 2번칸
+        DatabaseReference second_three_to_third = second_three.child("three_to_third"); // 3호차의 3번칸
+        DatabaseReference second_three_to_fourth = second_three.child("three_to_fourth"); // 3호차의 4번칸
+        DatabaseReference second_four_to_first = second_four.child("four_to_first"); // 4호차의 1번칸
+        DatabaseReference second_four_to_second = second_four.child("four_to_second"); // 4호차의 2번칸
+        DatabaseReference second_four_to_third = second_four.child("four_to_third"); // 4호차의 3번칸
+        DatabaseReference second_four_to_fourth = second_four.child("four_to_fourth"); // 4호차의 4번칸
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_01"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_02"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_03"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_04"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_05"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_06"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_07"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_08"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_09"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_10"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_11"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_12"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_13"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_14"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_15"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_16"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_17"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_18"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_19"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_20"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_21"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_22"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_23"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_24"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_25"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_26"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_27"));
+        second_one_to_first_list.add(second_one_to_first.child("one_to_first_list_28"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_01"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_02"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_03"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_04"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_05"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_06"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_07"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_08"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_09"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_10"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_11"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_12"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_13"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_14"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_15"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_16"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_17"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_18"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_19"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_20"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_21"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_22"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_23"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_24"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_25"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_26"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_27"));
+        second_one_to_second_list.add(second_one_to_second.child("one_to_second_list_28"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_01"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_02"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_03"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_04"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_05"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_06"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_07"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_08"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_09"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_10"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_11"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_12"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_13"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_14"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_15"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_16"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_17"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_18"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_19"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_20"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_21"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_22"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_23"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_24"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_25"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_26"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_27"));
+        second_one_to_third_list.add(second_one_to_third.child("one_to_third_list_28"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_01"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_02"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_03"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_04"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_05"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_06"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_07"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_08"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_09"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_10"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_11"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_12"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_13"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_14"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_15"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_16"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_17"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_18"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_19"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_20"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_21"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_22"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_23"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_24"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_25"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_26"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_27"));
+        second_one_to_fourth_list.add(second_one_to_fourth.child("one_to_fourth_list_28"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_01"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_02"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_03"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_04"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_05"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_06"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_07"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_08"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_09"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_10"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_11"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_12"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_13"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_14"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_15"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_16"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_17"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_18"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_19"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_20"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_21"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_22"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_23"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_24"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_25"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_26"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_27"));
+        second_two_to_first_list.add(second_two_to_first.child("two_to_first_list_28"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_01"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_02"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_03"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_04"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_05"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_06"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_07"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_08"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_09"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_10"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_11"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_12"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_13"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_14"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_15"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_16"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_17"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_18"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_19"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_20"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_21"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_22"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_23"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_24"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_25"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_26"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_27"));
+        second_two_to_second_list.add(second_two_to_second.child("two_to_second_list_28"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_01"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_02"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_03"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_04"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_05"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_06"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_07"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_08"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_09"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_10"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_11"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_12"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_13"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_14"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_15"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_16"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_17"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_18"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_19"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_20"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_21"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_22"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_23"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_24"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_25"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_26"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_27"));
+        second_two_to_third_list.add(second_two_to_third.child("two_to_third_list_28"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_01"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_02"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_03"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_04"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_05"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_06"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_07"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_08"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_09"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_10"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_11"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_12"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_13"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_14"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_15"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_16"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_17"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_18"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_19"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_20"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_21"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_22"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_23"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_24"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_25"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_26"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_27"));
+        second_two_to_fourth_list.add(second_two_to_fourth.child("two_to_fourth_list_28"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_01"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_02"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_03"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_04"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_05"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_06"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_07"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_08"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_09"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_10"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_11"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_12"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_13"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_14"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_15"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_16"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_17"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_18"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_19"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_20"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_21"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_22"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_23"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_24"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_25"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_26"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_27"));
+        second_three_to_first_list.add(second_three_to_first.child("three_to_first_list_28"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_01"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_02"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_03"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_04"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_05"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_06"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_07"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_08"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_09"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_10"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_11"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_12"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_13"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_14"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_15"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_16"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_17"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_18"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_19"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_20"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_21"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_22"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_23"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_24"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_25"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_26"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_27"));
+        second_three_to_second_list.add(second_three_to_second.child("three_to_second_list_28"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_01"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_02"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_03"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_04"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_05"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_06"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_07"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_08"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_09"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_10"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_11"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_12"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_13"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_14"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_15"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_16"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_17"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_18"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_19"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_20"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_21"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_22"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_23"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_24"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_25"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_26"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_27"));
+        second_three_to_third_list.add(second_three_to_third.child("three_to_third_list_28"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_01"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_02"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_03"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_04"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_05"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_06"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_07"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_08"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_09"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_10"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_11"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_12"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_13"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_14"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_15"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_16"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_17"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_18"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_19"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_20"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_21"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_22"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_23"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_24"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_25"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_26"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_27"));
+        second_three_to_fourth_list.add(second_three_to_fourth.child("three_to_fourth_list_28"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_01"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_02"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_03"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_04"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_05"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_06"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_07"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_08"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_09"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_10"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_11"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_12"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_13"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_14"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_15"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_16"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_17"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_18"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_19"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_20"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_21"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_22"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_23"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_24"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_25"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_26"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_27"));
+        second_four_to_first_list.add(second_four_to_first.child("four_to_first_list_28"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_01"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_02"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_03"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_04"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_05"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_06"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_07"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_08"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_09"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_10"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_11"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_12"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_13"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_14"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_15"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_16"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_17"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_18"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_19"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_20"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_21"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_22"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_23"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_24"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_25"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_26"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_27"));
+        second_four_to_second_list.add(second_four_to_second.child("four_to_second_list_28"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_01"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_02"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_03"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_04"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_05"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_06"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_07"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_08"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_09"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_10"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_11"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_12"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_13"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_14"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_15"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_16"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_17"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_18"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_19"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_20"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_21"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_22"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_23"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_24"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_25"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_26"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_27"));
+        second_four_to_third_list.add(second_four_to_third.child("four_to_third_list_28"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_01"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_02"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_03"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_04"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_05"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_06"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_07"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_08"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_09"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_10"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_11"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_12"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_13"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_14"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_15"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_16"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_17"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_18"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_19"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_20"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_21"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_22"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_23"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_24"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_25"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_26"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_27"));
+        second_four_to_fourth_list.add(second_four_to_fourth.child("four_to_fourth_list_28"));
+
+
+
     }
 
     void intentfunc(int detailwhich) {
@@ -357,6 +856,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_43);
+            title = (String) center.getText();
             right.setVisibility(View.INVISIBLE);
             station_start.setText("양산행");
             station_end.setText("장산행");
@@ -368,14 +868,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_43)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_43)));
 
@@ -390,6 +890,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_42);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             right.setVisibility(View.VISIBLE);
@@ -401,12 +902,12 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_42)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_42)));
 
@@ -421,6 +922,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_41);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -432,12 +934,12 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
             left.setVisibility(View.VISIBLE);
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_5)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_41)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_41)));
 
@@ -452,6 +954,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_40);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -462,8 +965,8 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_40_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_4_1)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_40)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_40)));
 
@@ -478,6 +981,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_39);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -489,12 +993,12 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_3)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_39)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_39)));
 
@@ -509,6 +1013,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_38);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -519,18 +1024,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_38)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_38)));
 
@@ -544,6 +1049,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_37);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -554,10 +1060,10 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_2)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_37)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_37)));
 
@@ -573,6 +1079,7 @@ public class DetailActivity_second extends AppCompatActivity {
             hosun.setText("3호선");
 
             center.setText(R.string.second_36);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -583,14 +1090,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_36)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_36)));
 
@@ -605,6 +1112,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_35);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -615,18 +1123,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_35)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_35)));
 
@@ -640,6 +1148,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_34);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -650,14 +1159,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_34)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_34)));
 
@@ -672,6 +1181,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_33);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -681,28 +1191,28 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_12)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_33)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_33)));
 
@@ -717,6 +1227,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_32);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -727,14 +1238,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_32)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_32)));
 
@@ -748,6 +1259,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_31);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -759,14 +1271,14 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_31)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_31)));
 
@@ -780,6 +1292,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_30);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -790,14 +1303,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_30)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_30)));
 
@@ -811,6 +1324,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_29);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -821,14 +1335,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_29)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_29)));
 
@@ -843,6 +1357,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_28);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -853,14 +1368,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_28)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_28)));
 
@@ -875,6 +1390,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_27);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -888,18 +1404,18 @@ public class DetailActivity_second extends AppCompatActivity {
             right.setVisibility(View.VISIBLE);
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_27)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_27)));
 
@@ -915,6 +1431,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_26);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -925,14 +1442,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_26)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_26)));
 
@@ -950,6 +1467,7 @@ public class DetailActivity_second extends AppCompatActivity {
             hosun.setText("2호선");
 
             center.setText(R.string.second_25);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -960,22 +1478,22 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_8)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_25)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_25)));
 
@@ -992,6 +1510,7 @@ public class DetailActivity_second extends AppCompatActivity {
             station.setText("2호선");
 
             center.setText(R.string.second_24);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1002,18 +1521,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_24)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_24)));
 
@@ -1027,6 +1546,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_23);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1037,18 +1557,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_7)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_23)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_23)));
 
@@ -1063,6 +1583,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_22);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1073,21 +1594,21 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_22_8)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_22)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_22)));
@@ -1102,6 +1623,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_21);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1112,14 +1634,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_21_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_23_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_21)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_21)));
 
@@ -1133,6 +1655,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_20);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1143,22 +1666,22 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_20_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_24_8)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_20)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_20)));
 
@@ -1172,6 +1695,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_19);
+            title = (String) center.getText();
 
             station_start.setText("양산행");
             station_end.setText("장산행");
@@ -1183,34 +1707,34 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_15)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_19_15)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_15)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_25_15)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_19)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_19)));
 
@@ -1224,6 +1748,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_18);
+            title = (String) center.getText();
             center.setTextSize(30);
             station_start.setText("양산행");
             station_end.setText("장산행");
@@ -1235,22 +1760,22 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_18_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_26_8)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_18)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_18)));
 
@@ -1266,6 +1791,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_17);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1276,14 +1802,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_17_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_27_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_17)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_17)));
 
@@ -1298,6 +1824,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_16);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             center.setTextSize(30);
@@ -1309,14 +1836,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_16_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_28_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_16)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_16)));
 
@@ -1330,6 +1857,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_15);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1340,14 +1868,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_15_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_29_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_15)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_15)));
 
@@ -1361,6 +1889,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_14);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1371,14 +1900,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_14_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_30_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_14)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_14)));
 
@@ -1393,6 +1922,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_13);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1403,18 +1933,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_13_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_31_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_13)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_13)));
 
@@ -1428,6 +1958,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_12);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1438,18 +1969,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_12_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_32_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_12)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_12)));
 
@@ -1464,6 +1995,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_11);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1474,14 +2006,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_11_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_33_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_11)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_11)));
 
@@ -1495,6 +2027,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_10);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1505,18 +2038,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_10_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_34_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_10)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_10)));
 
@@ -1530,6 +2063,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_9);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1540,18 +2074,18 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_9_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_35_6)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_9)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_9)));
 
@@ -1565,6 +2099,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_8);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1577,38 +2112,38 @@ public class DetailActivity_second extends AppCompatActivity {
 
             right.setVisibility(View.VISIBLE);
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_14)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_14)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_15)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_15)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_17)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_8_17)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_14)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_14)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_15)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_15)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_17)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_36_17)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_8)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_8)));
 
@@ -1622,6 +2157,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_7);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1632,14 +2168,14 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_7_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_37_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_7)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_7)));
 
@@ -1653,6 +2189,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_6);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1663,32 +2200,32 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_6_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_38_13)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_6)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_6)));
 
@@ -1702,6 +2239,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_5);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1712,26 +2250,26 @@ public class DetailActivity_second extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_5_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_39_11)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_5)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_5)));
 
@@ -1745,6 +2283,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_4);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1756,14 +2295,14 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_4_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_4_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_4_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_4_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_40_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_40_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_40_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_40_4)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_4)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_4)));
 
@@ -1777,6 +2316,7 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setTextColor(Color.parseColor("#B2E419"));
             center.setText(R.string.second_3);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1788,18 +2328,18 @@ public class DetailActivity_second extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_3_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_41_7)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_3)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_3)));
 
@@ -1813,6 +2353,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_2);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1826,28 +2367,28 @@ public class DetailActivity_second extends AppCompatActivity {
             right.setVisibility(View.VISIBLE);
             left.setVisibility(View.VISIBLE);
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_2_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_42_12)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_2)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_2)));
 
@@ -1861,6 +2402,7 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
 
             center.setText(R.string.second_1);
+            title = (String) center.getText();
             station_start.setText("양산행");
             station_end.setText("장산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1873,34 +2415,34 @@ public class DetailActivity_second extends AppCompatActivity {
 
             left.setVisibility(View.INVISIBLE);
 
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_1)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_2)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_3)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_4)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_5)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_6)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_7)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_8)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_9)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_10)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_11)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_12)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_13)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.out_14)));
-            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_1_14)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_1)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_2)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_3)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_4)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_5)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_6)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_7)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_8)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_9)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_10)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_11)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_12)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_13)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_14)));
+            exit.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_out_43_14)));
             fainfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_in_1)));
             etcinfo.invisibleChildren.add(new ExpandableListAdapter.Item(ExpandableListAdapter.CHILD, getString(R.string.second_call_1)));
 

@@ -49,7 +49,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
                     signup.setBackgroundResource(R.color.color);
                 } else {
-                    signup.setBackgroundResource(R.color.grey);
+                    signup.setBackgroundResource(R.color.gray);
                 }
 
             }
@@ -71,7 +71,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
                     signup.setBackgroundResource(R.color.color);
                 } else {
-                    signup.setBackgroundResource(R.color.grey);
+                    signup.setBackgroundResource(R.color.gray);
                 }
             }
 
@@ -92,7 +92,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (color[0] && color[1] && color[2] && Epassword.getText().toString().equals(Epassword_check.getText().toString())) {
                     signup.setBackgroundResource(R.color.color);
                 } else {
-                    signup.setBackgroundResource(R.color.grey);
+                    signup.setBackgroundResource(R.color.gray);
                 }
             }
 

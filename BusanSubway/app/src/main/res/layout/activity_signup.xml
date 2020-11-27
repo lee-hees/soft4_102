@@ -12,7 +12,7 @@
         android:background="@drawable/underline"
         android:gravity="center"
         android:text="@string/signup_title"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
             android:id="@+id/signup_up"
             android:layout_width="match_parent"
             android:layout_height="40sp"
-            android:background="@color/grey"
+            android:background="@color/gray"
             android:gravity="center"
             android:text="@string/signup"
             tools:ignore="Autofill,LabelFor,OnClick" />

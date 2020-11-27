@@ -35,6 +35,8 @@
         <activity android:name=".Inside.InsideActivity_kim_2" />
         <activity android:name=".Inside.InsideActivity_kim_3" />
         <activity android:name=".Inside.InsideActivity_kim_4" />
+        <activity android:name=".Inside.FirebaseHandler" />
+
         <activity android:name=".Details.DetailActivity_first" />
         <activity android:name=".Details.DetailActivity_second" />
         <activity android:name=".Details.DetailActivity_third" />
@@ -43,8 +45,9 @@
         <activity android:name=".Details.DetailActivity_kim" />
         <activity android:name=".Login.SignupActivity" />
         <activity android:name=".Login.SigninActivity" />
-        <!--        <activity android:name=".Select.Station_Tab" />-->
-        <!--        <activity android:name=".Intro.IntroActivity">-->
+
+<!--                        <activity android:name=".Select.Station_Tab" />-->
+<!--                        <activity android:name=".Intro.IntroActivity">-->
         <activity android:name=".Select.Station_Tab">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

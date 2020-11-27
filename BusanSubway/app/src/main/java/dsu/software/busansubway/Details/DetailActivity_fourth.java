@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,8 +40,28 @@ public class DetailActivity_fourth extends AppCompatActivity {
     int[][] subway_tab = new int[6][43];
     public static int which = 0;
     public static int state = 0;
+    public static String title = "";
     LinearLayout station_hosun;
 //    String add = R.string.app_name;
+
+    public static ArrayList<DatabaseReference> fourth_move = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_one_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_one_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_one_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_one_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_two_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_two_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_two_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_two_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_three_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_three_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_three_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_three_to_fourth_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_four_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_four_to_second_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_four_to_third_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> fourth_four_to_fourth_list = new ArrayList<>();
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -297,6 +320,501 @@ public class DetailActivity_fourth extends AppCompatActivity {
             }
         });
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference fourth = database.getReference("fourth"); // 1호선
+        DatabaseReference fourth_one = fourth.child("one"); // 1호선 1호차
+        DatabaseReference fourth_two = fourth.child("two"); // 1호선 2호차
+        DatabaseReference fourth_three = fourth.child("three"); // 1호선 3호차
+        DatabaseReference fourth_four = fourth.child("four"); // 1호선 4호차
+
+        DatabaseReference fourth_one_to_first = fourth_one.child("one_to_first"); // 1호차의 1번칸
+        DatabaseReference fourth_one_to_second = fourth_one.child("one_to_second"); // 1호차의 2번칸
+        DatabaseReference fourth_one_to_third = fourth_one.child("one_to_third"); // 1호차의 3번칸
+        DatabaseReference fourth_one_to_fourth = fourth_one.child("one_to_fourth"); // 1호차의 4번칸
+        DatabaseReference fourth_two_to_first = fourth_two.child("two_to_first"); // 2호차의 1번칸
+        DatabaseReference fourth_two_to_second = fourth_two.child("two_to_second"); // 2호차의 2번칸
+        DatabaseReference fourth_two_to_third = fourth_two.child("two_to_third"); // 2호차의 3번칸
+        DatabaseReference fourth_two_to_fourth = fourth_two.child("two_to_fourth"); // 2호차의 4번칸
+        DatabaseReference fourth_three_to_first = fourth_three.child("three_to_first"); // 3호차의 1번칸
+        DatabaseReference fourth_three_to_second = fourth_three.child("three_to_second"); // 3호차의 2번칸
+        DatabaseReference fourth_three_to_third = fourth_three.child("three_to_third"); // 3호차의 3번칸
+        DatabaseReference fourth_three_to_fourth = fourth_three.child("three_to_fourth"); // 3호차의 4번칸
+        DatabaseReference fourth_four_to_first = fourth_four.child("four_to_first"); // 4호차의 1번칸
+        DatabaseReference fourth_four_to_second = fourth_four.child("four_to_second"); // 4호차의 2번칸
+        DatabaseReference fourth_four_to_third = fourth_four.child("four_to_third"); // 4호차의 3번칸
+        DatabaseReference fourth_four_to_fourth = fourth_four.child("four_to_fourth"); // 4호차의 4번칸
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_01"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_02"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_03"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_04"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_05"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_06"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_07"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_08"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_09"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_10"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_11"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_12"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_13"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_14"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_15"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_16"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_17"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_18"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_19"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_20"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_21"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_22"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_23"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_24"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_25"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_26"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_27"));
+        fourth_one_to_first_list.add(fourth_one_to_first.child("one_to_first_list_28"));
+
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_01"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_02"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_03"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_04"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_05"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_06"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_07"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_08"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_09"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_10"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_11"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_12"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_13"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_14"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_15"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_16"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_17"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_18"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_19"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_20"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_21"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_22"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_23"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_24"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_25"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_26"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_27"));
+        fourth_one_to_second_list.add(fourth_one_to_second.child("one_to_second_list_28"));
+
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_01"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_02"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_03"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_04"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_05"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_06"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_07"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_08"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_09"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_10"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_11"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_12"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_13"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_14"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_15"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_16"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_17"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_18"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_19"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_20"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_21"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_22"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_23"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_24"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_25"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_26"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_27"));
+        fourth_one_to_third_list.add(fourth_one_to_third.child("one_to_third_list_28"));
+
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_01"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_02"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_03"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_04"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_05"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_06"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_07"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_08"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_09"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_10"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_11"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_12"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_13"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_14"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_15"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_16"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_17"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_18"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_19"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_20"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_21"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_22"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_23"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_24"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_25"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_26"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_27"));
+        fourth_one_to_fourth_list.add(fourth_one_to_fourth.child("one_to_fourth_list_28"));
+
+
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_01"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_02"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_03"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_04"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_05"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_06"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_07"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_08"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_09"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_10"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_11"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_12"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_13"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_14"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_15"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_16"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_17"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_18"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_19"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_20"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_21"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_22"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_23"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_24"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_25"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_26"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_27"));
+        fourth_two_to_first_list.add(fourth_two_to_first.child("two_to_first_list_28"));
+
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_01"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_02"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_03"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_04"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_05"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_06"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_07"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_08"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_09"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_10"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_11"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_12"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_13"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_14"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_15"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_16"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_17"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_18"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_19"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_20"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_21"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_22"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_23"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_24"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_25"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_26"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_27"));
+        fourth_two_to_second_list.add(fourth_two_to_second.child("two_to_second_list_28"));
+
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_01"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_02"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_03"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_04"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_05"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_06"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_07"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_08"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_09"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_10"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_11"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_12"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_13"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_14"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_15"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_16"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_17"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_18"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_19"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_20"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_21"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_22"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_23"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_24"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_25"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_26"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_27"));
+        fourth_two_to_third_list.add(fourth_two_to_third.child("two_to_third_list_28"));
+
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_01"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_02"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_03"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_04"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_05"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_06"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_07"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_08"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_09"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_10"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_11"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_12"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_13"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_14"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_15"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_16"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_17"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_18"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_19"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_20"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_21"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_22"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_23"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_24"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_25"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_26"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_27"));
+        fourth_two_to_fourth_list.add(fourth_two_to_fourth.child("two_to_fourth_list_28"));
+
+
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_01"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_02"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_03"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_04"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_05"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_06"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_07"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_08"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_09"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_10"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_11"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_12"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_13"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_14"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_15"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_16"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_17"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_18"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_19"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_20"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_21"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_22"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_23"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_24"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_25"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_26"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_27"));
+        fourth_three_to_first_list.add(fourth_three_to_first.child("three_to_first_list_28"));
+
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_01"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_02"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_03"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_04"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_05"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_06"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_07"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_08"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_09"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_10"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_11"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_12"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_13"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_14"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_15"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_16"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_17"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_18"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_19"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_20"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_21"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_22"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_23"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_24"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_25"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_26"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_27"));
+        fourth_three_to_second_list.add(fourth_three_to_second.child("three_to_second_list_28"));
+
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_01"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_02"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_03"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_04"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_05"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_06"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_07"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_08"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_09"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_10"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_11"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_12"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_13"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_14"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_15"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_16"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_17"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_18"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_19"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_20"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_21"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_22"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_23"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_24"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_25"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_26"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_27"));
+        fourth_three_to_third_list.add(fourth_three_to_third.child("three_to_third_list_28"));
+
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_01"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_02"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_03"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_04"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_05"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_06"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_07"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_08"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_09"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_10"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_11"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_12"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_13"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_14"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_15"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_16"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_17"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_18"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_19"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_20"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_21"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_22"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_23"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_24"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_25"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_26"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_27"));
+        fourth_three_to_fourth_list.add(fourth_three_to_fourth.child("three_to_fourth_list_28"));
+
+
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_01"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_02"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_03"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_04"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_05"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_06"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_07"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_08"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_09"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_10"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_11"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_12"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_13"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_14"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_15"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_16"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_17"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_18"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_19"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_20"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_21"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_22"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_23"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_24"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_25"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_26"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_27"));
+        fourth_four_to_first_list.add(fourth_four_to_first.child("four_to_first_list_28"));
+
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_01"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_02"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_03"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_04"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_05"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_06"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_07"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_08"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_09"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_10"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_11"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_12"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_13"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_14"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_15"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_16"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_17"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_18"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_19"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_20"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_21"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_22"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_23"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_24"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_25"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_26"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_27"));
+        fourth_four_to_second_list.add(fourth_four_to_second.child("four_to_second_list_28"));
+
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_01"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_02"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_03"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_04"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_05"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_06"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_07"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_08"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_09"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_10"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_11"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_12"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_13"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_14"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_15"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_16"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_17"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_18"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_19"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_20"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_21"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_22"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_23"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_24"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_25"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_26"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_27"));
+        fourth_four_to_third_list.add(fourth_four_to_third.child("four_to_third_list_28"));
+
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_01"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_02"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_03"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_04"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_05"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_06"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_07"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_08"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_09"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_10"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_11"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_12"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_13"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_14"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_15"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_16"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_17"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_18"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_19"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_20"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_21"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_22"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_23"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_24"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_25"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_26"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_27"));
+        fourth_four_to_fourth_list.add(fourth_four_to_fourth.child("four_to_fourth_list_28"));
+
+
+
+
 
     }
 
@@ -337,6 +855,7 @@ public class DetailActivity_fourth extends AppCompatActivity {
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
             center.setText(R.string.fourth_1);
+            title = (String) center.getText();
             left.setVisibility(View.INVISIBLE);
             hosun.setVisibility(View.GONE);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -394,7 +913,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_2);
+            title = (String) center.getText();
             left.setVisibility(View.VISIBLE);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -437,7 +958,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_3);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -478,7 +1001,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_4);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -512,7 +1037,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_5);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -545,7 +1072,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_6);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -578,7 +1107,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_7);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -610,7 +1141,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_8);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -643,7 +1176,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_9);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -672,7 +1207,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setTextColor(Color.parseColor("#02A3E9"));
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_10);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -698,7 +1235,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
         } else if (subway_tab[which][state] == subway_tab[3][10]) {
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_11);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -727,7 +1266,9 @@ public class DetailActivity_fourth extends AppCompatActivity {
         } else if (subway_tab[which][state] == subway_tab[3][11]) {
             station.setTextColor(Color.parseColor("#02A3E9"));
             center.setTextColor(Color.parseColor("#02A3E9"));
+            hosun.setVisibility(View.GONE);
             center.setText(R.string.fourth_12);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -761,6 +1302,7 @@ public class DetailActivity_fourth extends AppCompatActivity {
             station.setTextColor(Color.GRAY);
             center.setTextColor(Color.parseColor("#02A3E9"));
             center.setText(R.string.fourth_13);
+            title = (String) center.getText();
             hosun.setVisibility(View.VISIBLE);
             right.setVisibility(View.VISIBLE);
             station.setText("1호선");
@@ -798,6 +1340,7 @@ public class DetailActivity_fourth extends AppCompatActivity {
             hosun.setVisibility(View.VISIBLE);
             hosun.setText("4호선");
             center.setText(R.string.fourth_14);
+            title = (String) center.getText();
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();

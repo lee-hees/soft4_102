@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Inside.InsideActivity">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -36,7 +35,7 @@
             android:gravity="center"
             android:textColor="@color/first"
             android:text="@string/locate"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:background="@drawable/underline"
             tools:ignore="MissingConstraints" />
     </LinearLayout>

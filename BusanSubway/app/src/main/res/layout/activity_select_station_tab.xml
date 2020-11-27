@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Select.Station_Tab"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Select.Station_Tab">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
@@ -13,13 +13,12 @@
         android:layout_height="wrap_content">
 
         <androidx.viewpager.widget.PagerTabStrip
+            android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="60sp"
-            android:background="@color/color_tab"
-            android:textColor="@color/black">
-<!--            android:layout_gravity="top"-->
-<!--            android:paddingTop="15dp"-->
-<!--            android:paddingBottom="15dp"-->
+            android:layout_gravity="top"
+            android:textColor="@color/darkgray"
+            android:textSize="30sp">
 
         </androidx.viewpager.widget.PagerTabStrip>
     </androidx.viewpager.widget.ViewPager>

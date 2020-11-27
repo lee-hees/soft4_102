@@ -28,8 +28,8 @@ public class third extends Fragment {
     ArrayList<ListViewItem> list_itemArrayList;
     LinearLayout info30;
     TextView st_name;
+    TextView station_start, station_end, time_start, time_end;
     static String name;
-    int color=R.color.third;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,23 +50,23 @@ public class third extends Fragment {
         list_itemArrayList = new ArrayList<ListViewItem>();
         listView = (ListView) view.findViewById(R.id.list_view);
 
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_1)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_2)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_3)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_4)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_5)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_6)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_7)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_8)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_9)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_10)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_11)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_12)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_13)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_14)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_15)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_16)));
-        list_itemArrayList.add(new ListViewItem(3,getString(R.string.third_17)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_1)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_2)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_3)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_4)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_5)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_6)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_7)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_8)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_9)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_10)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_11)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_12)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_13)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_14)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_15)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_16)));
+        list_itemArrayList.add(new ListViewItem(3, getString(R.string.third_17)));
 
         info30 = view.findViewById(R.id.info30);
         st_name = view.findViewById(R.id.st_name);
@@ -77,7 +77,7 @@ public class third extends Fragment {
             public void onClick(View view) {
                 info30.setVisibility(View.GONE);
             }
-        }) ;
+        });
 
         myListAdapter = new ListviewAdapter(getActivity(), list_itemArrayList);
         listView.setAdapter(myListAdapter);
@@ -166,25 +166,34 @@ public class third extends Fragment {
             }
         });
 
+        station_start = view.findViewById(R.id.station_start);
+        station_end = view.findViewById(R.id.station_end);
+        station_end.setText("대저행");
+        station_start.setText("수영행");
+
+        time_start = view.findViewById(R.id.time_start);
+        time_end = view.findViewById(R.id.time_end);
+
         return view;
     }
+
     public void reset() {
-        list_itemArrayList.set(0,new ListViewItem(3,getString(R.string.third_1)));
-        list_itemArrayList.set(1,new ListViewItem(3,getString(R.string.third_2)));
-        list_itemArrayList.set(2,new ListViewItem(3,getString(R.string.third_3)));
-        list_itemArrayList.set(3,new ListViewItem(3,getString(R.string.third_4)));
-        list_itemArrayList.set(4,new ListViewItem(3,getString(R.string.third_5)));
-        list_itemArrayList.set(5,new ListViewItem(3,getString(R.string.third_6)));
-        list_itemArrayList.set(6,new ListViewItem(3,getString(R.string.third_7)));
-        list_itemArrayList.set(7,new ListViewItem(3,getString(R.string.third_8)));
-        list_itemArrayList.set(8,new ListViewItem(3,getString(R.string.third_9)));
-        list_itemArrayList.set(9,new ListViewItem(3,getString(R.string.third_10)));
-        list_itemArrayList.set(10,new ListViewItem(3,getString(R.string.third_11)));
-        list_itemArrayList.set(11,new ListViewItem(3,getString(R.string.third_12)));
-        list_itemArrayList.set(12,new ListViewItem(3,getString(R.string.third_13)));
-        list_itemArrayList.set(13,new ListViewItem(3,getString(R.string.third_14)));
-        list_itemArrayList.set(14,new ListViewItem(3,getString(R.string.third_15)));
-        list_itemArrayList.set(15,new ListViewItem(3,getString(R.string.third_16)));
-        list_itemArrayList.set(16,new ListViewItem(3,getString(R.string.third_17)));
+        list_itemArrayList.set(0, new ListViewItem(3, getString(R.string.third_1)));
+        list_itemArrayList.set(1, new ListViewItem(3, getString(R.string.third_2)));
+        list_itemArrayList.set(2, new ListViewItem(3, getString(R.string.third_3)));
+        list_itemArrayList.set(3, new ListViewItem(3, getString(R.string.third_4)));
+        list_itemArrayList.set(4, new ListViewItem(3, getString(R.string.third_5)));
+        list_itemArrayList.set(5, new ListViewItem(3, getString(R.string.third_6)));
+        list_itemArrayList.set(6, new ListViewItem(3, getString(R.string.third_7)));
+        list_itemArrayList.set(7, new ListViewItem(3, getString(R.string.third_8)));
+        list_itemArrayList.set(8, new ListViewItem(3, getString(R.string.third_9)));
+        list_itemArrayList.set(9, new ListViewItem(3, getString(R.string.third_10)));
+        list_itemArrayList.set(10, new ListViewItem(3, getString(R.string.third_11)));
+        list_itemArrayList.set(11, new ListViewItem(3, getString(R.string.third_12)));
+        list_itemArrayList.set(12, new ListViewItem(3, getString(R.string.third_13)));
+        list_itemArrayList.set(13, new ListViewItem(3, getString(R.string.third_14)));
+        list_itemArrayList.set(14, new ListViewItem(3, getString(R.string.third_15)));
+        list_itemArrayList.set(15, new ListViewItem(3, getString(R.string.third_16)));
+        list_itemArrayList.set(16, new ListViewItem(3, getString(R.string.third_17)));
     }
 }
