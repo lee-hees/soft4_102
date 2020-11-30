@@ -4,20 +4,27 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import dsu.software.busansubway.Inside.InsideActivity_third_1;
 import dsu.software.busansubway.Inside.InsideActivity_third_2;
@@ -44,7 +51,7 @@ public class DetailActivity_third extends AppCompatActivity {
 //    String add = R.string.app_name;
 
     public static ArrayList<DatabaseReference> third_move = new ArrayList<>();
-public static ArrayList<DatabaseReference> third_one_to_first_list = new ArrayList<>();
+    public static ArrayList<DatabaseReference> third_one_to_first_list = new ArrayList<>();
     public static ArrayList<DatabaseReference> third_one_to_second_list = new ArrayList<>();
     public static ArrayList<DatabaseReference> third_one_to_third_list = new ArrayList<>();
     public static ArrayList<DatabaseReference> third_one_to_fourth_list = new ArrayList<>();
@@ -351,11 +358,31 @@ public static ArrayList<DatabaseReference> third_one_to_first_list = new ArrayLi
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
+        final int[] _reverse_third = {0, 0, 1, 1};
+        final int[] _current_station_third = {0, 0, 42, 42};
+
         DatabaseReference third = database.getReference("third"); // 1호선
         DatabaseReference third_one = third.child("one"); // 1호선 1호차
         DatabaseReference third_two = third.child("two"); // 1호선 2호차
         DatabaseReference third_three = third.child("three"); // 1호선 3호차
         DatabaseReference third_four = third.child("four"); // 1호선 4호차
+
+        third_move.add(third_one.child("reverse"));
+        third_move.add(third_one.child("current_station"));
+        third_move.get(0).setValue(_reverse_third[0]);
+        third_move.get(1).setValue(_current_station_third[0]);
+        third_move.add(third_two.child("reverse"));
+        third_move.add(third_two.child("current_station"));
+        third_move.get(2).setValue(_reverse_third[1]);
+        third_move.get(3).setValue(_current_station_third[1]);
+        third_move.add(third_three.child("reverse"));
+        third_move.add(third_three.child("current_station"));
+        third_move.get(4).setValue(_reverse_third[2]);
+        third_move.get(5).setValue(_current_station_third[2]);
+        third_move.add(third_four.child("reverse"));
+        third_move.add(third_four.child("current_station"));
+        third_move.get(6).setValue(_reverse_third[3]);
+        third_move.get(7).setValue(_current_station_third[3]);
 
         DatabaseReference third_one_to_first = third_one.child("one_to_first"); // 1호차의 1번칸
         DatabaseReference third_one_to_second = third_one.child("one_to_second"); // 1호차의 2번칸
@@ -822,8 +849,331 @@ public static ArrayList<DatabaseReference> third_one_to_first_list = new ArrayLi
         third_four_to_fourth_list.add(third_four_to_fourth.child("four_to_fourth_list_27"));
         third_four_to_fourth_list.add(third_four_to_fourth.child("four_to_fourth_list_28"));
 
+        Timer mTimer = new Timer();
+        final Handler handler = new Handler();
+        mTimer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                handler.post(new Runnable() {
+                                    public void run() {
+                                        // 수행할 작업을 넣는다.
+
+                                        final int[] reverse = {0, 0, 0, 0};
+                                        final int[] current_station = {0, 0, 0, 0};
 
 
+                                        // 현재 역 표시
+                                        third_move.get(0).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                reverse[0] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(2).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                reverse[1] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(4).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                reverse[2] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(6).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                reverse[3] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+
+                                        third_move.get(1).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                current_station[0] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(3).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                current_station[1] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(5).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                current_station[2] = value;
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+
+                                        third_move.get(7).addValueEventListener(new ValueEventListener() {
+                                            @SuppressLint({"LongLogTag", "SetTextI18n"})
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                // This method is called once with the initial value and again
+                                                // whenever data at this location is updated.
+                                                Integer value = dataSnapshot.getValue(Integer.class);
+                                                current_station[3] = value;
+
+
+                                                int[] rev = {0, 0};
+                                                int[] nrev = {0, 0};
+                                                for (int i = 0, count1 = 0, count2 = 0; i < reverse.length; i++) {
+                                                    if (reverse[i] == 1) {
+                                                        rev[count1++] = i;
+                                                    } else {
+                                                        nrev[count2++] = i;
+                                                    }
+                                                }
+
+                                                // test 용도 - 완료 후 주석 처리할 것
+
+                                                current_station[0] = 15;
+                                                current_station[1] = 10;
+
+                                                current_station[2] = 5;
+                                                current_station[3] = 10;
+
+                                                //
+
+//                                                station_start.setText(Arrays.toString(nrev) + current_station[nrev[0]] + " " + current_station[nrev[1]]);
+//                                                station_end.setText(Arrays.toString(rev) + current_station[rev[0]] + " " + current_station[rev[1]]);
+
+                                                int current = DetailActivity_third.state;
+
+                                                // 왼쪽
+                                                if (current_station[nrev[0]] > current_station[nrev[1]]) // 멀리 있는거 먼저 체크
+                                                {
+                                                    if (current > current_station[nrev[0]]) // 곧도착/정거장전
+                                                    {
+                                                        if (current - current_station[nrev[0]] == 1) {
+                                                            time_start.setText("곧도착");
+                                                        } else {
+                                                            time_start.setText(current - current_station[nrev[0]] + "정거장 전");
+                                                        }
+                                                        if (current - current_station[nrev[1]] == 1) {
+                                                            time_start2.setText("곧도착");
+                                                        } else {
+                                                            time_start2.setText(current - current_station[nrev[1]] + "정거장 전");
+                                                        }
+                                                        time_start.setTextColor(Color.parseColor("#aaff0000"));
+                                                        time_start2.setTextColor(Color.parseColor("#aaff0000"));
+                                                    } else //
+                                                    {
+                                                        if (current > current_station[nrev[1]]) // 곧도착/정거장전
+                                                        {
+                                                            if (current - current_station[nrev[1]] == 1) {
+                                                                time_start.setText("곧도착");
+                                                            } else {
+                                                                time_start.setText(current - current_station[nrev[1]] + "정거장 전");
+                                                            }
+                                                            time_start2.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#aaff0000"));
+                                                            time_start2.setTextColor(Color.parseColor("#555555"));
+                                                        } else//곧출발
+                                                        {
+                                                            time_start.setText("곧출발");
+                                                            time_start2.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#555555"));
+                                                            time_start2.setTextColor(Color.parseColor("#555555"));
+                                                        }
+                                                    }
+                                                } else {
+                                                    if (current > current_station[nrev[1]]) // 곧도착/정거장전
+                                                    {
+                                                        if (current - current_station[nrev[1]] == 1) {
+                                                            time_start.setText("곧도착");
+                                                        } else {
+                                                            time_start.setText(current - current_station[nrev[1]] + "정거장 전");
+                                                        }
+                                                        if (current - current_station[nrev[0]] == 1) {
+                                                            time_start2.setText("곧도착");
+                                                        } else {
+                                                            time_start2.setText(current - current_station[nrev[0]] + "정거장 전");
+                                                        }
+                                                        time_start.setTextColor(Color.parseColor("#aaff0000"));
+                                                        time_start2.setTextColor(Color.parseColor("#aaff0000"));
+                                                    } else //
+                                                    {
+                                                        if (current > current_station[nrev[0]]) // 곧도착/정거장전
+                                                        {
+                                                            if (current - current_station[nrev[0]] == 1) {
+                                                                time_start.setText("곧도착");
+                                                            } else {
+                                                                time_start.setText(current - current_station[nrev[0]] + "정거장 전");
+                                                            }
+                                                            time_start2.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#aaff0000"));
+                                                            time_start2.setTextColor(Color.parseColor("#555555"));
+                                                        } else//곧출발
+                                                        {
+                                                            time_start.setText("곧출발");
+                                                            time_start2.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#555555"));
+                                                            time_start2.setTextColor(Color.parseColor("#555555"));
+                                                        }
+                                                    }
+                                                }
+
+
+                                                // 오른쪽
+                                                if (current_station[rev[0]] > current_station[rev[1]]) // 멀리 있는거 먼저 체크
+                                                {
+                                                    if (current < current_station[rev[1]]) // 곧도착/정거장전
+                                                    {
+                                                        if (current_station[rev[1]] - current == 1) {
+                                                            time_end.setText("곧도착");
+                                                        } else {
+                                                            time_end.setText(current_station[rev[1]] - current + "정거장 전");
+                                                        }
+                                                        if (current_station[rev[0]] - current == 1) {
+                                                            time_end2.setText("곧도착");
+                                                        } else {
+                                                            time_end2.setText(current_station[rev[0]] - current + "정거장 전");
+                                                        }
+                                                        time_end.setTextColor(Color.parseColor("#aaff0000"));
+                                                        time_end2.setTextColor(Color.parseColor("#aaff0000"));
+                                                    } else //
+                                                    {
+                                                        if (current < current_station[rev[0]]) // 곧도착/정거장전
+                                                        {
+                                                            if (current_station[rev[0]] - current == 1) {
+                                                                time_end.setText("곧도착");
+                                                            } else {
+                                                                time_end.setText(current_station[rev[0]] - current + "정거장 전");
+                                                            }
+                                                            time_end2.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#aaff0000"));
+                                                            time_end2.setTextColor(Color.parseColor("#555555"));
+                                                        } else//곧출발
+                                                        {
+                                                            time_end.setText("곧출발");
+                                                            time_end2.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#555555"));
+                                                            time_end2.setTextColor(Color.parseColor("#555555"));
+                                                        }
+                                                    }
+                                                } else {
+                                                    if (current < current_station[rev[0]]) // 곧도착/정거장전
+                                                    {
+                                                        if (current_station[rev[0]] - current == 1) {
+                                                            time_end.setText("곧도착");
+                                                        } else {
+                                                            time_end.setText(current_station[rev[0]] - current + "정거장 전");
+                                                        }
+                                                        if (current_station[rev[1]] - current == 1) {
+                                                            time_end2.setText("곧도착");
+                                                        } else {
+                                                            time_end2.setText(current_station[rev[1]] - current + "정거장 전");
+                                                        }
+                                                        time_end.setTextColor(Color.parseColor("#aaff0000"));
+                                                        time_end2.setTextColor(Color.parseColor("#aaff0000"));
+                                                    } else //
+                                                    {
+                                                        if (current < current_station[rev[1]]) // 곧도착/정거장전
+                                                        {
+                                                            if (current_station[rev[1]] - current == 1) {
+                                                                time_end.setText("곧도착");
+                                                            } else {
+                                                                time_end.setText(current_station[rev[1]] - current + "정거장 전");
+                                                            }
+                                                            time_end2.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#aaff0000"));
+                                                            time_end2.setTextColor(Color.parseColor("#555555"));
+                                                        } else//곧출발
+                                                        {
+                                                            time_end.setText("곧출발");
+                                                            time_end2.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#555555"));
+                                                            time_end2.setTextColor(Color.parseColor("#555555"));
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
+
+                                            @SuppressLint("LongLogTag")
+                                            @Override
+                                            public void onCancelled(DatabaseError error) {
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+
+                        }, 0, 100
+        );
 
     }
 

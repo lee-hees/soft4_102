@@ -46,9 +46,9 @@
         <activity android:name=".Login.SignupActivity" />
         <activity android:name=".Login.SigninActivity" />
 
-<!--                        <activity android:name=".Select.Station_Tab" />-->
-<!--                        <activity android:name=".Intro.IntroActivity">-->
-        <activity android:name=".Select.Station_Tab">
+                        <activity android:name=".Select.Station_Tab" />
+                        <activity android:name=".Intro.IntroActivity">
+<!--        <activity android:name=".Select.Station_Tab">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

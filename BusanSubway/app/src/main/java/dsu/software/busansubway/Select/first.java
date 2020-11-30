@@ -3,6 +3,7 @@ package dsu.software.busansubway.Select;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -491,13 +492,17 @@ public class first extends Fragment {
 
                                                 // test 용도 - 완료 후 주석 처리할 것
 
-                                                current_station[0]=5;
-                                                current_station[3]=5;
+                                                current_station[0]=15;
+                                                current_station[1]=10;
+
+
+                                                current_station[2]=5;
+                                                current_station[3]=10;
 
                                                 //
 
-                                                station_start.setText(Arrays.toString(nrev) + current_station[nrev[0]] + " " + current_station[nrev[1]]);
-                                                station_end.setText(Arrays.toString(rev) + current_station[rev[0]] + " " + current_station[rev[1]]);
+//                                                station_start.setText(Arrays.toString(nrev) + current_station[nrev[0]] + " " + current_station[nrev[1]]);
+//                                                station_end.setText(Arrays.toString(rev) + current_station[rev[0]] + " " + current_station[rev[1]]);
 
                                                 int current = DetailActivity_first.state;
 
@@ -511,6 +516,9 @@ public class first extends Fragment {
                                                         } else {
                                                             time_start.setText(current - current_station[nrev[0]] + "정거장 전");
                                                         }
+                                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                                            time_start.setTextColor(Color.parseColor("#aaff0000"));
+                                                        }
                                                     } else //
                                                     {
                                                         if (current > current_station[nrev[1]]) // 곧도착/정거장전
@@ -520,9 +528,11 @@ public class first extends Fragment {
                                                             } else {
                                                                 time_start.setText(current - current_station[nrev[1]] + "정거장 전");
                                                             }
+                                                            time_start.setTextColor(Color.parseColor("#aaff0000"));
                                                         } else//곧출발
                                                         {
                                                             time_start.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#555555"));
                                                         }
                                                     }
                                                 } else {
@@ -533,6 +543,7 @@ public class first extends Fragment {
                                                         } else {
                                                             time_start.setText(current - current_station[nrev[1]] + "정거장 전");
                                                         }
+                                                        time_start.setTextColor(Color.parseColor("#aaff0000"));
                                                     } else //
                                                     {
                                                         if (current > current_station[nrev[0]]) // 곧도착/정거장전
@@ -542,9 +553,11 @@ public class first extends Fragment {
                                                             } else {
                                                                 time_start.setText(current - current_station[nrev[0]] + "정거장 전");
                                                             }
+                                                            time_start.setTextColor(Color.parseColor("#aaff0000"));
                                                         } else//곧출발
                                                         {
                                                             time_start.setText("곧출발");
+                                                            time_start.setTextColor(Color.parseColor("#555555"));
                                                         }
                                                     }
                                                 }
@@ -560,6 +573,7 @@ public class first extends Fragment {
                                                         } else {
                                                             time_end.setText(current_station[rev[1]] - current + "정거장 전");
                                                         }
+                                                        time_end.setTextColor(Color.parseColor("#aaff0000"));
                                                     } else //
                                                     {
                                                         if (current < current_station[rev[0]]) // 곧도착/정거장전
@@ -569,9 +583,11 @@ public class first extends Fragment {
                                                             } else {
                                                                 time_end.setText(current_station[rev[0]] - current + "정거장 전");
                                                             }
+                                                            time_end.setTextColor(Color.parseColor("#aaff0000"));
                                                         } else//곧출발
                                                         {
                                                             time_end.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#555555"));
                                                         }
                                                     }
                                                 } else {
@@ -582,6 +598,7 @@ public class first extends Fragment {
                                                         } else {
                                                             time_end.setText(current_station[rev[0]] - current + "정거장 전");
                                                         }
+                                                        time_end.setTextColor(Color.parseColor("#aaff0000"));
                                                     } else //
                                                     {
                                                         if (current < current_station[rev[1]]) // 곧도착/정거장전
@@ -591,9 +608,11 @@ public class first extends Fragment {
                                                             } else {
                                                                 time_end.setText(current_station[rev[1]] - current + "정거장 전");
                                                             }
+                                                            time_end.setTextColor(Color.parseColor("#aaff0000"));
                                                         } else//곧출발
                                                         {
                                                             time_end.setText("곧출발");
+                                                            time_end.setTextColor(Color.parseColor("#555555"));
                                                         }
                                                     }
                                                 }
