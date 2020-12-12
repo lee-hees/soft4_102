@@ -1,93 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20sp"
     tools:context=".Login.SigninActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:background="@drawable/underline"
-        android:gravity="center"
-        android:text="@string/signin_title"
-        android:textSize="30sp" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Login.SigninActivity">
 
-        <EditText
-            android:id="@+id/email_in"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="60sp"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:padding="20sp"
-            android:textSize="15sp"
-            tools:ignore="Autofill,LabelFor" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp">
-
-        <EditText
-            android:id="@+id/password_in"
-            android:layout_width="match_parent"
-            android:layout_height="60sp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:padding="20sp"
-            android:textSize="15sp"
-            tools:ignore="Autofill,LabelFor" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="30sp"
-        android:paddingTop="20sp"
-        android:paddingRight="30sp">
-
-        <Button
-            android:id="@+id/signin_in"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
+            android:background="@drawable/underline"
             android:gravity="center"
-            android:background="@color/gray"
-            android:text="@string/signin"
-            tools:ignore="Autofill,LabelFor,OnClick" />
-    </LinearLayout>
+            android:text="@string/signin_title"
+            android:textSize="30sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10sp"
-        tools:ignore="SmallSp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingLeft="80sp"
-        android:paddingTop="20sp"
-        android:paddingRight="80sp">
+            <EditText
+                android:id="@+id/email_in"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="20sp"
+                android:textSize="15sp"
+                tools:ignore="Autofill,LabelFor" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/signup_in"
-            android:layout_width="250sp"
-            android:layout_height="30sp"
-            android:background="@color/color"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp">
+
+            <EditText
+                android:id="@+id/password_in"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="20sp"
+                android:textSize="15sp"
+                tools:ignore="Autofill,LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30sp"
+            android:paddingTop="20sp"
+            android:paddingRight="30sp">
+
+            <Button
+                android:id="@+id/signin_in"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:text="@string/signin"
+                tools:ignore="Autofill,LabelFor,OnClick" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/signup"
-            tools:ignore="Autofill,LabelFor" />
-    </LinearLayout>
+            android:paddingLeft="80sp"
+            android:paddingTop="20sp"
+            android:paddingRight="80sp">
 
-</LinearLayout>
+            <Button
+                android:id="@+id/signup_in"
+                android:layout_width="250sp"
+                android:layout_height="30sp"
+                android:background="@color/color"
+                android:gravity="center"
+                android:text="@string/signup"
+                tools:ignore="Autofill,LabelFor" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

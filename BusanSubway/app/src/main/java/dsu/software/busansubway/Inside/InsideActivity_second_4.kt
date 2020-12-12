@@ -147,6 +147,7 @@
 package dsu.software.busansubway.Inside
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -190,6 +191,7 @@ class InsideActivity_second_4 :AppCompatActivity(){
 
         //텍스트 변경
         locate.text=DetailActivity_second.title
+        locate.setTextColor(Color.parseColor("#B2E419"))
         where.text="양산행"
 
         _four_to_first_list=DetailActivity_second.second_four_to_first_list

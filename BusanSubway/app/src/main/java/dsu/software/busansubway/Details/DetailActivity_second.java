@@ -39,7 +39,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
     private RecyclerView recyclerview;
 
-    TextView left, center, right;
+    LinearLayout left, right;
+    TextView center;
     TextView station_start, station_end;
     TextView station, hosun;
     Button time_start, time_start2, time_end, time_end2;
@@ -1210,8 +1211,8 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setText(R.string.second_43);
             title = (String) center.getText();
             right.setVisibility(View.INVISIBLE);
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1243,8 +1244,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_42);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             right.setVisibility(View.VISIBLE);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1275,8 +1276,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_41);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1307,8 +1308,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_40);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1334,8 +1335,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_39);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1366,8 +1367,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_38);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1402,8 +1403,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_37);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1432,8 +1433,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_36);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1465,8 +1466,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_35);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1501,8 +1502,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_34);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1580,8 +1581,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_32);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1612,8 +1613,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_31);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1645,8 +1646,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_30);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1677,8 +1678,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_29);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1710,8 +1711,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_28);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1743,8 +1744,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_27);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1784,8 +1785,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_26);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1820,8 +1821,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_25);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1863,8 +1864,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_24);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1899,8 +1900,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_23);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1936,8 +1937,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_22);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -1976,8 +1977,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_21);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2008,8 +2009,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_20);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2049,8 +2050,8 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setText(R.string.second_19);
             title = (String) center.getText();
 
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2102,8 +2103,8 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setText(R.string.second_18);
             title = (String) center.getText();
             center.setTextSize(30);
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2144,8 +2145,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_17);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2177,8 +2178,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_16);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             center.setTextSize(30);
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -2210,8 +2211,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_15);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2242,8 +2243,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_14);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2275,8 +2276,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_13);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2311,8 +2312,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_12);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2348,8 +2349,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_11);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2380,8 +2381,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_10);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2416,8 +2417,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_9);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2452,8 +2453,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_8);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2510,8 +2511,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_7);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2542,8 +2543,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_6);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2592,8 +2593,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_5);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2636,8 +2637,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_4);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2669,8 +2670,8 @@ public class DetailActivity_second extends AppCompatActivity {
             center.setTextColor(Color.parseColor("#B2E419"));
             center.setText(R.string.second_3);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2706,8 +2707,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_2);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();
@@ -2755,8 +2756,8 @@ public class DetailActivity_second extends AppCompatActivity {
 
             center.setText(R.string.second_1);
             title = (String) center.getText();
-            station_start.setText("양산행");
-            station_end.setText("장산행");
+            station_start.setText("장산행");
+            station_end.setText("양산행");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
             exit.invisibleChildren = new ArrayList<>();

@@ -39,7 +39,8 @@ public class DetailActivity_third extends AppCompatActivity {
 
     private RecyclerView recyclerview;
 
-    TextView left, center, right;
+    LinearLayout left, right;
+    TextView center;
     TextView station_start, station_end;
     TextView station, hosun;
     Button time_start, time_start2, time_end, time_end2;
@@ -1217,8 +1218,8 @@ public class DetailActivity_third extends AppCompatActivity {
             title = (String) center.getText();
             right.setVisibility(View.INVISIBLE);
 
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             hosun.setText("3호선");
             station.setText("2호선");
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1279,8 +1280,8 @@ public class DetailActivity_third extends AppCompatActivity {
             title = (String) center.getText();
             right.setVisibility(View.VISIBLE);
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1331,8 +1332,8 @@ public class DetailActivity_third extends AppCompatActivity {
             fainfo.invisibleChildren = new ArrayList<>();
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
@@ -1371,8 +1372,8 @@ public class DetailActivity_third extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
@@ -1409,8 +1410,8 @@ public class DetailActivity_third extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
             station.setText("1호선");
             hosun.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             hosun.setTextColor(Color.parseColor("#B77A56"));
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
@@ -1457,8 +1458,8 @@ public class DetailActivity_third extends AppCompatActivity {
             title = (String) center.getText();
             station.setText("3호선");
             hosun.setText("동해선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1505,8 +1506,8 @@ public class DetailActivity_third extends AppCompatActivity {
             center.setText(R.string.third_11);
             title = (String) center.getText();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1549,8 +1550,8 @@ public class DetailActivity_third extends AppCompatActivity {
             center.setText(R.string.third_10);
             title = (String) center.getText();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1595,8 +1596,8 @@ public class DetailActivity_third extends AppCompatActivity {
             station.setText("3호선");
             hosun.setText("4호선");
             left.setVisibility(View.VISIBLE);
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
 
@@ -1644,8 +1645,8 @@ public class DetailActivity_third extends AppCompatActivity {
             center.setText(R.string.third_8);
             title = (String) center.getText();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1677,8 +1678,8 @@ public class DetailActivity_third extends AppCompatActivity {
 
             center.setText(R.string.third_7);
             title = (String) center.getText();
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1724,8 +1725,8 @@ public class DetailActivity_third extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
 
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
 
             exit.invisibleChildren.add(new ExpandableListAdapter.Item(1, ExpandableListAdapter.CHILD, getString(R.string.out_1)));
@@ -1760,8 +1761,8 @@ public class DetailActivity_third extends AppCompatActivity {
 
             station.setText("2호선");
             hosun.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             hosun.setTextColor(Color.parseColor("#B77A56"));
 
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
@@ -1810,8 +1811,8 @@ public class DetailActivity_third extends AppCompatActivity {
             center.setText(R.string.third_4);
             title = (String) center.getText();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1839,8 +1840,8 @@ public class DetailActivity_third extends AppCompatActivity {
 
             center.setText(R.string.third_3);
             title = (String) center.getText();
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             List<ExpandableListAdapter.Item> data = new ArrayList<>();
             ExpandableListAdapter.Item exit = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "출구정보");
@@ -1881,8 +1882,8 @@ public class DetailActivity_third extends AppCompatActivity {
             ExpandableListAdapter.Item etcinfo = new ExpandableListAdapter.Item(ExpandableListAdapter.HEADER, "주소 및 전화번호");
             etcinfo.invisibleChildren = new ArrayList<>();
             station.setText("3호선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             left.setVisibility(View.VISIBLE);
 
@@ -1918,8 +1919,8 @@ public class DetailActivity_third extends AppCompatActivity {
             etcinfo.invisibleChildren = new ArrayList<>();
             station.setText("3호선");
             hosun.setText("김해선");
-            station_start.setText("대저행");
-            station_end.setText("수영행");
+            station_start.setText("수영행");
+            station_end.setText("대저행");
             station.setTextColor(Color.parseColor("#B77A56"));
             left.setVisibility(View.INVISIBLE);
 

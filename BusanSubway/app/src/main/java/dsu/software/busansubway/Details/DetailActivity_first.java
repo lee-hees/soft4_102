@@ -41,7 +41,8 @@ public class DetailActivity_first extends AppCompatActivity {
 
     private RecyclerView recyclerview;
 
-    TextView left, center, right;
+    LinearLayout left, right;
+    TextView center;
     TextView station_start, station_end;
     TextView station, hosun;
     Button time_start, time_start2, time_end, time_end2;

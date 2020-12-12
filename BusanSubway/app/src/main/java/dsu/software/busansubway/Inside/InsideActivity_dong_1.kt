@@ -1,6 +1,7 @@
 package dsu.software.busansubway.Inside
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -41,6 +42,7 @@ class InsideActivity_dong_1 : AppCompatActivity() {
 
         //텍스트 변경
         locate.text = DetailActivity_dong.title
+        locate.setTextColor(Color.parseColor("#98DAEA"))
         where.text = "부전(동해선)행"
 
         _one_to_first_list = DetailActivity_dong.dong_one_to_first_list
