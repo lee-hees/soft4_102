@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dsu.software.busansubway">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -43,12 +45,13 @@
         <activity android:name=".Details.DetailActivity_fourth" />
         <activity android:name=".Details.DetailActivity_dong" />
         <activity android:name=".Details.DetailActivity_kim" />
+
         <activity android:name=".Login.SignupActivity" />
         <activity android:name=".Login.SigninActivity" />
 
-                        <activity android:name=".Select.Station_Tab" />
-                        <activity android:name=".Intro.IntroActivity">
-<!--        <activity android:name=".Select.Station_Tab">-->
+        <!--        <activity android:name=".Select.Station_Tab" />-->
+        <!--        <activity android:name=".Intro.IntroActivity">-->
+        <activity android:name=".Select.Station_Tab">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
