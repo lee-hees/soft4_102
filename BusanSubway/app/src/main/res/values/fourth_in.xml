@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="fourth_in_1">
+        엘리베이터, 자전거보관소, 고객안내센터, 만남의장소
+    </string>
+    <string name="fourth_in_2">
+        엘리베이터, 자전거보관소, 고객안내센터, 만남의장소\n 문화공간
+    </string>
+    <string name="fourth_in_3">
+        엘리베이터, 고객안내센터, 문화공간, 자전거보관소
+    </string>
+    <string name="fourth_in_4">
+        엘리베이터, 고객안내센터, 만남의장소, 문화공간\n 자전거보관소
+
+    </string>
+    <string name="fourth_in_5">
+        엘리베이터, 고객안내센터, 만남의장소, 문화공간\n 자전거보관소
+
+    </string>
+    <string name="fourth_in_6">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="fourth_in_7">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+
+    </string>
+    <string name="fourth_in_8">
+        엘리베이터, 고객안내센터, 만남의장소, 자전거보관소
+    </string>
+    <string name="fourth_in_9">
+        관광안내소, 고객안내센터, 만남의장소
+
+    </string>
+    <string name="fourth_in_10">
+        관광안내소, 고객안내센터, 만남의장소
+
+    </string>
+    <string name="fourth_in_11">
+        엘리베이터, 고객안내센터, 만남의장소, 관광안내소
+    </string>
+    <string name="fourth_in_12">
+        엘리베이터, 고객안내센터, 만남의장소, 관광안내소
+
+    </string>
+    <string name="fourth_in_13">
+        엘리베이터, 고객안내센터, 만남의장소, 관광안내소
+
+    </string>
+    <string name="fourth_in_14">
+        엘리베이터, 고객안내센터, 만남의장소, 관광안내소
+    </string>
+
+</resources>

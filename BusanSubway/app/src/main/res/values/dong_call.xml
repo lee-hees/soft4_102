@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dong_call_1">
+        주소 부산광역시 부산진구 부전로 181\n전화 1544-7788
+    </string>
+    <string name="dong_call_2">
+        주소 부산광역시 연제구 거제대로 123\n전화 1544-7788
+    </string>
+    <string name="dong_call_3">
+        주소 부산광역시 연제구 월드컵대로 지하 209\n전화 1544-7788
+    </string>
+    <string name="dong_call_4">
+        주소 부산광역시 연제구 중앙대로 지하 1217\n전화 1544-7788
+    </string>
+    <string name="dong_call_5">
+        주소 부산광역시 동래구 낙민로 27\n전화 1544-7788
+    </string>
+    <string name="dong_call_6">
+        주소 부산광역시 동래구 안연로98번길 57\n전화 1544-7788
+    </string>
+    <string name="dong_call_7">
+        주소 부산광역시 동래구 안락동 1063-1\n전화 1544-7788
+    </string>
+    <string name="dong_call_8">
+        주소 부산광역시 해운대구 해운대로 100\n전화 1544-7788
+    </string>
+    <string name="dong_call_9">
+        주소 부산광역시 해운대구 해운대로 210\n전화 1544-7788
+    </string>
+    <string name="dong_call_10">
+        주소 부산광역시 해운대구 해운대로 지하 396\n전화 1544-7788
+    </string>
+    <string name="dong_call_11">
+        주소 부산광역시 해운대구 장산로 427\n전화 1544-7788
+    </string>
+    <string name="dong_call_12">
+        주소 부산광역시 해운대구, 해운대로 1147\n전화 1544-7788
+    </string>
+    <string name="dong_call_13">
+        주소 부산광역시 기장군 기장읍 동부산관광5로 14\n전화 1544-7788
+    </string>
+    <string name="dong_call_14">
+        주소 부산광역시 기장군 기장읍 차성로 288번길 86\n전화 1544-7788
+    </string>
+    <string name="dong_call_15">
+        주소 부산광역시 기장군 일광면 일광로 111-10\n전화 1544-7788
+    </string>
+
+</resources>

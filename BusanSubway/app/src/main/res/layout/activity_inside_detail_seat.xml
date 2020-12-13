@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        tools:ignore="UselessLeaf">
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/station_name"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/station_name"-->
+        <!--                android:textSize="34sp"-->
+        <!--                tools:ignore="MissingConstraints" />-->
+
+
+        <TextView
+            android:id="@+id/locate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/first"
+            android:text="@string/locate"
+            android:textSize="30sp"
+            android:background="@drawable/underline"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/where"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5sp"
+        android:text="@string/where"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/subway_car1_button"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_green"
+        android:text="@string/subway_car1_button"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <Button
+        android:id="@+id/subway_car2_button"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_green"
+        android:text="@string/subway_car2_button"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/subway_car3_button"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_green"
+        android:text="@string/subway_car3_button"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <Button
+        android:id="@+id/subway_car4_button"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_green"
+        android:text="@string/subway_car4_button"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <LinearLayout
+        android:id="@+id/subway_car1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_car"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:id="@+id/one_to_first_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_first_02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+
+            <TextView
+                android:id="@+id/one_to_first_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_first_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_first_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/one_to_first_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_first_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_first_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_first_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_first_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_first_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_first_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subway_car2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_car"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:id="@+id/one_to_second_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_second_02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+
+            <TextView
+                android:id="@+id/one_to_second_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_second_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_second_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/one_to_second_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_second_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_second_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_second_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_second_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_second_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_second_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subway_car3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_car"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:id="@+id/one_to_third_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_third_02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+
+            <TextView
+                android:id="@+id/one_to_third_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_third_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_third_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/one_to_third_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_third_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_third_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_third_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_third_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_third_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subway_car4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/train_car"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:id="@+id/one_to_fourth_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+
+            <TextView
+                android:id="@+id/one_to_fourth_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_05"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_06"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_07"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_08"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_09"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_fourth_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/one_to_fourth_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_fourth_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_white" />
+
+
+            <TextView
+                android:id="@+id/one_to_fourth_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_pregnant" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+            <TextView
+                android:id="@+id/one_to_fourth_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:background="@color/train_yellow" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
